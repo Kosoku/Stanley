@@ -39,6 +39,10 @@
 		078C6F7D1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F7C1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m */; };
 		078C6F7E1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F7C1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m */; };
 		078C6F7F1E6F5D0B00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */; };
+		078C6F821E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6F801E6F5E1200F04786 /* NSFileManager+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C6F831E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6F801E6F5E1200F04786 /* NSFileManager+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C6F841E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F811E6F5E1200F04786 /* NSFileManager+KSTExtensions.m */; };
+		078C6F851E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F811E6F5E1200F04786 /* NSFileManager+KSTExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,8 @@
 		078C6F761E6F5B3800F04786 /* NSBundle+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C6F771E6F5B3800F04786 /* NSBundle+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C6F7C1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSBundleExtensionsTestCase.m; sourceTree = "<group>"; };
+		078C6F801E6F5E1200F04786 /* NSFileManager+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+KSTExtensions.h"; sourceTree = "<group>"; };
+		078C6F811E6F5E1200F04786 /* NSFileManager+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+KSTExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +239,8 @@
 			children = (
 				078C6F761E6F5B3800F04786 /* NSBundle+KSTExtensions.h */,
 				078C6F771E6F5B3800F04786 /* NSBundle+KSTExtensions.m */,
+				078C6F801E6F5E1200F04786 /* NSFileManager+KSTExtensions.h */,
+				078C6F811E6F5E1200F04786 /* NSFileManager+KSTExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 				077B76721E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6F6F1E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
 				077B76641E6F3FC6005FC783 /* KSTMacros.h in Headers */,
+				078C6F821E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				077B76661E6F3FD1005FC783 /* KSTMacrosPrivate.h in Headers */,
 				077B76491E6F314E005FC783 /* Stanley.h in Headers */,
 				077B766B1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
@@ -264,6 +273,7 @@
 				077B766C1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
 				077B76731E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6F6D1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
+				078C6F831E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				077B76671E6F3FD3005FC783 /* KSTMacrosPrivate.h in Headers */,
 				078C6F701E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
 				077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */,
@@ -435,6 +445,7 @@
 				077B76741E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				077B766D1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 				078C6F7A1E6F5B3800F04786 /* NSBundle+KSTExtensions.m in Sources */,
+				078C6F841E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +466,7 @@
 				077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				077B766E1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 				078C6F7B1E6F5B3800F04786 /* NSBundle+KSTExtensions.m in Sources */,
+				078C6F851E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

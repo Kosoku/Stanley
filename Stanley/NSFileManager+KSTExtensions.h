@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSFileManager+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,22 +15,29 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface NSFileManager (KSTExtensions)
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ Returns the NSURL instance representing the application support directory, creating the directory if it does not exist. On macOS, appends the bundle executable name to the returned URL (e.g. <application_support>/<bundle_executable>).
+ 
+ @return The application support NSURL instance
+ */
+- (NSURL *)KST_applicationSupportDirectoryURL;
+/**
+ Returns the NSURL instance representing the caches directory. On OSX, appends the bundle identifier to the returned URL (e.g. <caches>/<bundle_identifier>) and creates the directory if it does not already exist. On iOS, the base caches directory will always exist.
+ 
+ @return The caches NSURL instance
+ */
+- (NSURL *)KST_cachesDirectoryURL;
+/**
+ Returns the NSURL instance representing the document directory.
+ 
+ @return The document NSURL instance
+ */
+- (NSURL *)KST_documentDirectoryURL;
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+@end
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
-
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
