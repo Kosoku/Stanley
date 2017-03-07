@@ -1,0 +1,1 @@
+genstrings -o $SRCROOT/Stanley/en.lproj $SRCROOT/Stanley/*

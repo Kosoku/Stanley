@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSError+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,29 +15,32 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+/**
+ The key used to identify the alert title.
+ */
+FOUNDATION_EXPORT NSString *const KSTErrorAlertTitleKey;
+/**
+ The key used to identify the alert message.
+ */
+FOUNDATION_EXPORT NSString *const KSTErrorAlertMessageKey;
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+@interface NSError (KSTExtensions)
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+/**
+ Returns the value for the BBErrorAlertTitleKey key in the receiver's userInfo dictionary if non-nil, otherwise returns a default title.
+ 
+ @return The alert title
+ */
+- (NSString *)KST_alertTitle;
+/**
+ Returns the value for the BBErrorAlertMessageKey key in the receiver's userInfo dictionary if non-nil, then the value for the NSLocalizedDescriptionKey key, then a default title.
+ 
+ @return The alert message
+ */
+- (NSString *)KST_alertMessage;
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
+@end
 
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
-#import <Stanley/NSError+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
