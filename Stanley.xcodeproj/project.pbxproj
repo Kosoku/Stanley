@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		077B76421E6F314E005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; };
-		077B76471E6F314E005FC783 /* StanleyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76461E6F314E005FC783 /* StanleyTests.m */; };
 		077B76491E6F314E005FC783 /* Stanley.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B763B1E6F314E005FC783 /* Stanley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B76641E6F3FC6005FC783 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,6 +21,9 @@
 		077B76731E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76701E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B76741E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */; };
 		077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */; };
+		077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */; };
+		077B767F1E6F4704005FC783 /* StanleyTests_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B767E1E6F4704005FC783 /* StanleyTests_macOS.m */; };
+		077B76811E6F4704005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,19 @@
 			remoteGlobalIDString = 077B76371E6F314E005FC783;
 			remoteInfo = Stanley;
 		};
+		077B76821E6F4704005FC783 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 077B762D1E6F2D73005FC783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 077B76541E6F3301005FC783;
+			remoteInfo = "Stanley-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B763B1E6F314E005FC783 /* Stanley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stanley.h; sourceTree = "<group>"; };
-		077B76411E6F314E005FC783 /* StanleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		077B76461E6F314E005FC783 /* StanleyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StanleyTests.m; sourceTree = "<group>"; };
-		077B76481E6F314E005FC783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B76551E6F3301005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B765D1E6F33CB005FC783 /* Stanley-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stanley-iOS-Info.plist"; sourceTree = "<group>"; };
 		077B765E1E6F33CB005FC783 /* Stanley-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stanley-macOS-Info.plist"; sourceTree = "<group>"; };
@@ -49,6 +56,12 @@
 		077B766A1E6F4361005FC783 /* KSTGeometryFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTGeometryFunctions.m; sourceTree = "<group>"; };
 		077B76701E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTSnakeCaseToLlamaCaseValueTransformer.h; sourceTree = "<group>"; };
 		077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTSnakeCaseToLlamaCaseValueTransformer.m; sourceTree = "<group>"; };
+		077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m; sourceTree = "<group>"; };
+		077B767C1E6F4704005FC783 /* StanleyTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		077B767E1E6F4704005FC783 /* StanleyTests_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StanleyTests_macOS.m; sourceTree = "<group>"; };
+		077B76801E6F4704005FC783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		077B76871E6F473B005FC783 /* StanleyTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-iOS-Info.plist"; sourceTree = "<group>"; };
+		077B76881E6F473B005FC783 /* StanleyTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-macOS-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		077B76791E6F4704005FC783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077B76811E6F4704005FC783 /* Stanley.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +103,7 @@
 			children = (
 				077B763A1E6F314E005FC783 /* Stanley */,
 				077B76451E6F314E005FC783 /* StanleyTests */,
+				077B767D1E6F4704005FC783 /* StanleyTests-macOS */,
 				077B76391E6F314E005FC783 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				077B76381E6F314E005FC783 /* Stanley.framework */,
-				077B76411E6F314E005FC783 /* StanleyTests.xctest */,
+				077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */,
 				077B76551E6F3301005FC783 /* Stanley.framework */,
+				077B767C1E6F4704005FC783 /* StanleyTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,8 +132,8 @@
 		077B76451E6F314E005FC783 /* StanleyTests */ = {
 			isa = PBXGroup;
 			children = (
-				077B76461E6F314E005FC783 /* StanleyTests.m */,
-				077B76481E6F314E005FC783 /* Info.plist */,
+				077B768A1E6F47AA005FC783 /* Source */,
+				077B76891E6F47A2005FC783 /* Supporting Files */,
 			);
 			path = StanleyTests;
 			sourceTree = "<group>";
@@ -161,6 +184,32 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		077B767D1E6F4704005FC783 /* StanleyTests-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				077B767E1E6F4704005FC783 /* StanleyTests_macOS.m */,
+				077B76801E6F4704005FC783 /* Info.plist */,
+			);
+			path = "StanleyTests-macOS";
+			sourceTree = "<group>";
+		};
+		077B76891E6F47A2005FC783 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				077B76871E6F473B005FC783 /* StanleyTests-iOS-Info.plist */,
+				077B76881E6F473B005FC783 /* StanleyTests-macOS-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		077B768A1E6F47AA005FC783 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -208,9 +257,9 @@
 			productReference = 077B76381E6F314E005FC783 /* Stanley.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		077B76401E6F314E005FC783 /* StanleyTests */ = {
+		077B76401E6F314E005FC783 /* StanleyTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 077B764D1E6F314E005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests" */;
+			buildConfigurationList = 077B764D1E6F314E005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests-iOS" */;
 			buildPhases = (
 				077B763D1E6F314E005FC783 /* Sources */,
 				077B763E1E6F314E005FC783 /* Frameworks */,
@@ -221,9 +270,9 @@
 			dependencies = (
 				077B76441E6F314E005FC783 /* PBXTargetDependency */,
 			);
-			name = StanleyTests;
+			name = "StanleyTests-iOS";
 			productName = StanleyTests;
-			productReference = 077B76411E6F314E005FC783 /* StanleyTests.xctest */;
+			productReference = 077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		077B76541E6F3301005FC783 /* Stanley-macOS */ = {
@@ -243,6 +292,24 @@
 			productName = "Stanley-macOS";
 			productReference = 077B76551E6F3301005FC783 /* Stanley.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		077B767B1E6F4704005FC783 /* StanleyTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 077B76841E6F4704005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests-macOS" */;
+			buildPhases = (
+				077B76781E6F4704005FC783 /* Sources */,
+				077B76791E6F4704005FC783 /* Frameworks */,
+				077B767A1E6F4704005FC783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				077B76831E6F4704005FC783 /* PBXTargetDependency */,
+			);
+			name = "StanleyTests-macOS";
+			productName = "StanleyTests-macOS";
+			productReference = 077B767C1E6F4704005FC783 /* StanleyTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,6 +333,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					077B767B1E6F4704005FC783 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 077B76301E6F2D73005FC783 /* Build configuration list for PBXProject "Stanley" */;
@@ -282,7 +353,8 @@
 			targets = (
 				077B76371E6F314E005FC783 /* Stanley-iOS */,
 				077B76541E6F3301005FC783 /* Stanley-macOS */,
-				077B76401E6F314E005FC783 /* StanleyTests */,
+				077B76401E6F314E005FC783 /* StanleyTests-iOS */,
+				077B767B1E6F4704005FC783 /* StanleyTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +381,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		077B767A1E6F4704005FC783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -325,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				077B76471E6F314E005FC783 /* StanleyTests.m in Sources */,
+				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +417,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		077B76781E6F4704005FC783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077B767F1E6F4704005FC783 /* StanleyTests_macOS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -345,6 +432,11 @@
 			isa = PBXTargetDependency;
 			target = 077B76371E6F314E005FC783 /* Stanley-iOS */;
 			targetProxy = 077B76431E6F314E005FC783 /* PBXContainerItemProxy */;
+		};
+		077B76831E6F4704005FC783 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 077B76541E6F3301005FC783 /* Stanley-macOS */;
+			targetProxy = 077B76821E6F4704005FC783 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -519,8 +611,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = StanleyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				INFOPLIST_FILE = "StanleyTests/StanleyTests-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -564,8 +656,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = StanleyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				INFOPLIST_FILE = "StanleyTests/StanleyTests-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.StanleyTests;
@@ -692,6 +784,103 @@
 			};
 			name = Release;
 		};
+		077B76851E6F4704005FC783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "StanleyTests/StanleyTests-macOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.StanleyTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		077B76861E6F4704005FC783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "StanleyTests/StanleyTests-macOS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.StanleyTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -712,7 +901,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		077B764D1E6F314E005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests" */ = {
+		077B764D1E6F314E005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				077B764E1E6F314E005FC783 /* Debug */,
@@ -725,6 +914,14 @@
 			buildConfigurations = (
 				077B765B1E6F3301005FC783 /* Debug */,
 				077B765C1E6F3301005FC783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		077B76841E6F4704005FC783 /* Build configuration list for PBXNativeTarget "StanleyTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				077B76851E6F4704005FC783 /* Debug */,
+				077B76861E6F4704005FC783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

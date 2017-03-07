@@ -1,6 +1,6 @@
 //
-//  StanleyTests.m
-//  StanleyTests
+//  KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m
+//  Stanley
 //
 //  Created by William Towe on 3/7/17.
 //  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
@@ -15,32 +15,35 @@
 
 #import <XCTest/XCTest.h>
 
-@interface StanleyTests : XCTestCase
+#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+
+@interface KSTSnakeCaseToLlamaCaseValueTransformerTestCase : XCTestCase
 
 @end
 
-@implementation StanleyTests
+@implementation KSTSnakeCaseToLlamaCaseValueTransformerTestCase
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testTransformedValue {
+    NSString *start = @"first_middle_last";
+    NSString *end = @"firstMiddleLast";
+    
+    XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
+    
+    start = @"first";
+    end = @"first";
+    
+    XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
 }
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testReverseTransformedValue {
+    NSString *start = @"firstMiddleLast";
+    NSString *end = @"first_middle_last";
+    
+    XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] reverseTransformedValue:start], end);
+    
+    start = @"first";
+    end = @"first";
+    
+    XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] reverseTransformedValue:start], end);
 }
 
 @end
