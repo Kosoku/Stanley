@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSArray+KSTExtensions.m
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -13,30 +13,50 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import <Foundation/Foundation.h>
+#import "NSArray+KSTExtensions.h"
+#import "NSMutableArray+KSTExtensions.h"
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+@implementation NSArray (KSTExtensions)
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+- (NSArray *)KST_reversedArray; {
+    return [self reverseObjectEnumerator].allObjects;
+}
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+- (NSArray *)KST_append:(NSArray *)array; {
+    return [self arrayByAddingObjectsFromArray:array];
+}
+- (NSArray *)KST_prepend:(NSArray *)array {
+    NSMutableArray *retval = [self mutableCopy];
+    
+    [retval insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];
+    
+    return [retval copy];
+}
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+- (NSSet *)KST_set; {
+    return [NSSet setWithArray:self];
+}
+- (NSMutableSet *)KST_mutableSet; {
+    return [NSMutableSet setWithArray:self];
+}
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
+- (NSOrderedSet *)KST_orderedSet {
+    return [NSOrderedSet orderedSetWithArray:self];
+}
+- (NSMutableOrderedSet *)KST_mutableOrderedSet {
+    return [NSMutableOrderedSet orderedSetWithArray:self];
+}
 
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
+- (NSArray *)KST_shuffledArray; {
+    NSMutableArray *retval = [self mutableCopy];
+    
+    [retval KST_shuffle];
+    
+    return [retval copy];
+}
 
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+- (id)KST_objectAtRandomIndex {
+    return self[arc4random_uniform((u_int32_t)self.count)];
+}
+
+@end

@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSMutableArray+KSTExtensions.m
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -13,30 +13,35 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import <Foundation/Foundation.h>
+#import "NSMutableArray+KSTExtensions.h"
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+@implementation NSMutableArray (KSTExtensions)
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+- (void)KST_removeFirstObject; {
+    if (self.count > 0) {
+        [self removeObjectAtIndex:0];
+    }
+}
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+- (void)KST_push:(id)object; {
+    [self insertObject:object atIndex:0];
+}
+- (id)KST_pop; {
+    id retval = self.firstObject;
+    
+    [self KST_removeFirstObject];
+    
+    return retval;
+}
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+- (void)KST_shuffle {
+    NSUInteger max = self.count - 1;
+    
+    for (NSUInteger i=0; i<self.count; i++) {
+        NSUInteger n = arc4random_uniform((u_int32_t)max) + i;
+        
+        [self exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+}
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
-
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+@end

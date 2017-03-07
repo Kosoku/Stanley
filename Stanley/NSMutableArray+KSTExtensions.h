@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSMutableArray+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,28 +15,33 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface NSMutableArray<ObjectType> (KSTExtensions)
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ If self.count > 0, removes the first object in the receiver; otherwise does nothing.
+ */
+- (void)KST_removeFirstObject;
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+/**
+ Inserts _object_ at index 0 of the receiver.
+ 
+ @param object The object to insert
+ */
+- (void)KST_push:(ObjectType)object;
+/**
+ Removes the first object of the receiver and returns it.
+ 
+ @return The first object of the receiver or nil
+ */
+- (nullable ObjectType)KST_pop;
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
+/**
+ Shuffles the receiver. See http://stackoverflow.com/questions/56648/whats-the-best-way-to-shuffle-an-nsmutablearray for implementation reference.
+ */
+- (void)KST_shuffle;
 
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
+@end
 
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
