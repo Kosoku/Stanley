@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  KSTFunctions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,17 +15,22 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+/**
+ Executes *block* on the main thread asynchronously, using dispatch_async, passing dispatch_get_main_queue() and *block* respectively.
+ 
+ @param block The block to execute on the main thread
+ @exception NSException Thrown if block is NULL
+ */
+FOUNDATION_EXPORT void KSTDispatchMainAsync(dispatch_block_t block);
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ Executes *block* on the main thread synchronously, first checking to see if already on the main thread and if so, executing the *block* immediately. Otherwise using dispatch_sync, passing dispatch_get_main_queue() and *block* respectively.
+ 
+ @param block The block to execute on the main thread
+ @exception NSException Thrown if block is NULL
+ */
+FOUNDATION_EXPORT void KSTDispatchMainSync(dispatch_block_t block);
 
-#import <Stanley/KSTMacros.h>
-
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END

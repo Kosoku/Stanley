@@ -24,6 +24,10 @@
 		077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */; };
 		077B767F1E6F4704005FC783 /* StanleyTests_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B767E1E6F4704005FC783 /* StanleyTests_macOS.m */; };
 		077B76811E6F4704005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; };
+		078C6F691E6F4C2500F04786 /* KSTFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F681E6F4C2500F04786 /* KSTFunctions.m */; };
+		078C6F6A1E6F4C2500F04786 /* KSTFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F681E6F4C2500F04786 /* KSTFunctions.m */; };
+		078C6F6C1E6F4C3600F04786 /* KSTFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C6F6D1E6F4C3600F04786 /* KSTFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,8 @@
 		077B76871E6F473B005FC783 /* StanleyTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-iOS-Info.plist"; sourceTree = "<group>"; };
 		077B76881E6F473B005FC783 /* StanleyTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-macOS-Info.plist"; sourceTree = "<group>"; };
 		078C6F671E6F497800F04786 /* Stanley-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stanley-Info.h"; sourceTree = "<group>"; };
+		078C6F681E6F4C2500F04786 /* KSTFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctions.m; sourceTree = "<group>"; };
+		078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTFunctions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,8 @@
 		077B76681E6F4344005FC783 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */,
+				078C6F681E6F4C2500F04786 /* KSTFunctions.m */,
 				077B76691E6F4361005FC783 /* KSTGeometryFunctions.h */,
 				077B766A1E6F4361005FC783 /* KSTGeometryFunctions.m */,
 			);
@@ -224,6 +232,7 @@
 				077B76661E6F3FD1005FC783 /* KSTMacrosPrivate.h in Headers */,
 				077B76491E6F314E005FC783 /* Stanley.h in Headers */,
 				077B766B1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
+				078C6F6C1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +242,7 @@
 			files = (
 				077B766C1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
 				077B76731E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
+				078C6F6D1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
 				077B76671E6F3FD3005FC783 /* KSTMacrosPrivate.h in Headers */,
 				077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */,
 			);
@@ -397,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078C6F691E6F4C2500F04786 /* KSTFunctions.m in Sources */,
 				077B76741E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				077B766D1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 			);
@@ -414,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078C6F6A1E6F4C2500F04786 /* KSTFunctions.m in Sources */,
 				077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				077B766E1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 			);
