@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSBundle+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,21 +15,41 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface NSBundle (KSTExtensions)
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ Returns the bundle identifier. For example, "com.mycompany.app".
+ 
+ @return The bundle identifier
+ */
+- (NSString *)KST_bundleIdentifier;
+/**
+ Returns the bundle display name. For example, "App". This value is localized.
+ 
+ @return The bundle display name
+ */
+- (nullable NSString *)KST_bundleDisplayName;
+/**
+ Returns the bundle executable. For example, "App". This value is not localized.
+ 
+ @return The bundle executable
+ */
+- (NSString *)KST_bundleExecutable;
+/**
+ Returns the bundle short version string. For example, "1.0.0".
+ 
+ @return The bundle short version string
+ */
+- (NSString *)KST_bundleShortVersionString;
+/**
+ Returns the bundle version. For example, "1".
+ 
+ @return The bundle version
+ */
+- (NSString *)KST_bundleVersion;
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+@end
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
-
-#import <Stanley/NSBundle+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
