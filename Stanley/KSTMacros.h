@@ -18,6 +18,7 @@
 
 #import "KSTMacrosPrivate.h"
 
+
 /**
  Macro to create a weakly referenced variable of type var.
  
