@@ -19,7 +19,9 @@
 		077B762D1E6F2D73005FC783 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KST;
 				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kosoku Interactive, LLC.";
 			};
 			buildConfigurationList = 077B76301E6F2D73005FC783 /* Build configuration list for PBXProject "Stanley" */;
 			compatibilityVersion = "Xcode 3.2";
