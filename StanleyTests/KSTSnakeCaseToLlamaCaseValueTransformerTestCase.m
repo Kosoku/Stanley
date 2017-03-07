@@ -29,7 +29,7 @@
     
     XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
     
-    start = @"first";
+    start = @"First";
     end = @"first";
     
     XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
