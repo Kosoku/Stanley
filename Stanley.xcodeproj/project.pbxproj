@@ -31,6 +31,8 @@
 		077B76551E6F3301005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B765D1E6F33CB005FC783 /* Stanley-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stanley-iOS-Info.plist"; sourceTree = "<group>"; };
 		077B765E1E6F33CB005FC783 /* Stanley-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stanley-macOS-Info.plist"; sourceTree = "<group>"; };
+		077B76621E6F35CD005FC783 /* KSTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTMacros.h; sourceTree = "<group>"; };
+		077B76631E6F35CD005FC783 /* KSTMacrosPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTMacrosPrivate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				077B763B1E6F314E005FC783 /* Stanley.h */,
-				077B765D1E6F33CB005FC783 /* Stanley-iOS-Info.plist */,
-				077B765E1E6F33CB005FC783 /* Stanley-macOS-Info.plist */,
+				077B76601E6F354A005FC783 /* Source */,
+				077B765F1E6F3541005FC783 /* Supporting Files */,
 			);
 			path = Stanley;
 			sourceTree = "<group>";
@@ -95,6 +97,32 @@
 				077B76481E6F314E005FC783 /* Info.plist */,
 			);
 			path = StanleyTests;
+			sourceTree = "<group>";
+		};
+		077B765F1E6F3541005FC783 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				077B765D1E6F33CB005FC783 /* Stanley-iOS-Info.plist */,
+				077B765E1E6F33CB005FC783 /* Stanley-macOS-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		077B76601E6F354A005FC783 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				077B76611E6F3575005FC783 /* Headers */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		077B76611E6F3575005FC783 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				077B76621E6F35CD005FC783 /* KSTMacros.h */,
+				077B76631E6F35CD005FC783 /* KSTMacrosPrivate.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
