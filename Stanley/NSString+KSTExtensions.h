@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSString+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,24 +15,35 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface NSString (KSTExtensions)
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ Creates and returns an NSString representing the MD5 hash of the receiver.
+ 
+ @return The NSString hash
+ */
+- (nullable NSString *)KST_MD5String;
+/**
+ Creates and returns an NSString representing the SHA1 hash of the receiver.
+ 
+ @return The NSString hash
+ */
+- (nullable NSString *)KST_SHA1String;
+/**
+ Creates and returns an NSString representing the SHA256 hash of the receiver.
+ 
+ @return The NSString hash
+ */
+- (nullable NSString *)KST_SHA256String;
+/**
+ Creates and returns an NSString representing the SHA512 hash of the receiver.
+ 
+ @return The NSString hash
+ */
+- (nullable NSString *)KST_SHA512String;
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+@end
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
-
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
