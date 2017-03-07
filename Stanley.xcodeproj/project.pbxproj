@@ -133,6 +133,12 @@
 		078C70171E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70111E6F716000F04786 /* NSMutableArray+KSTExtensions.m */; };
 		078C70181E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70111E6F716000F04786 /* NSMutableArray+KSTExtensions.m */; };
 		078C70191E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70111E6F716000F04786 /* NSMutableArray+KSTExtensions.m */; };
+		078C701B1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */; };
+		078C701C1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */; };
+		078C701D1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */; };
+		078C701F1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */; };
+		078C70201E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */; };
+		078C70211E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +213,8 @@
 		078C70071E6F70BF00F04786 /* NSArray+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70101E6F716000F04786 /* NSMutableArray+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70111E6F716000F04786 /* NSMutableArray+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+KSTExtensions.m"; sourceTree = "<group>"; };
+		078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSArrayExtensionsTestCase.m; sourceTree = "<group>"; };
+		078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSMutableArrayExtensionsTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +387,8 @@
 				078C6FDC1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m */,
 				078C6FEA1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m */,
 				078C70021E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m */,
+				078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */,
+				078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -769,6 +779,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70031E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
+				078C701F1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
+				078C701B1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEB1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				078C6FDD1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
@@ -799,6 +811,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70041E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
+				078C70201E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
+				078C701C1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEC1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				078C6F7F1E6F5D0B00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				078C6FDE1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
@@ -847,6 +861,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70051E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
+				078C70211E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
+				078C701D1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FED1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				078C6FC01E6F652400F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				078C6FDF1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
