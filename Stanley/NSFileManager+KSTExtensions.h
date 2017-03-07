@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSURL *)KST_applicationSupportDirectoryURL;
 /**
- Returns the NSURL instance representing the caches directory. On OSX, appends the bundle identifier to the returned URL (e.g. <caches>/<bundle_identifier>) and creates the directory if it does not already exist. On iOS, the base caches directory will always exist.
+ Returns the NSURL instance representing the caches directory. On macOS, appends the bundle identifier to the returned URL (e.g. <caches>/<bundle_identifier>) and creates the directory if it does not already exist. On iOS, the base caches directory will always exist.
  
  @return The caches NSURL instance
  */
