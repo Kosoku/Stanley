@@ -10,6 +10,10 @@
 		077B76421E6F314E005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; };
 		077B76471E6F314E005FC783 /* StanleyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76461E6F314E005FC783 /* StanleyTests.m */; };
 		077B76491E6F314E005FC783 /* Stanley.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B763B1E6F314E005FC783 /* Stanley.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B76641E6F3FC6005FC783 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B76661E6F3FD1005FC783 /* KSTMacrosPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76631E6F35CD005FC783 /* KSTMacrosPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077B76671E6F3FD3005FC783 /* KSTMacrosPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76631E6F35CD005FC783 /* KSTMacrosPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077B76641E6F3FC6005FC783 /* KSTMacros.h in Headers */,
+				077B76661E6F3FD1005FC783 /* KSTMacrosPrivate.h in Headers */,
 				077B76491E6F314E005FC783 /* Stanley.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +146,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077B76671E6F3FD3005FC783 /* KSTMacrosPrivate.h in Headers */,
+				077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
