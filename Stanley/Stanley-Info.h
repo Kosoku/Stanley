@@ -16,7 +16,6 @@
 #ifndef __STANLEY_INFO__
 #define __STANLEY_INFO__
 
-#define KST_BUNDLE_IDENTIFIER com.kosoku.stanley
 #define KST_BUNDLE_SHORT_VERSION_STRING 1.0.0
 
 #endif
