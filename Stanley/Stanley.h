@@ -23,7 +23,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
 
-#import <Stanley/KSTMacros.h>
+#import <Stanley/KSTScopeMacros.h>
 #import <Stanley/KSTEnvironmentMacros.h>
 #import <Stanley/KSTLoggingMacros.h>
 #import <Stanley/KSTValueMacros.h>
