@@ -170,6 +170,14 @@
 		078C70531E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */; };
 		078C70541E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */; };
 		078C70551E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */; };
+		078C70581E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C70591E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C705A1E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C705B1E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C705C1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
+		078C705D1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
+		078C705E1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
+		078C705F1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +264,8 @@
 		078C70481E6F7E2A00F04786 /* NSURL+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+KSTExtensions.h"; path = "../../../Downloads/NSURL+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70491E6F7E2A00F04786 /* NSURL+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+KSTExtensions.m"; path = "../../../Downloads/NSURL+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSURLExtensionsTestCase.m; sourceTree = "<group>"; };
+		078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KSTExtensions.h"; sourceTree = "<group>"; };
+		078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KSTExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,6 +471,8 @@
 				078C70231E6F77BD00F04786 /* NSError+KSTExtensions.m */,
 				078C70481E6F7E2A00F04786 /* NSURL+KSTExtensions.h */,
 				078C70491E6F7E2A00F04786 /* NSURL+KSTExtensions.m */,
+				078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */,
+				078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -488,6 +500,7 @@
 				078C70121E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD41E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				077B766B1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
+				078C70581E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F781E6F5B3800F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				078C704A1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F6C1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
@@ -514,6 +527,7 @@
 				078C70131E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD51E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				077B76651E6F3FCB005FC783 /* KSTMacros.h in Headers */,
+				078C70591E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F791E6F5B3800F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				078C704B1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F741E6F5A9E00F04786 /* Stanley.h in Headers */,
@@ -540,6 +554,7 @@
 				078C70151E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD71E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				078C6FC31E6F65F600F04786 /* Stanley.h in Headers */,
+				078C705B1E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F9A1E6F636900F04786 /* KSTMacrosPrivate.h in Headers */,
 				078C704D1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F971E6F636900F04786 /* KSTFunctions.h in Headers */,
@@ -566,6 +581,7 @@
 				078C70141E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD61E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				078C6FC91E6F66DD00F04786 /* KSTMacros.h in Headers */,
+				078C705A1E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6FC51E6F66DD00F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				078C704C1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6FC21E6F65F500F04786 /* Stanley.h in Headers */,
@@ -891,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6F691E6F4C2500F04786 /* KSTFunctions.m in Sources */,
+				078C705C1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
 				078C700C1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70281E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FD81E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
@@ -927,6 +944,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6F6A1E6F4C2500F04786 /* KSTFunctions.m in Sources */,
+				078C705D1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
 				078C700D1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70291E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FD91E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
@@ -963,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6FA01E6F637500F04786 /* KSTFunctions.m in Sources */,
+				078C705F1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
 				078C700F1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C702B1E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FDB1E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
@@ -984,6 +1003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6FD01E6F66E800F04786 /* KSTFunctions.m in Sources */,
+				078C705E1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
 				078C700E1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C702A1E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FDA1E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Stanley.h
+//  NSDate+KSTExtensions.h
 //  Stanley
 //
 //  Created by William Towe on 3/7/17.
@@ -15,31 +15,42 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface NSDate (KSTExtensions)
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+/**
+ Returns the day component from a NSDateComponents created from the receiver.
+ 
+ @return The day of the receiver
+ */
+- (NSInteger)KST_day;
+/**
+ Returns the month component from a NSDateComponents created from the receiver.
+ 
+ @return The month of the receiver
+ */
+- (NSInteger)KST_month;
+/**
+ Returns the year component from a NSDateComponents created from the receiver.
+ 
+ @return The year of the receiver
+ */
+- (NSInteger)KST_year;
 
-#import <Stanley/KSTMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
+/**
+ Returns a NSDate representing the beginning of the day, which is 12:00:00 AM.
+ 
+ @return The beginning of the day date
+ */
+- (NSDate *)KST_beginningOfDay;
+/**
+ Returns a NSDate representing the end of the day, which is 11:59:59 PM.
+ 
+ @return The end of the day date
+ */
+- (NSDate *)KST_endOfDay;
 
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
+@end
 
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
-#import <Stanley/NSError+KSTExtensions.h>
-#import <Stanley/NSURL+KSTExtensions.h>
-#import <Stanley/NSDate+KSTExtensions.h>
-
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+NS_ASSUME_NONNULL_END
