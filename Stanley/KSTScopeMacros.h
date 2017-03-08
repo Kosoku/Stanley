@@ -16,8 +16,7 @@
 #ifndef __KST_MACROS__
 #define __KST_MACROS__
 
-#import "KSTMacrosPrivate.h"
-
+#import "KSTScopePrivateMacros.h"
 
 /**
  Macro to create a weakly referenced variable of type var.

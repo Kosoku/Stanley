@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "078C6F8A1E6F621000F04786"
-               BuildableName = "Stanley-watchOS.framework"
+               BuildableName = "Stanley.framework"
                BlueprintName = "Stanley-watchOS"
                ReferencedContainer = "container:Stanley.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078C6F8A1E6F621000F04786"
-            BuildableName = "Stanley-watchOS.framework"
+            BuildableName = "Stanley.framework"
             BlueprintName = "Stanley-watchOS"
             ReferencedContainer = "container:Stanley.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078C6F8A1E6F621000F04786"
-            BuildableName = "Stanley-watchOS.framework"
+            BuildableName = "Stanley.framework"
             BlueprintName = "Stanley-watchOS"
             ReferencedContainer = "container:Stanley.xcodeproj">
          </BuildableReference>
