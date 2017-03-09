@@ -17,7 +17,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSArray<ObjectType> (KSTExtensions)
+@interface NSArray<__covariant ObjectType> (KSTExtensions)
 
 /**
  Creates and returns an NSArray with the receiver's objects in reverse order.
