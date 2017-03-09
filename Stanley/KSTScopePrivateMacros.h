@@ -21,6 +21,15 @@
  */
 
 /**
+ Typedefs that kstOnExit relies on.
+ */
+typedef void (^kst_cleanupBlock_t)();
+
+static inline void kst_executeCleanupBlock (__strong kst_cleanupBlock_t *block) {
+    (*block)();
+}
+
+/**
  Private macros that kstkeypath relies upon.
  */
 #define kstkeypath1(PATH) \

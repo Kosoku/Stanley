@@ -19,11 +19,18 @@
 #import "KSTScopePrivateMacros.h"
 
 /**
+ Macro that defines some code to be executed when the current scope exits. The code must be enclosed in braces and terminated with a semicolon, and will be executed regardless of how the scope is exited.
+ */
+#define kstOnExit \
+rac_keywordify \
+__strong kst_cleanupBlock_t kstmetamacro_concat(kst_exitBlock_, __LINE__) __attribute__((cleanup(kst_executeCleanupBlock), unused)) = ^
+
+/**
  Macro to create a weakly referenced variable of type var.
  
  @param The variable you want to weakly reference
  */
-#define kstweakify(var) __weak typeof(var) kstweak_##var = var;
+#define kstWeakify(var) __weak typeof(var) kstweak_##var = var;
 
 /**
  Macro to strongly reference a previously weakly referenced variable created by using kstweakify. The strongly referenced variable shadows the weakly referenced variable, preventing a retain cycle. Especially useful for referencing self within a block.
@@ -37,7 +44,7 @@
  
  @param The variable you want to strongly reference, which must have been previously created using kstweakify
  */
-#define kststrongify(var) \
+#define kstStrongify(var) \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wshadow\"") \
 __strong typeof(var) var = kstweak_##var; \
