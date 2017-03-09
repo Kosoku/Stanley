@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/Kosoku/Stanley.svg?branch=master)](https://travis-ci.org/Kosoku/Stanley)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](http://img.shields.io/cocoapods/v/Stanley.svg)](http://cocoapods.org/?q=Stanley)
-[![codecov.io](https://codecov.io/github/Kosoku/Stanley/coverage.svg?branch=master)](https://codecov.io/github/Kosoku/Stanley?branch=master)
 [![Platform](http://img.shields.io/cocoapods/p/Stanley.svg)]()
 [![License](http://img.shields.io/cocoapods/l/Stanley.svg)](https://github.com/Kosoku/Stanley/blob/master/license.txt)
 
