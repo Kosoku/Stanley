@@ -39,7 +39,7 @@ Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` fra
   s.exclude_files = 'Stanley/Stanley-Info.h'
   s.ios.exclude_files = 'Stanley/macOS'
   s.osx.exclude_files = 'Stanley/iOS'
-  s.tvos.exclude_files = 'Stanley/tvOS'
+  s.tvos.exclude_files = 'Stanley/macOS'
   s.watchos.exclude_files = 'Stanley/macOS'
   
   # s.resource_bundles = {
