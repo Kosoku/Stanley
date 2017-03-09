@@ -20,6 +20,20 @@
 
 /**
  Macro that defines some code to be executed when the current scope exits. The code must be enclosed in braces and terminated with a semicolon, and will be executed regardless of how the scope is exited.
+ 
+ void *bytes = malloc(100);
+ 
+ @kstOnExit {
+    free(bytes);
+ };
+ 
+ // the free(bytes) will always be executed before the function/method returns
+ if (someCondition) {
+    return 0;
+ }
+ else {
+    return 1;
+ }
  */
 #define kstOnExit \
 rac_keywordify \
