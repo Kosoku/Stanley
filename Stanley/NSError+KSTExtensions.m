@@ -21,12 +21,18 @@ NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
 
 @implementation NSError (KSTExtensions)
 
-- (NSString *)KST_alertTitle {
-    return self.userInfo[KSTErrorAlertTitleKey] ?: NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_TITLE", nil, [NSBundle KST_frameworkBundle], @"Error", @"default error alert title");
++ (NSString *)KST_defaultAlertTitle; {
+    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_TITLE", nil, [NSBundle KST_frameworkBundle], @"Error", @"default error alert title");
+}
++ (NSString *)KST_defaultAlertMessage; {
+    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_MESSAGE", nil, [NSBundle KST_frameworkBundle], @"The operation could not be completed.", @"default error alert message");
 }
 
+- (NSString *)KST_alertTitle {
+    return self.userInfo[KSTErrorAlertTitleKey] ?: self.class.KST_defaultAlertTitle;;
+}
 - (NSString *)KST_alertMessage {
-    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_MESSAGE", nil, [NSBundle KST_frameworkBundle], @"The operation could not be completed.", @"default error alert message");
+    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
 }
 
 @end

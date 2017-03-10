@@ -29,17 +29,26 @@ FOUNDATION_EXPORT NSString *const KSTErrorAlertMessageKey;
 @interface NSError (KSTExtensions)
 
 /**
- Returns the value for the BBErrorAlertTitleKey key in the receiver's userInfo dictionary if non-nil, otherwise returns a default title.
+ Returns the default alert title.
+ */
+@property (class,readonly,nonatomic) NSString *KST_defaultAlertTitle;
+/**
+ Returns the default alert message.
+ */
+@property (class,readonly,nonatomic) NSString *KST_defaultAlertMessage;
+
+/**
+ Returns the value for the KSTErrorAlertTitleKey key in the receiver's userInfo dictionary if non-nil, otherwise returns KST_defaultAlertTitle.
  
  @return The alert title
  */
-- (NSString *)KST_alertTitle;
+@property (readonly,nonatomic) NSString *KST_alertTitle;
 /**
- Returns the value for the BBErrorAlertMessageKey key in the receiver's userInfo dictionary if non-nil, then the value for the NSLocalizedDescriptionKey key, then a default title.
+ Returns the value for the KSTErrorAlertMessageKey key in the receiver's userInfo dictionary if non-nil, then the value for the NSLocalizedDescriptionKey key, then KST_defaultAlertMessage.
  
  @return The alert message
  */
-- (NSString *)KST_alertMessage;
+@property (readonly,nonatomic) NSString *KST_alertMessage;
 
 @end
 

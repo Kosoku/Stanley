@@ -15,7 +15,7 @@
 
 #import "KSTFunctions.h"
 
-extern void KSTDispatchMainAsync(dispatch_block_t block) {
+void KSTDispatchMainAsync(dispatch_block_t block) {
     NSCParameterAssert(block);
     
     if ([NSThread isMainThread]) {
@@ -26,7 +26,7 @@ extern void KSTDispatchMainAsync(dispatch_block_t block) {
     }
 }
 
-extern void KSTDispatchMainSync(dispatch_block_t block) {
+void KSTDispatchMainSync(dispatch_block_t block) {
     NSCParameterAssert(block);
     
     if ([NSThread isMainThread]) {
