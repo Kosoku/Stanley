@@ -15,7 +15,26 @@
 
 #import "NSURL+KSTExtensions.h"
 
+@interface NSURL (KSTPrivateExtensions)
+- (id)_KST_resourceValueForKey:(NSString *)key;
+@end
+
 @implementation NSURL (KSTExtensions)
+
+- (NSDate *)KST_creationDate {
+    return [self _KST_resourceValueForKey:NSURLCreationDateKey];
+}
+- (NSDate *)KST_contentModificationDate {
+    return [self _KST_resourceValueForKey:NSURLContentModificationDateKey];
+}
+- (BOOL)KST_isDirectory {
+    NSNumber *retval = [self _KST_resourceValueForKey:NSURLIsDirectoryKey];
+    
+    return retval.boolValue;
+}
+- (NSString *)KST_typeIdentifier {
+    return [self _KST_resourceValueForKey:NSURLTypeIdentifierKey];
+}
 
 - (NSDictionary *)KST_queryDictionary; {
     if (self.query.length == 0) {
@@ -54,6 +73,18 @@
     }
     
     return [NSURL URLWithString:retval];
+}
+
+@end
+
+@implementation NSURL (KSTPrivateExtensions)
+
+- (id)_KST_resourceValueForKey:(NSString *)key; {
+    id retval = nil;
+    
+    [self getResourceValue:&retval forKey:key error:NULL];
+    
+    return retval;
 }
 
 @end

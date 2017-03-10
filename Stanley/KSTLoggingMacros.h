@@ -126,10 +126,10 @@ typedef NS_ENUM(NSInteger, KSTLogLevel) {
 #define KSTLogMaybe(lvl, flg, fmt, ...) \
 do {if (lvl & flg) {KSTLog(fmt, ##__VA_ARGS__);}} while(0)
 
-#define KSTLogError(fmt, ...) KSTLogMaybe(BB_LOG_LEVEL_DEF, KSTLogFlagsError, fmt, ##__VA_ARGS__)
-#define KSTLogWarning(fmt, ...) KSTLogMaybe(BB_LOG_LEVEL_DEF, KSTLogFlagsWarning, fmt, ##__VA_ARGS__)
-#define KSTLogInfo(fmt, ...) KSTLogMaybe(BB_LOG_LEVEL_DEF, KSTLogFlagsInfo, fmt, ##__VA_ARGS__)
-#define KSTLogDebug(fmt, ...) KSTLogMaybe(BB_LOG_LEVEL_DEF, KSTLogFlagsDebug, fmt, ##__VA_ARGS__)
-#define KSTLogVerbose(fmt, ...) KSTLogMaybe(BB_LOG_LEVEL_DEF, KSTLogFlagsVerbose, fmt, ##__VA_ARGS__)
+#define KSTLogError(fmt, ...) KSTLogMaybe(KST_LOGGING_LOG_LEVEL_DEF, KSTLogFlagsError, fmt, ##__VA_ARGS__)
+#define KSTLogWarning(fmt, ...) KSTLogMaybe(KST_LOGGING_LOG_LEVEL_DEF, KSTLogFlagsWarning, fmt, ##__VA_ARGS__)
+#define KSTLogInfo(fmt, ...) KSTLogMaybe(KST_LOGGING_LOG_LEVEL_DEF, KSTLogFlagsInfo, fmt, ##__VA_ARGS__)
+#define KSTLogDebug(fmt, ...) KSTLogMaybe(KST_LOGGING_LOG_LEVEL_DEF, KSTLogFlagsDebug, fmt, ##__VA_ARGS__)
+#define KSTLogVerbose(fmt, ...) KSTLogMaybe(KST_LOGGING_LOG_LEVEL_DEF, KSTLogFlagsVerbose, fmt, ##__VA_ARGS__)
 
 #endif

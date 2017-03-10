@@ -20,6 +20,31 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSURL (KSTExtensions)
 
 /**
+ Returns the value associated with the NSURLCreationDateKey key.
+ 
+ @return The associated creation date
+ */
+@property (readonly,nonatomic,nullable) NSDate *KST_creationDate;
+/**
+ Returns the value associated with the NSURLContentModificationDateKey key.
+ 
+ @return The associated content modification date
+ */
+@property (readonly,nonatomic,nullable) NSDate *KST_contentModificationDate;
+/**
+ Returns the value associated with the NSURLIsDirectoryKey key.
+ 
+ @return The associated isDirectory value
+ */
+@property (readonly,nonatomic) BOOL KST_isDirectory;
+/**
+ Returns the value associated with the NSURLTypeIdentifierKey key.
+ 
+ @return The associated type identifier
+ */
+@property (readonly,nonatomic,nullable) NSString *KST_typeIdentifier;
+
+/**
  Creates and returns a dictionary with query keys mapping to query values.
  
  @return The query dictionary
