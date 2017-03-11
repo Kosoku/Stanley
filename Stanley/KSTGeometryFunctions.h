@@ -55,7 +55,7 @@ FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, 
  */
 FOUNDATION_EXPORT NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_rect);
 /**
- Calls BBNSRectCenterInRect() and restores the resulting rectangle origin.y to its original value. This centers the rectangle horizontally.
+ Calls KSTNSRectCenterInRect() and restores the resulting rectangle origin.y to its original value. This centers the rectangle horizontally.
  
  @param rect_to_center The rectangle to center
  @param in_rect The bounding rectangle
@@ -63,7 +63,7 @@ FOUNDATION_EXPORT NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_
  */
 FOUNDATION_EXPORT NSRect KSTNSRectCenterInRectHorizontally(NSRect rect_to_center, NSRect in_rect);
 /**
- Calls BBNSRectCenterInRect() and restores the resulting rectangle origin.x to its original value. This centers the rectangle vertically.
+ Calls KSTNSRectCenterInRect() and restores the resulting rectangle origin.x to its original value. This centers the rectangle vertically.
  
  @param rect_to_center The rectangle to center
  @param in_rect The bounding rectangle

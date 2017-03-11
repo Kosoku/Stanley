@@ -112,7 +112,7 @@ typedef NS_ENUM(NSInteger, KSTLogLevel) {
 /**
  The variable name that should be used when defining the current log level.
  
- static NSInteger const kBBLogLevel = ...;
+ static NSInteger const kKSTLogLevel = ...;
  */
 #ifndef KST_LOGGING_LOG_LEVEL_DEF
 #define KST_LOGGING_LOG_LEVEL_DEF kKSTLogLevel
@@ -121,7 +121,7 @@ typedef NS_ENUM(NSInteger, KSTLogLevel) {
 /**
  Macro used to check against the current log level and execute the log statement.
  
- This will throw an error if kBBLogLevel is not defined somewhere within your project.
+ This will throw an error if kKSTLogLevel is not defined somewhere within your project.
  */
 #define KSTLogMaybe(lvl, flg, fmt, ...) \
 do {if (lvl & flg) {KSTLog(fmt, ##__VA_ARGS__);}} while(0)
