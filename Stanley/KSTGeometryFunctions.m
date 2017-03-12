@@ -38,7 +38,7 @@ CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect) {
     return new_rect;
 }
 
-#if (!TARGET_OS_IPHONE)
+#if (TARGET_OS_OSX)
 NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_rect) {
     return NSMakeRect(floor(NSMinX(in_rect) + (NSWidth(in_rect) * 0.5) - (NSWidth(rect_to_center) * 0.5)),
                       floor(NSMinY(in_rect) + (NSHeight(in_rect) * 0.5) - (NSHeight(rect_to_center) * 0.5)),

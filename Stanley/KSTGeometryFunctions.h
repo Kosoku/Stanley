@@ -45,7 +45,7 @@ FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectHorizontally(CGRect rect_to_center
  */
 FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect);
 
-#if (!TARGET_OS_IPHONE)
+#if (TARGET_OS_OSX)
 /**
  Creates and returns a `NSRect` by centering *rect_to_center* within *in_rect*.
  
