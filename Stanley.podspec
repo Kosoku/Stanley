@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Stanley'
-  s.version          = '0.2.0'
-  s.summary          = 'Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` framework.'
+  s.version          = '0.3.0'
+  s.summary          = 'Stanley is an iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -37,6 +37,7 @@ Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` fra
 
   s.source_files = 'Stanley/**/*.{h,m}'
   s.exclude_files = 'Stanley/Stanley-Info.h'
+  s.private_header_files = 'Stanley/Private/*.h'
   s.ios.exclude_files = 'Stanley/macOS'
   s.osx.exclude_files = 'Stanley/iOS'
   s.tvos.exclude_files = 'Stanley/macOS'
