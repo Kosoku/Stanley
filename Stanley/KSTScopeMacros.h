@@ -19,6 +19,19 @@
 #import "KSTScopePrivateMacros.h"
 
 /**
+ Given a real object receiver and key path, returns the string concatentation of all arguments except the first. If the keypath is invalid, it will be flagged at compile time.
+ 
+ NSString *string = ...;
+ NSString *keypath = @kstKeypath(string.lowercaseString); // @"lowercaseString"
+ 
+ keypath = @kstKeypath(NSObject, version); // @"version"
+ 
+ keypath = @kstKeypath(NSString.new, lowercaseString); // @"lowercaseString"
+ */
+#define kstKeypath(...) \
+kstmetamacro_if_eq(1, kstmetamacro_argcount(__VA_ARGS__))(kstkeypath1(__VA_ARGS__))(kstkeypath2(__VA_ARGS__))
+
+/**
  Macro that defines some code to be executed when the current scope exits. The code must be enclosed in braces and terminated with a semicolon, and will be executed regardless of how the scope is exited.
  
  void *bytes = malloc(100);
@@ -36,7 +49,6 @@
  }
  */
 #define kstOnExit \
-rac_keywordify \
 __strong kst_cleanupBlock_t kstmetamacro_concat(kst_exitBlock_, __LINE__) __attribute__((cleanup(kst_executeCleanupBlock), unused)) = ^
 
 /**
@@ -63,18 +75,5 @@ _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wshadow\"") \
 __strong typeof(var) var = kstweak_##var; \
 _Pragma("clang diagnostic pop")
-
-/**
- Given a real object receiver and key path, returns the string concatentation of all arguments except the first. If the keypath is invalid, it will be flagged at compile time.
- 
-     NSString *string = ...;
-     NSString *keypath = @kstKeypath(string.lowercaseString); // @"lowercaseString"
- 
-     keypath = @kstKeypath(NSObject, version); // @"version"
- 
-     keypath = @kstKeypath(NSString.new, lowercaseString); // @"lowercaseString"
- */
-#define kstKeypath(...) \
-kstmetamacro_if_eq(1, kstmetamacro_argcount(__VA_ARGS__))(kstkeypath1(__VA_ARGS__))(kstkeypath2(__VA_ARGS__))
 
 #endif
