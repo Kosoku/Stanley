@@ -68,13 +68,13 @@ _Pragma("clang diagnostic pop")
  Given a real object receiver and key path, returns the string concatentation of all arguments except the first. If the keypath is invalid, it will be flagged at compile time.
  
      NSString *string = ...;
-     NSString *keypath = @kstkeypath(string.lowercaseString); // @"lowercaseString"
+     NSString *keypath = @kstKeypath(string.lowercaseString); // @"lowercaseString"
  
-     keypath = @kstkeypath(NSObject, version); // @"version"
+     keypath = @kstKeypath(NSObject, version); // @"version"
  
-     keypath = @kstkeypath(NSString.new, lowercaseString); // @"lowercaseString"
+     keypath = @kstKeypath(NSString.new, lowercaseString); // @"lowercaseString"
  */
-#define kstkeypath(...) \
+#define kstKeypath(...) \
 kstmetamacro_if_eq(1, kstmetamacro_argcount(__VA_ARGS__))(kstkeypath1(__VA_ARGS__))(kstkeypath2(__VA_ARGS__))
 
 #endif
