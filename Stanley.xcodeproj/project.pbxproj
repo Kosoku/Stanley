@@ -457,8 +457,6 @@
 			children = (
 				078C6F761E6F5B3800F04786 /* NSBundle+KSTExtensions.h */,
 				078C6F771E6F5B3800F04786 /* NSBundle+KSTExtensions.m */,
-				078C702C1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h */,
-				078C702D1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m */,
 				078C6F801E6F5E1200F04786 /* NSFileManager+KSTExtensions.h */,
 				078C6F811E6F5E1200F04786 /* NSFileManager+KSTExtensions.m */,
 				078C6FD21E6F67BB00F04786 /* NSData+KSTExtensions.h */,
@@ -479,8 +477,18 @@
 				078C70491E6F7E2A00F04786 /* NSURL+KSTExtensions.m */,
 				078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */,
 				078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */,
+				07D1AC891E81152C00A963B1 /* Private */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		07D1AC891E81152C00A963B1 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				078C702C1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h */,
+				078C702D1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
