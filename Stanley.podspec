@@ -43,9 +43,9 @@ Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` fra
   s.tvos.exclude_files = 'Stanley/macOS'
   s.watchos.exclude_files = 'Stanley/macOS'
   
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'Stanley' => ['Stanley/**/*.lproj']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation'
