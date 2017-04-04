@@ -109,7 +109,7 @@
 		078C6FFA1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6FF81E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C6FFB1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6FF81E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C6FFC1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6FF81E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		078C6FFD1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6FF81E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h */; };
+		078C6FFD1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6FF81E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C6FFE1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6FF91E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m */; };
 		078C6FFF1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6FF91E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m */; };
 		078C70001E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6FF91E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m */; };
