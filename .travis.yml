@@ -6,6 +6,8 @@ os: osx
 osx_image: xcode8.2
 language: objective-c
 script: ./scripts/travis-ci.sh
+after_success:
+	- bash <(curl -s https://codecov.io/bash)
 notifications:
     email:
         on_success: never
