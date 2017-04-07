@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "078C6FB31E6F646E00F04786"
+               BuildableName = "StanleyTests-tvOS.xctest"
+               BlueprintName = "StanleyTests-tvOS"
+               ReferencedContainer = "container:Stanley.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "078C6FA61E6F63DA00F04786"
+            BuildableName = "Stanley.framework"
+            BlueprintName = "Stanley-tvOS"
+            ReferencedContainer = "container:Stanley.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

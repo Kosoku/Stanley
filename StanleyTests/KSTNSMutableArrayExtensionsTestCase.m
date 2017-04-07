@@ -27,11 +27,28 @@
     NSMutableArray *begin = [[NSMutableArray alloc] init];
     
     XCTAssertNoThrow([begin KST_removeFirstObject]);
+    
+    begin = [[NSMutableArray alloc] initWithObjects:@1, @2, nil];
+    
+    [begin KST_removeFirstObject];
+    
+    NSMutableArray *end = [[NSMutableArray alloc] initWithObjects:@2, nil];
+    
+    XCTAssertEqualObjects(begin, end);
+}
+- (void)setPush {
+    NSMutableArray *begin = [[NSMutableArray alloc] init];
+    
+    [begin KST_push:@1];
+    
+    NSMutableArray *end = [[NSMutableArray alloc] initWithObjects:@1, nil];
+    
+    XCTAssertEqualObjects(begin, end);
 }
 - (void)testPop {
     NSMutableArray *begin = [[NSMutableArray alloc] init];
     
-    XCTAssertNoThrow([begin KST_pop]);
+    XCTAssertNil([begin KST_pop]);
 }
 
 @end

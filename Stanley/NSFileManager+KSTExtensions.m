@@ -22,7 +22,7 @@
 - (NSURL *)KST_applicationSupportDirectoryURL; {
     NSURL *retval = [self URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask].firstObject;
     
-#if (!TARGET_OS_IPHONE)
+#if (TARGET_OS_OSX)
     retval = [retval URLByAppendingPathComponent:[[NSBundle mainBundle] KST_bundleExecutable] isDirectory:YES];
 #endif
     
@@ -39,7 +39,7 @@
 - (NSURL *)KST_cachesDirectoryURL; {
     NSURL *retval = [self URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask].firstObject;
     
-#if (!TARGET_OS_IPHONE)
+#if (TARGET_OS_OSX)
     retval = [retval URLByAppendingPathComponent:[[NSBundle mainBundle] KST_bundleIdentifier] isDirectory:YES];
     
     if (![retval checkResourceIsReachableAndReturnError:NULL]) {

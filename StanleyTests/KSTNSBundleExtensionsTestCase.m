@@ -26,5 +26,14 @@
 - (void)testBundleIdentifier {
     XCTAssertNotNil([[NSBundle bundleForClass:[self class]] KST_bundleIdentifier]);
 }
+- (void)testBundleExecutable {
+    XCTAssertNotNil([[NSBundle bundleForClass:[self class]] KST_bundleExecutable]);
+}
+- (void)testBundleShortVersionString {
+    XCTAssertNotNil([[NSBundle bundleForClass:[self class]] KST_bundleShortVersionString]);
+}
+- (void)testBundleVersion {
+    XCTAssertNotNil([[NSBundle bundleForClass:[self class]] KST_bundleVersion]);
+}
 
 @end

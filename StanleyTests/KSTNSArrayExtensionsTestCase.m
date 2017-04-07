@@ -44,4 +44,30 @@
     XCTAssertEqualObjects([begin KST_prepend:prepend], end);
 }
 
+- (void)testSet {
+    NSArray *begin = @[@1,@2,@3];
+    NSSet *end = [NSSet setWithArray:begin];
+    
+    XCTAssertEqualObjects([begin KST_set], end);
+}
+- (void)testMutableSet {
+    NSArray *begin = @[@1,@2,@3];
+    NSMutableSet *end = [NSMutableSet setWithArray:begin];
+    
+    XCTAssertEqualObjects([begin KST_mutableSet], end);
+}
+
+- (void)testOrderedSet {
+    NSArray *begin = @[@1,@2,@3];
+    NSOrderedSet *end = [NSOrderedSet orderedSetWithArray:begin];
+    
+    XCTAssertEqualObjects([begin KST_orderedSet], end);
+}
+- (void)testMutableOrderedSet {
+    NSArray *begin = @[@1,@2,@3];
+    NSMutableOrderedSet *end = [NSMutableOrderedSet orderedSetWithArray:begin];
+    
+    XCTAssertEqualObjects([begin KST_mutableOrderedSet], end);
+}
+
 @end
