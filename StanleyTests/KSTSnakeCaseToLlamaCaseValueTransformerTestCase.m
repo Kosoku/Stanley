@@ -23,9 +23,20 @@
 
 @implementation KSTSnakeCaseToLlamaCaseValueTransformerTestCase
 
+- (void)testTransformedValueClass {
+    XCTAssertEqualObjects([[[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] class] transformedValueClass], [NSString class]);
+}
+- (void)testAllowsReverseTransformation {
+    XCTAssertTrue([[[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] class] allowsReverseTransformation]);
+}
 - (void)testTransformedValue {
     NSString *start = @"first_middle_last";
     NSString *end = @"firstMiddleLast";
+    
+    XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
+    
+    start = @"first";
+    end = @"first";
     
     XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
     
@@ -33,6 +44,10 @@
     end = @"first";
     
     XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start], end);
+    
+    start = nil;
+    
+    XCTAssertNil([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:start]);
 }
 - (void)testReverseTransformedValue {
     NSString *start = @"firstMiddleLast";
@@ -44,6 +59,10 @@
     end = @"first";
     
     XCTAssertEqualObjects([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] reverseTransformedValue:start], end);
+    
+    start = nil;
+    
+    XCTAssertNil([[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] reverseTransformedValue:start]);
 }
 
 @end
