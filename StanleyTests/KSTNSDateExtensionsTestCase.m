@@ -1,8 +1,8 @@
 //
-//  NSError+KSTExtensions.m
+//  KSTNSDateExtensionsTestCase.m
 //  Stanley
 //
-//  Created by William Towe on 3/7/17.
+//  Created by William Towe on 4/6/17.
 //  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -13,26 +13,42 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "NSError+KSTExtensions.h"
-#import "NSBundle+KSTPrivateExtensions.h"
+#import <XCTest/XCTest.h>
 
-NSString *const KSTErrorAlertTitleKey = @"KSTErrorAlertTitleKey";
-NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
+#import <Stanley/NSDate+KSTExtensions.h>
 
-@implementation NSError (KSTExtensions)
+@interface KSTNSDateExtensionsTestCase : XCTestCase
 
-+ (NSString *)KST_defaultAlertTitle; {
-    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_TITLE", nil, [NSBundle KST_frameworkBundle], @"Error", @"default error alert title");
+@end
+
+@implementation KSTNSDateExtensionsTestCase
+
+- (void)testDay {
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    
+    [comps setDay:17];
+    
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:comps];
+    
+    XCTAssertEqual(date.KST_day, 17);
 }
-+ (NSString *)KST_defaultAlertMessage; {
-    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_MESSAGE", nil, [NSBundle KST_frameworkBundle], @"The operation could not be completed.", @"default error alert message");
+- (void)testMonth {
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    
+    [comps setMonth:10];
+    
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:comps];
+    
+    XCTAssertEqual(date.KST_month, 10);
 }
-
-- (NSString *)KST_alertTitle {
-    return self.userInfo[KSTErrorAlertTitleKey] ?: self.class.KST_defaultAlertTitle;
-}
-- (NSString *)KST_alertMessage {
-    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
+- (void)testYear {
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    
+    [comps setYear:1984];
+    
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:comps];
+    
+    XCTAssertEqual(date.KST_year, 1984);
 }
 
 @end

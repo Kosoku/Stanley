@@ -1,8 +1,8 @@
 //
-//  NSError+KSTExtensions.m
+//  KSTNSErrorExtensionsTestCase.m
 //  Stanley
 //
-//  Created by William Towe on 3/7/17.
+//  Created by William Towe on 4/6/17.
 //  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -13,26 +13,31 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "NSError+KSTExtensions.h"
-#import "NSBundle+KSTPrivateExtensions.h"
+#import <XCTest/XCTest.h>
 
-NSString *const KSTErrorAlertTitleKey = @"KSTErrorAlertTitleKey";
-NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
+#import <Stanley/NSError+KSTExtensions.h>
 
-@implementation NSError (KSTExtensions)
+@interface KSTNSErrorExtensionsTestCase : XCTestCase
 
-+ (NSString *)KST_defaultAlertTitle; {
-    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_TITLE", nil, [NSBundle KST_frameworkBundle], @"Error", @"default error alert title");
+@end
+
+@implementation KSTNSErrorExtensionsTestCase
+
+- (void)testDefaultAlertTitle {
+    XCTAssertNotNil(NSError.KST_defaultAlertTitle);
 }
-+ (NSString *)KST_defaultAlertMessage; {
-    return NSLocalizedStringWithDefaultValue(@"ERROR_ALERT_DEFAULT_MESSAGE", nil, [NSBundle KST_frameworkBundle], @"The operation could not be completed.", @"default error alert message");
+- (void)testDefaultAlertMessage {
+    XCTAssertNotNil(NSError.KST_defaultAlertMessage);
 }
-
-- (NSString *)KST_alertTitle {
-    return self.userInfo[KSTErrorAlertTitleKey] ?: self.class.KST_defaultAlertTitle;
+- (void)testAlertTitle {
+    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{NSLocalizedDescriptionKey: @"message"}];
+    
+    XCTAssertEqualObjects(error.KST_alertTitle, NSError.KST_defaultAlertTitle);
 }
-- (NSString *)KST_alertMessage {
-    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
+- (void)testAlertMessage {
+    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{NSLocalizedDescriptionKey: @"message"}];
+    
+    XCTAssertEqualObjects(error.KST_alertMessage, @"message");
 }
 
 @end

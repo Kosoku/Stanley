@@ -25,6 +25,9 @@
 
 - (void)testNilReturnValue {
     XCTAssertNil([@"" KST_MD5String]);
+    XCTAssertNil([@"" KST_SHA1String]);
+    XCTAssertNil([@"" KST_SHA256String]);
+    XCTAssertNil([@"" KST_SHA512String]);
 }
 
 @end

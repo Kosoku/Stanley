@@ -36,7 +36,7 @@
     
     XCTAssertEqualObjects(begin, end);
 }
-- (void)setPush {
+- (void)testPush {
     NSMutableArray *begin = [[NSMutableArray alloc] init];
     
     [begin KST_push:@1];

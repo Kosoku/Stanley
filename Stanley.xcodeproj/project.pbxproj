@@ -182,6 +182,12 @@
 		078C70821E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C70831E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C70841E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07D166D31E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
+		07D166D41E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
+		07D166D51E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
+		07D166D71E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
+		07D166D81E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
+		07D166D91E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +277,8 @@
 		078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70801E6F93C900F04786 /* KSTValueMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTValueMacros.h; sourceTree = "<group>"; };
+		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
+		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +456,8 @@
 				078C701A1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m */,
 				078C701E1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m */,
 				078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */,
+				07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */,
+				07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -946,12 +956,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D166D31E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */,
 				078C70031E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70531E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C701F1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
 				078C701B1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEB1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
+				07D166D71E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDD1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
 				078C6F7D1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
@@ -983,12 +995,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D166D41E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */,
 				078C70041E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70541E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C70201E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
 				078C701C1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEC1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				078C6F7F1E6F5D0B00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
+				07D166D81E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDE1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
 				078C6F7E1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
@@ -1042,12 +1056,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D166D51E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */,
 				078C70051E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70551E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C70211E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
 				078C701D1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FED1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				078C6FC01E6F652400F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
+				07D166D91E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDF1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
 				078C6FC11E6F652800F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
