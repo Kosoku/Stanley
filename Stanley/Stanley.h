@@ -45,6 +45,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/NSDate+KSTExtensions.h>
 
 #import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
+#import <Stanley/KSTFileWatcher.h>
 #if (TARGET_OS_OSX)
 #import <Stanley/KSTDirectoryWatcher.h>
 #endif

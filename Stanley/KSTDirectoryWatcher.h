@@ -18,13 +18,54 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^KSTDirectoryWatcherBlock)(FSEventStreamEventId eventID, FSEventStreamEventFlags flags, NSURL *URL);
+typedef NS_OPTIONS(UInt32, KSTDirectoryWatcherCreateFlags) {
+    KSTDirectoryWatcherCreateFlagsNone = kFSEventStreamCreateFlagNone,
+    KSTDirectoryWatcherCreateFlagsNoDefer = kFSEventStreamCreateFlagNoDefer,
+    KSTDirectoryWatcherCreateFlagsIgnoreSelf = kFSEventStreamCreateFlagIgnoreSelf,
+    KSTDirectoryWatcherCreateFlagsFlagFileEvents = kFSEventStreamCreateFlagFileEvents,
+    KSTDirectoryWatcherCreateFlagsMarkSelf = kFSEventStreamCreateFlagMarkSelf
+};
+
+typedef NS_OPTIONS(UInt32, KSTDirectoryWatcherEventFlags) {
+    KSTDirectoryWatcherEventFlagsNone = kFSEventStreamEventFlagNone,
+    KSTDirectoryWatcherEventFlagsMustScanSubDirs = kFSEventStreamEventFlagMustScanSubDirs,
+    KSTDirectoryWatcherEventFlagsUserDropped = kFSEventStreamEventFlagUserDropped,
+    KSTDirectoryWatcherEventFlagsKernelDropped = kFSEventStreamEventFlagKernelDropped,
+    KSTDirectoryWatcherEventFlagsEventIDsWrapped = kFSEventStreamEventFlagEventIdsWrapped,
+    KSTDirectoryWatcherEventFlagsHistoryDone = kFSEventStreamEventFlagHistoryDone,
+    KSTDirectoryWatcherEventFlagsRootChanged = kFSEventStreamEventFlagRootChanged,
+    KSTDirectoryWatcherEventFlagsMount = kFSEventStreamEventFlagMount,
+    KSTDirectoryWatcherEventFlagsUnmount = kFSEventStreamEventFlagUnmount,
+    KSTDirectoryWatcherEventFlagsItemCreated = kFSEventStreamEventFlagItemCreated,
+    KSTDirectoryWatcherEventFlagsItemRemoved = kFSEventStreamEventFlagItemRemoved,
+    KSTDirectoryWatcherEventFlagsItemInodeMetaMod = kFSEventStreamEventFlagItemInodeMetaMod,
+    KSTDirectoryWatcherEventFlagsItemRenamed = kFSEventStreamEventFlagItemRenamed,
+    KSTDirectoryWatcherEventFlagsItemModified = kFSEventStreamEventFlagItemModified,
+    KSTDirectoryWatcherEventFlagsFinderInfoMod = kFSEventStreamEventFlagItemFinderInfoMod,
+    KSTDirectoryWatcherEventFlagsItemChangeOwner = kFSEventStreamEventFlagItemChangeOwner,
+    KSTDirectoryWatcherEventFlagsItemXattrMod = kFSEventStreamEventFlagItemXattrMod,
+    KSTDirectoryWatcherEventFlagsItemIsFile = kFSEventStreamEventFlagItemIsFile,
+    KSTDirectoryWatcherEventFlagsItemIsDir = kFSEventStreamEventFlagItemIsDir,
+    KSTDirectoryWatcherEventFlagsItemIsSymlink = kFSEventStreamEventFlagItemIsSymlink,
+    KSTDirectoryWatcherEventFlagsOwnEvent = kFSEventStreamEventFlagOwnEvent,
+    KSTDirectoryWatcherEventFlagsItemIsHardLink = kFSEventStreamEventFlagItemIsHardlink,
+    KSTDirectoryWatcherEventFlagsItemIsLastHardLink = kFSEventStreamEventFlagItemIsLastHardlink
+};
+
+typedef FSEventStreamEventId KSTDirectoryWatcherEventID;
+
+@class KSTDirectoryWatcher;
+
+typedef void(^KSTDirectoryWatcherBlock)(KSTDirectoryWatcher *directoryWatcher, KSTDirectoryWatcherEventID eventID, KSTDirectoryWatcherEventFlags flags, NSURL *URL);
 
 @interface KSTDirectoryWatcher : NSObject
 
 @property (readonly,copy,nonatomic) NSArray<NSURL *> *URLs;
+@property (readonly,assign,nonatomic) KSTDirectoryWatcherCreateFlags flags;
 
 - (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs block:(KSTDirectoryWatcherBlock)block;
+- (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs flags:(KSTDirectoryWatcherCreateFlags)flags block:(KSTDirectoryWatcherBlock)block NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
 
 - (void)startWatchingURLs;
 - (void)stopWatchingURLs;

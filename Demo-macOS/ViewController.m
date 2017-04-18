@@ -19,6 +19,7 @@
 
 @interface ViewController ()
 @property (strong,nonatomic) KSTDirectoryWatcher *directoryWatcher;
+@property (strong,nonatomic) KSTFileWatcher *fileWatcher;
 @end
 
 @implementation ViewController
@@ -29,7 +30,7 @@
     
 }
 
-- (IBAction)_buttonAction:(id)sender {
+- (IBAction)_watchDirectoryAction:(id)sender {
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
     
     [openPanel setCanChooseDirectories:YES];
@@ -37,11 +38,23 @@
     [openPanel setPrompt:@"Watch"];
     
     [openPanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
-        [self setDirectoryWatcher:[[KSTDirectoryWatcher alloc] initWithURLs:@[openPanel.URLs.firstObject] block:^(FSEventStreamEventId eventID, FSEventStreamEventFlags flags, NSURL * _Nonnull URL) {
+        [self setDirectoryWatcher:[[KSTDirectoryWatcher alloc] initWithURLs:@[openPanel.URLs.firstObject] block:^(KSTDirectoryWatcher * _Nonnull fileWatcher, FSEventStreamEventId eventID, FSEventStreamEventFlags flags, NSURL * _Nonnull URL) {
             NSLog(@"%@ %@ %@",@(eventID),@(flags),URL);
         }]];
         
         [self.directoryWatcher startWatchingURLs];
+    }];
+}
+- (IBAction)_watchFilesAction:(id)sender {
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    
+    [openPanel setAllowsMultipleSelection:YES];
+    [openPanel setPrompt:@"Watch"];
+    
+    [openPanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
+        [self setFileWatcher:[[KSTFileWatcher alloc] initWithURLs:openPanel.URLs block:^(KSTFileWatcher * _Nonnull fileWatcher, NSURL * _Nonnull URL, KSTFileWatcherFlags flags) {
+            NSLog(@"%@ %@",URL,@(flags));
+        }]];
     }];
 }
 

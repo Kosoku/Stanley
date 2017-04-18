@@ -693,12 +693,24 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="_buttonAction:" target="XfG-lQ-9wD" id="ejQ-ot-x7I"/>
+                                    <action selector="_watchDirectoryAction:" target="XfG-lQ-9wD" id="46Y-aZ-JGf"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Y7-HC-NBX">
+                                <rect key="frame" x="14" y="189" width="121" height="32"/>
+                                <buttonCell key="cell" type="push" title="Watch Files…" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WA9-C7-UsT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="_watchFilesAction:" target="XfG-lQ-9wD" id="kV3-gY-kge"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aM6-2c-yLM" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="APk-Q9-Jc2"/>
+                            <constraint firstItem="9Y7-HC-NBX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="FKM-E3-5mh"/>
+                            <constraint firstItem="9Y7-HC-NBX" firstAttribute="top" secondItem="aM6-2c-yLM" secondAttribute="bottom" constant="12" id="aKB-IT-jzN"/>
                             <constraint firstItem="aM6-2c-yLM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="nna-hp-pt9"/>
                         </constraints>
                     </view>

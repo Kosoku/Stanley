@@ -17,11 +17,12 @@
 
 @interface KSTDirectoryWatcher ()
 @property (readwrite,copy,nonatomic) NSArray<NSURL *> *URLs;
+@property (readwrite,assign,nonatomic) KSTDirectoryWatcherCreateFlags flags;
 @property (copy,nonatomic) KSTDirectoryWatcherBlock block;
 @property (assign,nonatomic) FSEventStreamRef eventStreamRef;
 @property (strong,nonatomic) dispatch_queue_t eventQueue;
 
-- (void)_createEventStreamRef;
+- (void)_createEventStreamRefWithFlags:(KSTDirectoryWatcherCreateFlags)flags;
 - (void)_destroyEventStreamRef;
 - (void)_startEventStreamRef;
 - (void)_stopEventStreamRef;
@@ -36,7 +37,7 @@ static void kKSTFSEventStreamCallback(ConstFSEventStreamRef streamRef, void * __
         FSEventStreamEventFlags flags = eventFlags[i];
         NSURL *URL = [NSURL fileURLWithPath:paths[i]];
         
-        watcher.block(eventID, flags, URL);
+        watcher.block(watcher, eventID, flags, URL);
     }
 }
 
@@ -47,6 +48,9 @@ static void kKSTFSEventStreamCallback(ConstFSEventStreamRef streamRef, void * __
 }
 
 - (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs block:(KSTDirectoryWatcherBlock)block; {
+    return [self initWithURLs:URLs flags:KSTDirectoryWatcherCreateFlagsNone block:block];
+}
+- (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs flags:(KSTDirectoryWatcherCreateFlags)flags block:(KSTDirectoryWatcherBlock)block; {
     if (!(self = [super init]))
         return nil;
     
@@ -54,8 +58,9 @@ static void kKSTFSEventStreamCallback(ConstFSEventStreamRef streamRef, void * __
     
     _URLs = [URLs copy];
     _block = [block copy];
+    _flags = flags|kFSEventStreamCreateFlagUseCFTypes|kFSEventStreamCreateFlagWatchRoot;
     
-    [self _createEventStreamRef];
+    [self _createEventStreamRefWithFlags:_flags];
     
     _eventQueue = dispatch_queue_create([NSString stringWithFormat:@"%@.%p.queue",NSStringFromClass(self.class),self].UTF8String, DISPATCH_QUEUE_SERIAL);
     
@@ -69,7 +74,7 @@ static void kKSTFSEventStreamCallback(ConstFSEventStreamRef streamRef, void * __
     [self _stopEventStreamRef];
 }
 
-- (void)_createEventStreamRef {
+- (void)_createEventStreamRefWithFlags:(KSTDirectoryWatcherCreateFlags)flags {
     [self _destroyEventStreamRef];
     
     FSEventStreamContext context = {
@@ -86,7 +91,7 @@ static void kKSTFSEventStreamCallback(ConstFSEventStreamRef streamRef, void * __
         [paths addObject:URL.path];
     }
     
-    _eventStreamRef = FSEventStreamCreate(kCFAllocatorDefault, &kKSTFSEventStreamCallback, &context, (__bridge CFArrayRef)paths, kFSEventStreamEventIdSinceNow, 0.2, kFSEventStreamCreateFlagUseCFTypes|kFSEventStreamCreateFlagWatchRoot);
+    _eventStreamRef = FSEventStreamCreate(kCFAllocatorDefault, &kKSTFSEventStreamCallback, &context, (__bridge CFArrayRef)paths, kFSEventStreamEventIdSinceNow, 0.2, flags);
 }
 - (void)_destroyEventStreamRef {
     if (_eventStreamRef == NULL) {

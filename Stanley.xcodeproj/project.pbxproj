@@ -197,6 +197,14 @@
 		07E9919E1EA6717E002377E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E9919C1EA6717E002377E6 /* Main.storyboard */; };
 		07E991A31EA67189002377E6 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; };
 		07E991A41EA67189002377E6 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07E991AA1EA680A1002377E6 /* KSTFileWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E991A81EA680A1002377E6 /* KSTFileWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E991AB1EA680A1002377E6 /* KSTFileWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E991A81EA680A1002377E6 /* KSTFileWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E991AC1EA680A1002377E6 /* KSTFileWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E991A81EA680A1002377E6 /* KSTFileWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E991AD1EA680A1002377E6 /* KSTFileWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E991A81EA680A1002377E6 /* KSTFileWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E991AE1EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
+		07E991AF1EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
+		07E991B01EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
+		07E991B11EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +328,8 @@
 		07E9919A1EA6717E002377E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E9919D1EA6717E002377E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07E9919F1EA6717E002377E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07E991A81EA680A1002377E6 /* KSTFileWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTFileWatcher.h; sourceTree = "<group>"; };
+		07E991A91EA680A1002377E6 /* KSTFileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFileWatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +494,8 @@
 				077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */,
 				07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */,
 				07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */,
+				07E991A81EA680A1002377E6 /* KSTFileWatcher.h */,
+				07E991A91EA680A1002377E6 /* KSTFileWatcher.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -598,6 +610,7 @@
 				077B76661E6F3FD1005FC783 /* KSTScopePrivateMacros.h in Headers */,
 				077B76491E6F314E005FC783 /* Stanley.h in Headers */,
 				078C702E1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h in Headers */,
+				07E991AA1EA680A1002377E6 /* KSTFileWatcher.h in Headers */,
 				078C70121E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD41E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				077B766B1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
@@ -632,6 +645,7 @@
 				077B76651E6F3FCB005FC783 /* KSTScopeMacros.h in Headers */,
 				078C70591E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F791E6F5B3800F04786 /* NSBundle+KSTExtensions.h in Headers */,
+				07E991AB1EA680A1002377E6 /* KSTFileWatcher.h in Headers */,
 				078C704B1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F741E6F5A9E00F04786 /* Stanley.h in Headers */,
 			);
@@ -655,6 +669,7 @@
 				078C6F981E6F636900F04786 /* KSTGeometryFunctions.h in Headers */,
 				078C6F991E6F636900F04786 /* KSTScopeMacros.h in Headers */,
 				078C70311E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h in Headers */,
+				07E991AD1EA680A1002377E6 /* KSTFileWatcher.h in Headers */,
 				078C70151E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD71E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				078C6FC31E6F65F600F04786 /* Stanley.h in Headers */,
@@ -683,6 +698,7 @@
 				078C6FC71E6F66DD00F04786 /* KSTFunctions.h in Headers */,
 				078C6FC81E6F66DD00F04786 /* KSTGeometryFunctions.h in Headers */,
 				078C70301E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h in Headers */,
+				07E991AC1EA680A1002377E6 /* KSTFileWatcher.h in Headers */,
 				078C70141E6F716000F04786 /* NSMutableArray+KSTExtensions.h in Headers */,
 				078C6FD61E6F67BB00F04786 /* NSData+KSTExtensions.h in Headers */,
 				078C6FC91E6F66DD00F04786 /* KSTScopeMacros.h in Headers */,
@@ -1056,6 +1072,7 @@
 				078C6FF41E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				077B766D1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 				078C6F7A1E6F5B3800F04786 /* NSBundle+KSTExtensions.m in Sources */,
+				07E991AE1EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C6FFE1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C704E1E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6F841E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */,
@@ -1086,6 +1103,7 @@
 			files = (
 				078C6F6A1E6F4C2500F04786 /* KSTFunctions.m in Sources */,
 				078C705D1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
+				07E991AF1EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C700D1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70291E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FD91E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
@@ -1135,6 +1153,7 @@
 				078C6FF71E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				078C6F9F1E6F637500F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				078C6FA11E6F637500F04786 /* KSTGeometryFunctions.m in Sources */,
+				07E991B11EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C70011E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C70511E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6F9E1E6F637500F04786 /* NSFileManager+KSTExtensions.m in Sources */,
@@ -1157,6 +1176,7 @@
 				078C6FF61E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				078C6FCF1E6F66E800F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				078C6FD11E6F66E800F04786 /* KSTGeometryFunctions.m in Sources */,
+				07E991B01EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C70001E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C70501E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6FCE1E6F66E800F04786 /* NSFileManager+KSTExtensions.m in Sources */,
