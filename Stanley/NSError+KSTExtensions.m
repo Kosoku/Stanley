@@ -29,10 +29,18 @@ NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
 }
 
 - (NSString *)KST_alertTitle {
+#if (TARGET_OS_IPHONE)
     return self.userInfo[KSTErrorAlertTitleKey] ?: self.class.KST_defaultAlertTitle;
+#else
+    return self.userInfo[KSTErrorAlertTitleKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertTitle;
+#endif
 }
 - (NSString *)KST_alertMessage {
+#if (TARGET_OS_IPHONE)
     return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
+#else
+    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedRecoverySuggestionErrorKey] ?: self.class.KST_defaultAlertMessage;
+#endif
 }
 
 @end
