@@ -18,7 +18,7 @@
 @implementation NSBundle (KSTPrivateExtensions)
 
 + (NSBundle *)KST_frameworkBundle; {
-    return [self bundleWithIdentifier:@"com.kosoku.stanley"];
+    return [self bundleWithIdentifier:@"com.kosoku.stanley"] ?: [self bundleWithURL:[[[NSBundle mainBundle].privateFrameworksURL URLByAppendingPathComponent:@"Stanley.framework" isDirectory:YES] URLByAppendingPathComponent:@"Stanley.bundle" isDirectory:YES]] ?: [self bundleWithURL:[[NSBundle mainBundle] URLForResource:@"Stanley" withExtension:@"bundle"]];
 }
 
 @end
