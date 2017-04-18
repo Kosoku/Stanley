@@ -188,6 +188,15 @@
 		07D166D71E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
 		07D166D81E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
 		07D166D91E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */; };
+		07E991841EA670EE002377E6 /* KSTDirectoryWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E991881EA670EE002377E6 /* KSTDirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */; };
+		07E991931EA6717E002377E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991921EA6717E002377E6 /* AppDelegate.m */; };
+		07E991961EA6717E002377E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991951EA6717E002377E6 /* main.m */; };
+		07E991991EA6717E002377E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991981EA6717E002377E6 /* ViewController.m */; };
+		07E9919B1EA6717E002377E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E9919A1EA6717E002377E6 /* Assets.xcassets */; };
+		07E9919E1EA6717E002377E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E9919C1EA6717E002377E6 /* Main.storyboard */; };
+		07E991A31EA67189002377E6 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; };
+		07E991A41EA67189002377E6 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,7 +221,28 @@
 			remoteGlobalIDString = 078C6FA61E6F63DA00F04786;
 			remoteInfo = "Stanley-tvOS";
 		};
+		07E991A51EA67189002377E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 077B762D1E6F2D73005FC783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 077B76541E6F3301005FC783;
+			remoteInfo = "Stanley-macOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07E991A71EA67189002377E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07E991A41EA67189002377E6 /* Stanley.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +309,17 @@
 		078C70801E6F93C900F04786 /* KSTValueMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTValueMacros.h; sourceTree = "<group>"; };
 		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
 		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
+		07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTDirectoryWatcher.h; sourceTree = "<group>"; };
+		07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTDirectoryWatcher.m; sourceTree = "<group>"; };
+		07E9918F1EA6717E002377E6 /* Demo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E991911EA6717E002377E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07E991921EA6717E002377E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07E991951EA6717E002377E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07E991971EA6717E002377E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07E991981EA6717E002377E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07E9919A1EA6717E002377E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07E9919D1EA6717E002377E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07E9919F1EA6717E002377E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +375,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E9918C1EA6717E002377E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E991A31EA67189002377E6 /* Stanley.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -342,6 +391,7 @@
 			children = (
 				077B763A1E6F314E005FC783 /* Stanley */,
 				077B76451E6F314E005FC783 /* StanleyTests */,
+				07E991901EA6717E002377E6 /* Demo-macOS */,
 				077B76391E6F314E005FC783 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -356,6 +406,7 @@
 				078C6F8B1E6F621000F04786 /* Stanley.framework */,
 				078C6FA71E6F63DA00F04786 /* Stanley.framework */,
 				078C6FB41E6F646E00F04786 /* StanleyTests-tvOS.xctest */,
+				07E9918F1EA6717E002377E6 /* Demo-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,6 +482,8 @@
 			children = (
 				077B76701E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h */,
 				077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */,
+				07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */,
+				07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -501,6 +554,29 @@
 			path = Private;
 			sourceTree = "<group>";
 		};
+		07E991901EA6717E002377E6 /* Demo-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				07E991911EA6717E002377E6 /* AppDelegate.h */,
+				07E991921EA6717E002377E6 /* AppDelegate.m */,
+				07E991971EA6717E002377E6 /* ViewController.h */,
+				07E991981EA6717E002377E6 /* ViewController.m */,
+				07E9919A1EA6717E002377E6 /* Assets.xcassets */,
+				07E9919C1EA6717E002377E6 /* Main.storyboard */,
+				07E9919F1EA6717E002377E6 /* Info.plist */,
+				07E991941EA6717E002377E6 /* Supporting Files */,
+			);
+			path = "Demo-macOS";
+			sourceTree = "<group>";
+		};
+		07E991941EA6717E002377E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E991951EA6717E002377E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -536,6 +612,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E991841EA670EE002377E6 /* KSTDirectoryWatcher.h in Headers */,
 				078C6F731E6F599400F04786 /* KSTEnvironmentMacros.h in Headers */,
 				077B766C1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
 				078C70821E6F93C900F04786 /* KSTValueMacros.h in Headers */,
@@ -749,6 +826,25 @@
 			productReference = 078C6FB41E6F646E00F04786 /* StanleyTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		07E9918E1EA6717E002377E6 /* Demo-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E991A01EA6717E002377E6 /* Build configuration list for PBXNativeTarget "Demo-macOS" */;
+			buildPhases = (
+				07E9918B1EA6717E002377E6 /* Sources */,
+				07E9918C1EA6717E002377E6 /* Frameworks */,
+				07E9918D1EA6717E002377E6 /* Resources */,
+				07E991A71EA67189002377E6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E991A61EA67189002377E6 /* PBXTargetDependency */,
+			);
+			name = "Demo-macOS";
+			productName = "Demo-macOS";
+			productReference = 07E9918F1EA6717E002377E6 /* Demo-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -787,6 +883,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07E9918E1EA6717E002377E6 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 077B76301E6F2D73005FC783 /* Build configuration list for PBXProject "Stanley" */;
@@ -797,6 +897,7 @@
 				en,
 				es,
 				ja,
+				Base,
 			);
 			mainGroup = 077B762C1E6F2D73005FC783;
 			productRefGroup = 077B76391E6F314E005FC783 /* Products */;
@@ -810,6 +911,7 @@
 				077B76401E6F314E005FC783 /* StanleyTests-iOS */,
 				077B767B1E6F4704005FC783 /* StanleyTests-macOS */,
 				078C6FB31E6F646E00F04786 /* StanleyTests-tvOS */,
+				07E9918E1EA6717E002377E6 /* Demo-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -865,6 +967,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E9918D1EA6717E002377E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E9919B1EA6717E002377E6 /* Assets.xcassets in Resources */,
+				07E9919E1EA6717E002377E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,6 +1089,7 @@
 				078C700D1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70291E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FD91E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
+				07E991881EA670EE002377E6 /* KSTDirectoryWatcher.m in Sources */,
 				078C70331E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m in Sources */,
 				077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				078C6FE71E6F696500F04786 /* NSString+KSTExtensions.m in Sources */,
@@ -1069,6 +1181,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E9918B1EA6717E002377E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E991991EA6717E002377E6 /* ViewController.m in Sources */,
+				07E991961EA6717E002377E6 /* main.m in Sources */,
+				07E991931EA6717E002377E6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1087,6 +1209,11 @@
 			target = 078C6FA61E6F63DA00F04786 /* Stanley-tvOS */;
 			targetProxy = 078C6FBA1E6F646E00F04786 /* PBXContainerItemProxy */;
 		};
+		07E991A61EA67189002377E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 077B76541E6F3301005FC783 /* Stanley-macOS */;
+			targetProxy = 07E991A51EA67189002377E6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1098,6 +1225,14 @@
 				078C70471E6F7D4100F04786 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		07E9919C1EA6717E002377E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07E9919D1EA6717E002377E6 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1881,6 +2016,107 @@
 			};
 			name = Release;
 		};
+		07E991A11EA6717E002377E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.Demo-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07E991A21EA6717E002377E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.Demo-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1955,6 +2191,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		07E991A01EA6717E002377E6 /* Build configuration list for PBXNativeTarget "Demo-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E991A11EA6717E002377E6 /* Debug */,
+				07E991A21EA6717E002377E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
