@@ -16,8 +16,8 @@
 #import "NSError+KSTExtensions.h"
 #import "NSBundle+KSTPrivateExtensions.h"
 
-NSString *const KSTErrorAlertTitleKey = @"KSTErrorAlertTitleKey";
-NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
+KSTErrorAlertKey const KSTErrorAlertKeyTitle = @"KSTErrorAlertKeyTitle";
+KSTErrorAlertKey const KSTErrorAlertKeyMessage = @"KSTErrorAlertKeyMessage";
 
 @implementation NSError (KSTExtensions)
 
@@ -30,16 +30,16 @@ NSString *const KSTErrorAlertMessageKey = @"KSTErrorAlertMessageKey";
 
 - (NSString *)KST_alertTitle {
 #if (TARGET_OS_IPHONE)
-    return self.userInfo[KSTErrorAlertTitleKey] ?: self.class.KST_defaultAlertTitle;
+    return self.userInfo[KSTErrorAlertKeyTitle] ?: self.class.KST_defaultAlertTitle;
 #else
-    return self.userInfo[KSTErrorAlertTitleKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertTitle;
+    return self.userInfo[KSTErrorAlertKeyTitle] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertTitle;
 #endif
 }
 - (NSString *)KST_alertMessage {
 #if (TARGET_OS_IPHONE)
-    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
+    return self.userInfo[KSTErrorAlertKeyMessage] ?: self.userInfo[NSLocalizedDescriptionKey] ?: self.class.KST_defaultAlertMessage;
 #else
-    return self.userInfo[KSTErrorAlertMessageKey] ?: self.userInfo[NSLocalizedRecoverySuggestionErrorKey] ?: self.class.KST_defaultAlertMessage;
+    return self.userInfo[KSTErrorAlertKeyMessage] ?: self.userInfo[NSLocalizedRecoverySuggestionErrorKey] ?: self.class.KST_defaultAlertMessage;
 #endif
 }
 

@@ -18,13 +18,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ Typedef for additional keys to be used when constructing the userInfo dictionary of an NSError.
+ */
+typedef NSString* KSTErrorAlertKey NS_STRING_ENUM;
+
+/**
  The key used to identify the alert title.
  */
-FOUNDATION_EXPORT NSString *const KSTErrorAlertTitleKey;
+FOUNDATION_EXPORT KSTErrorAlertKey const KSTErrorAlertKeyTitle;
 /**
  The key used to identify the alert message.
  */
-FOUNDATION_EXPORT NSString *const KSTErrorAlertMessageKey;
+FOUNDATION_EXPORT KSTErrorAlertKey const KSTErrorAlertKeyMessage;
 
 @interface NSError (KSTExtensions)
 
