@@ -36,3 +36,18 @@ void KSTDispatchMainSync(dispatch_block_t block) {
         dispatch_sync(dispatch_get_main_queue(), block);
     }
 }
+
+void KSTDispatchMainAfter(NSTimeInterval delay, dispatch_block_t block) {
+    NSCParameterAssert(block);
+    
+    KSTDispatchAfter(delay, dispatch_get_main_queue(), block);
+}
+void KSTDispatchAfter(NSTimeInterval delay, dispatch_queue_t queue, dispatch_block_t block) {
+    NSCParameterAssert(block);
+    
+    if (queue == NULL) {
+        queue = dispatch_get_main_queue();
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), queue, block);
+}
