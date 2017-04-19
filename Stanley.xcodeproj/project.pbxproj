@@ -317,8 +317,8 @@
 		078C70801E6F93C900F04786 /* KSTValueMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTValueMacros.h; sourceTree = "<group>"; };
 		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
 		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
-		07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTDirectoryWatcher.h; sourceTree = "<group>"; };
-		07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTDirectoryWatcher.m; sourceTree = "<group>"; };
+		07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSTDirectoryWatcher.h; path = macOS/KSTDirectoryWatcher.h; sourceTree = "<group>"; };
+		07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSTDirectoryWatcher.m; path = macOS/KSTDirectoryWatcher.m; sourceTree = "<group>"; };
 		07E9918F1EA6717E002377E6 /* Demo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E991911EA6717E002377E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07E991921EA6717E002377E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2219,6 +2219,7 @@
 				07E991A21EA6717E002377E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
