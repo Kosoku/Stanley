@@ -101,6 +101,8 @@ typedef void(^KSTFileWatcherBlock)(KSTFileWatcher *fileWatcher, NSURL *URL, KSTF
  @return The initialized instance
  */
 - (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs flags:(KSTFileWatcherFlags)flags block:(KSTFileWatcherBlock)block NS_DESIGNATED_INITIALIZER;
+
++ (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
