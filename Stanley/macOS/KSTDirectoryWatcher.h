@@ -192,6 +192,8 @@ typedef void(^KSTDirectoryWatcherBlock)(KSTDirectoryWatcher *directoryWatcher, K
  @return The initialized instance
  */
 - (instancetype)initWithURLs:(NSArray<NSURL *> *)URLs flags:(KSTDirectoryWatcherCreateFlags)flags block:(KSTDirectoryWatcherBlock)block NS_DESIGNATED_INITIALIZER;
+
++ (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
