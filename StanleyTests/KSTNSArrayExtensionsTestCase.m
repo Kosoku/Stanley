@@ -70,4 +70,15 @@
     XCTAssertEqualObjects([begin KST_mutableOrderedSet], end);
 }
 
+- (void)testShuffledArray {
+    NSArray *begin = @[@1,@2,@3];
+    
+    XCTAssertNotEqual([begin KST_shuffledArray], begin);
+}
+- (void)testObjectAtRandomIndex {
+    NSArray *begin = @[];
+    
+    XCTAssertNil([begin KST_objectAtRandomIndex]);
+}
+
 @end

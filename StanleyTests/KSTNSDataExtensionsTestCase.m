@@ -25,6 +25,15 @@
 
 - (void)testNilReturnValue {
     XCTAssertNil([[@"" dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String]);
+    XCTAssertNil([[@"" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA1String]);
+    XCTAssertNil([[@"" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA256String]);
+    XCTAssertNil([[@"" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA512String]);
+}
+- (void)testNonNilReturnValue {
+    XCTAssertNotNil([[@"abc" dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String]);
+    XCTAssertNotNil([[@"abc" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA1String]);
+    XCTAssertNotNil([[@"abc" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA256String]);
+    XCTAssertNotNil([[@"abc" dataUsingEncoding:NSUTF8StringEncoding] KST_SHA512String]);
 }
 
 @end

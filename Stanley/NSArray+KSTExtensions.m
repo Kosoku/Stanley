@@ -56,6 +56,10 @@
 }
 
 - (id)KST_objectAtRandomIndex {
+    if (self.count == 0) {
+        return nil;
+    }
+    
     return self[arc4random_uniform((u_int32_t)self.count)];
 }
 

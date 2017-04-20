@@ -77,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The random object
  */
-- (ObjectType)KST_objectAtRandomIndex;
+- (nullable ObjectType)KST_objectAtRandomIndex;
 
 @end
 

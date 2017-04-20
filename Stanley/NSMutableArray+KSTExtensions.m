@@ -35,10 +35,8 @@
 }
 
 - (void)KST_shuffle {
-    NSUInteger max = self.count - 1;
-    
-    for (NSUInteger i=0; i<self.count; i++) {
-        NSUInteger n = arc4random_uniform((u_int32_t)max) + i;
+    for (NSUInteger i=0; i<self.count-1; i++) {
+        NSUInteger n = arc4random_uniform((u_int32_t)(self.count - i)) + i;
         
         [self exchangeObjectAtIndex:i withObjectAtIndex:n];
     }

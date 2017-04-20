@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0726280E1E7096EF00511F80 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078C6FA71E6F63DA00F04786 /* Stanley.framework */; };
+		072B3B7C1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */; };
+		072B3B7D1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */; };
+		072B3B7E1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */; };
 		077B76421E6F314E005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; };
 		077B76491E6F314E005FC783 /* Stanley.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B763B1E6F314E005FC783 /* Stanley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B76641E6F3FC6005FC783 /* KSTScopeMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTScopeMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -253,6 +256,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctionsTestCase.m; sourceTree = "<group>"; };
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B763B1E6F314E005FC783 /* Stanley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stanley.h; sourceTree = "<group>"; };
 		077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -523,6 +527,7 @@
 				078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */,
 				07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */,
 				07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */,
+				072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1093,6 +1098,7 @@
 				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				07D166D71E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDD1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
+				072B3B7C1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */,
 				078C6F7D1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1134,6 +1140,7 @@
 				078C6F7F1E6F5D0B00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				07D166D81E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDE1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
+				072B3B7D1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */,
 				078C6F7E1E6F5D0700F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1197,6 +1204,7 @@
 				078C6FC01E6F652400F04786 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
 				07D166D91E9741830073F69A /* KSTNSDateExtensionsTestCase.m in Sources */,
 				078C6FDF1E6F68B700F04786 /* KSTNSDataExtensionsTestCase.m in Sources */,
+				072B3B7E1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */,
 				078C6FC11E6F652800F04786 /* KSTNSBundleExtensionsTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
