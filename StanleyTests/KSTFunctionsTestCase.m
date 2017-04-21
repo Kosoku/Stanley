@@ -24,50 +24,51 @@
 @implementation KSTFunctionsTestCase
 
 - (void)testDispatchMain {
-    XCTestExpectation *expect = [[XCTestExpectation alloc] init];
-    
-    [expect setExpectedFulfillmentCount:4];
+    XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchMain1"];
+    XCTestExpectation *expect2 = [self expectationWithDescription:@"testDispatchMain2"];
+    XCTestExpectation *expect3 = [self expectationWithDescription:@"testDispatchMain3"];
+    XCTestExpectation *expect4 = [self expectationWithDescription:@"testDispatchMain4"];
     
     KSTDispatchMainSync(^{
         XCTAssertTrue([NSThread isMainThread]);
-        [expect fulfill];
+        [expect1 fulfill];
     });
     KSTDispatchMainAsync(^{
         XCTAssertTrue([NSThread isMainThread]);
-        [expect fulfill];
+        [expect2 fulfill];
     });
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), ^{
         KSTDispatchMainSync(^{
             XCTAssertTrue([NSThread isMainThread]);
-            [expect fulfill];
+            [expect3 fulfill];
         });
         KSTDispatchMainAsync(^{
             XCTAssertTrue([NSThread isMainThread]);
-            [expect fulfill];
+            [expect4 fulfill];
         });
     });
     
-    [self waitForExpectations:@[expect] timeout:5.0];
+    [self waitForExpectations:@[expect1,expect2,expect3,expect4] timeout:5.0];
 }
 - (void)testDispatchAfter {
-    XCTestExpectation *expect = [[XCTestExpectation alloc] init];
-    
-    [expect setExpectedFulfillmentCount:3];
+    XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchAfter1"];
+    XCTestExpectation *expect2 = [self expectationWithDescription:@"testDispatchAfter2"];
+    XCTestExpectation *expect3 = [self expectationWithDescription:@"testDispatchAfter3"];
     
     KSTDispatchMainAfter(0.1, ^{
         XCTAssertTrue([NSThread isMainThread]);
-        [expect fulfill];
+        [expect1 fulfill];
     });
     KSTDispatchAfter(0.1, dispatch_get_main_queue(), ^{
         XCTAssertTrue([NSThread isMainThread]);
-        [expect fulfill];
+        [expect2 fulfill];
     });
     KSTDispatchAfter(0.1, nil, ^{
         XCTAssertTrue([NSThread isMainThread]);
-        [expect fulfill];
+        [expect3 fulfill];
     });
     
-    [self waitForExpectations:@[expect] timeout:5.0];
+    [self waitForExpectations:@[expect1,expect2,expect3] timeout:5.0];
 }
 
 @end
