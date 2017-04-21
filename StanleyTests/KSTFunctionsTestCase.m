@@ -48,7 +48,7 @@
         });
     });
     
-    [self waitForExpectations:@[expect1,expect2,expect3,expect4] timeout:5.0];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
 }
 - (void)testDispatchAfter {
     XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchAfter1"];
@@ -68,7 +68,7 @@
         [expect3 fulfill];
     });
     
-    [self waitForExpectations:@[expect1,expect2,expect3] timeout:5.0];
+    [self waitForExpectationsWithTimeout:5.0 handler:nil];
 }
 
 @end
