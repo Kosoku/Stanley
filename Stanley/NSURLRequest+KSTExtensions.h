@@ -18,71 +18,71 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Struct containing string constants for supported HTTP methods. See http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html for more information.
+ Typedef for string constants for supported HTTP methods. See http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html for more information.
  */
-FOUNDATION_EXPORT const struct KSTHTTPMethod {
-    __unsafe_unretained NSString *OPTIONS;
-    __unsafe_unretained NSString *GET;
-    __unsafe_unretained NSString *HEAD;
-    __unsafe_unretained NSString *POST;
-    __unsafe_unretained NSString *PUT;
-    __unsafe_unretained NSString *DELETE;
-    __unsafe_unretained NSString *TRACE;
-    __unsafe_unretained NSString *CONNECT;
-} KSTHTTPMethod;
+typedef NSString* KSHTTPMethod NS_STRING_ENUM;
+
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodOPTIONS;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodGET;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodHEAD;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodPOST;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodPUT;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodDELETE;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodTRACE;
+FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodCONNECT;
 
 /**
- Struct containing string constants for supported HTTP header fields. See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more information.
+ Typedef for string constants for supported HTTP header fields. See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more information.
  */
-FOUNDATION_EXPORT const struct KSTHTTPHeaderField {
-    __unsafe_unretained NSString *Accept;
-    __unsafe_unretained NSString *Accept_Charset;
-    __unsafe_unretained NSString *Accept_Encoding;
-    __unsafe_unretained NSString *Accept_Language;
-    __unsafe_unretained NSString *Accept_Ranges;
-    __unsafe_unretained NSString *Age;
-    __unsafe_unretained NSString *Allow;
-    __unsafe_unretained NSString *Authorization;
-    __unsafe_unretained NSString *Cache_Control;
-    __unsafe_unretained NSString *Connection;
-    __unsafe_unretained NSString *Content_Encoding;
-    __unsafe_unretained NSString *Content_Language;
-    __unsafe_unretained NSString *Content_Length;
-    __unsafe_unretained NSString *Content_Location;
-    __unsafe_unretained NSString *Content_MD5;
-    __unsafe_unretained NSString *Content_Range;
-    __unsafe_unretained NSString *Content_Type;
-    __unsafe_unretained NSString *Date;
-    __unsafe_unretained NSString *ETag;
-    __unsafe_unretained NSString *Expect;
-    __unsafe_unretained NSString *Expires;
-    __unsafe_unretained NSString *From;
-    __unsafe_unretained NSString *Host;
-    __unsafe_unretained NSString *If_Match;
-    __unsafe_unretained NSString *If_Modified_Since;
-    __unsafe_unretained NSString *If_None_Match;
-    __unsafe_unretained NSString *If_Range;
-    __unsafe_unretained NSString *If_Unmodified_Since;
-    __unsafe_unretained NSString *Last_Modified;
-    __unsafe_unretained NSString *Location;
-    __unsafe_unretained NSString *Max_Forwards;
-    __unsafe_unretained NSString *Pragma;
-    __unsafe_unretained NSString *Proxy_Authenticate;
-    __unsafe_unretained NSString *Proxy_Authorization;
-    __unsafe_unretained NSString *Range;
-    __unsafe_unretained NSString *Referer;
-    __unsafe_unretained NSString *Retry_After;
-    __unsafe_unretained NSString *Server;
-    __unsafe_unretained NSString *TE;
-    __unsafe_unretained NSString *Trailer;
-    __unsafe_unretained NSString *Transfer_Encoding;
-    __unsafe_unretained NSString *Upgrade;
-    __unsafe_unretained NSString *User_Agent;
-    __unsafe_unretained NSString *Vary;
-    __unsafe_unretained NSString *Via;
-    __unsafe_unretained NSString *Warning;
-    __unsafe_unretained NSString *WWW_Authenticate;
-} KSTHTTPHeaderField;
+typedef NSString* KSTHTTPHeaderField NS_STRING_ENUM;
+
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAccept;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptCharset;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptEncoding;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptLanguage;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptRanges;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAge;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAllow;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAuthorization;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldCacheControl;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldConnection;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentEncoding;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLanguage;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLength;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLocation;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentMD5;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentRange;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldContentType;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldDate;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldETag;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldExpect;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldExpires;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldFrom;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldHost;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldIfMatch;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldIfModifiedSince;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldIfNoneMatch;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldIfRange;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldIfUnmodifiedSince;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldLastModified;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldLocation;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldMaxForwards;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldPragma;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldProxyAuthenticate;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldProxyAuthorization;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldRange;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldReferer;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldRetryAfter;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldServer;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldTE;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldTrailer;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldTransferEncoding;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldUpgrade;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldUserAgent;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldVary;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldVia;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldWarning;
+FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldWWWAuthenticate;
 
 @interface NSURLRequest (KSTExtensions)
 
@@ -93,7 +93,7 @@ FOUNDATION_EXPORT const struct KSTHTTPHeaderField {
  @param HTTPMethod The HTTP method for the request
  @return The request
  */
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod;
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod;
 /**
  Creates and returns an `NSURLRequest` instance with the provided *URL*, *HTTPMethod* and *HTTPHeaderFields*.
  
@@ -102,7 +102,7 @@ FOUNDATION_EXPORT const struct KSTHTTPHeaderField {
  @param HTTPHeaderFields The HTTP header fields for the request
  @return The request
  */
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<NSString *, NSString *> *)HTTPHeaderFields;
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<KSTHTTPHeaderField, NSString *> *)HTTPHeaderFields;
 
 @end
 

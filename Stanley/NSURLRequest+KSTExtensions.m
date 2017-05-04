@@ -15,73 +15,69 @@
 
 #import "NSURLRequest+KSTExtensions.h"
 
-const struct KSTHTTPMethod KSTHTTPMethod = {
-    .OPTIONS = @"OPTIONS",
-    .GET = @"GET",
-    .HEAD = @"HEAD",
-    .POST = @"POST",
-    .PUT = @"PUT",
-    .DELETE = @"DELETE",
-    .TRACE = @"TRACE",
-    .CONNECT = @"CONNECT"
-};
+KSHTTPMethod const KSHTTPMethodOPTIONS = @"OPTIONS";
+KSHTTPMethod const KSHTTPMethodGET = @"GET";
+KSHTTPMethod const KSHTTPMethodHEAD = @"HEAD";
+KSHTTPMethod const KSHTTPMethodPOST = @"POST";
+KSHTTPMethod const KSHTTPMethodPUT = @"PUT";
+KSHTTPMethod const KSHTTPMethodDELETE = @"DELETE";
+KSHTTPMethod const KSHTTPMethodTRACE = @"TRACE";
+KSHTTPMethod const KSHTTPMethodCONNECT = @"CONNECT";
 
-const struct KSTHTTPHeaderField KSTHTTPHeaderField = {
-    .Accept = @"Accept",
-    .Accept_Charset = @"Accept-Charset",
-    .Accept_Encoding = @"Accept-Encoding",
-    .Accept_Language = @"Accept-Language",
-    .Accept_Ranges = @"Accept-Ranges",
-    .Age = @"Age",
-    .Allow = @"Allow",
-    .Authorization = @"Authorization",
-    .Cache_Control = @"Cache-Control",
-    .Connection = @"Connection",
-    .Content_Encoding = @"Content-Encoding",
-    .Content_Language = @"Content-Language",
-    .Content_Length = @"Content-Length",
-    .Content_Location = @"Content-Location",
-    .Content_MD5 = @"Content-MD5",
-    .Content_Range = @"Content-Range",
-    .Content_Type = @"Content-Type",
-    .Date = @"Date",
-    .ETag = @"ETag",
-    .Expect = @"Expect",
-    .Expires = @"Expires",
-    .From = @"From",
-    .Host = @"Host",
-    .If_Match = @"If-Match",
-    .If_Modified_Since = @"If-Modified-Since",
-    .If_None_Match = @"If-None-Match",
-    .If_Range = @"If-Range",
-    .If_Unmodified_Since = @"If-Unmodified-Since",
-    .Last_Modified = @"Last-Modified",
-    .Location = @"Location",
-    .Max_Forwards = @"Max-Forwards",
-    .Pragma = @"Pragma",
-    .Proxy_Authenticate = @"Proxy-Authenticate",
-    .Proxy_Authorization = @"Proxy-Authorization",
-    .Range = @"Range",
-    .Referer = @"Referer",
-    .Retry_After = @"Retry-After",
-    .Server = @"Server",
-    .TE = @"TE",
-    .Trailer = @"Trailer",
-    .Transfer_Encoding = @"Transfer-Encoding",
-    .Upgrade = @"Upgrade",
-    .User_Agent = @"User-Agent",
-    .Vary = @"Vary",
-    .Via = @"Via",
-    .Warning = @"Warning",
-    .WWW_Authenticate = @"WWW-Authenticate"
-};
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAccept = @"Accept";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptCharset = @"Accept-Charset";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptEncoding = @"Accept-Encoding";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptLanguage = @"Accept-Language";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptRanges = @"Accept-Ranges";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAge = @"Age";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAllow = @"Allow";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldAuthorization = @"Authorization";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldCacheControl = @"Cache-Control";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldConnection = @"Connection";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentEncoding = @"Content-Encoding";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLanguage = @"Content-Language";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLength = @"Content-Length";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentLocation = @"Content-Location";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentMD5 = @"Content-MD5";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentRange = @"Content-Range";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldContentType = @"Content-Type";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldDate = @"Date";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldETag = @"ETag";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldExpect = @"Expect";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldExpires = @"Expires";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldFrom = @"From";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldHost = @"Host";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldIfMatch = @"If-Match";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldIfModifiedSince = @"If-Modified-Since";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldIfNoneMatch = @"If-None-Match";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldIfRange = @"If-Range";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldIfUnmodifiedSince = @"If-Unmodified-Since";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldLastModified = @"Last-Modified";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldLocation = @"Location";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldMaxForwards = @"Max-Forwards";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldPragma = @"Pragma";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldProxyAuthentication = @"Proxy-Authentication";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldProxyAuthorization = @"Proxy-Authorization";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldRange = @"Range";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldReferer = @"Referer";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldRetryAfter = @"Retry-After";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldServer = @"Server";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldTE = @"TE";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldTrailer = @"Trailer";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldTransferEncoding = @"Transfer-Encoding";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldUpgrade = @"Upgrade";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldUserAgent = @"User-Agent";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldVary = @"Vary";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldVia = @"Via";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldWarning = @"Warning";
+KSTHTTPHeaderField const KSTHTTPHeaderFieldWWWAuthenticate = @"WWW-Authenticate";
 
 @implementation NSURLRequest (KSTExtensions)
 
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod; {
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod; {
     return [self KST_URLRequestWithURL:URL HTTPMethod:HTTPMethod HTTPHeaderFields:nil];
 }
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<NSString *, NSString *> *)HTTPHeaderFields; {
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<KSTHTTPHeaderField, NSString *> *)HTTPHeaderFields; {
     NSMutableURLRequest *retval = [[NSMutableURLRequest alloc] initWithURL:URL];
     
     [retval setHTTPMethod:HTTPMethod];
