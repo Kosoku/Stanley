@@ -79,6 +79,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable ObjectType)KST_objectAtRandomIndex;
 
+/**
+ Returns the object at the provided *index* if *index* is within the receiver's bounds, otherwise returns nil.
+ 
+ @param index The array index
+ @return The object or nil
+ */
+- (nullable ObjectType)KST_safeObjectAtIndex:(NSUInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

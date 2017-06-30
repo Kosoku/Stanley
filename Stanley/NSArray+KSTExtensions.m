@@ -63,4 +63,11 @@
     return self[arc4random_uniform((u_int32_t)self.count)];
 }
 
+- (id)KST_safeObjectAtIndex:(NSUInteger)index {
+    if (index < self.count) {
+        return self[index];
+    }
+    return nil;
+}
+
 @end
