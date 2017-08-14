@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Stanley'
-  s.version          = '0.11.0'
+  s.version          = '0.12.0'
   s.summary          = 'Stanley is an iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` fra
   s.source           = { :git => 'https://github.com/Kosoku/Stanley.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.12'
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '3.0'
