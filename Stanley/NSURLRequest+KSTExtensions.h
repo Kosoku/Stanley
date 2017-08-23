@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Typedef for string constants for supported HTTP methods. See http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html for more information.
  */
-typedef NSString* KSHTTPMethod NS_STRING_ENUM;
+typedef NSString* KSHTTPMethod NS_EXTENSIBLE_STRING_ENUM;
 
 FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodOPTIONS;
 FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodGET;
@@ -34,7 +34,7 @@ FOUNDATION_EXPORT KSHTTPMethod const KSHTTPMethodCONNECT;
 /**
  Typedef for string constants for supported HTTP header fields. See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more information.
  */
-typedef NSString* KSTHTTPHeaderField NS_STRING_ENUM;
+typedef NSString* KSTHTTPHeaderField NS_EXTENSIBLE_STRING_ENUM;
 
 FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAccept;
 FOUNDATION_EXPORT KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptCharset;
