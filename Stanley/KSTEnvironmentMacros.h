@@ -24,7 +24,17 @@
  if (KSTIsEnvironmentVariableDefined(MY_ENVIRONMENT_VARIABLE)) {
  // do something
  }
+ 
+ @param envVariable The environment variable to check
+ @return YES if the variable exists, otherwise NO
  */
-#define KSTIsEnvironmentVariableDefined(environmentVariable) [NSProcessInfo processInfo].environment[[NSString stringWithUTF8String:(#environmentVariable)]]
+#define KSTIsEnvironmentVariableDefined(envVariable) ([NSProcessInfo processInfo].environment[[NSString stringWithUTF8String:(#envVariable)]])
+/**
+ Returns the environment string value for the provided environment string variable.
+ 
+ @param envString The string for which to return the environment value
+ @return The environment string value
+ */
+#define KSTEnvironmentStringForString(envString) ([NSProcessInfo processInfo].environment[envString])
 
 #endif
