@@ -23,7 +23,7 @@
 /**
  Typedefs that kstOnExit relies on.
  */
-typedef void (^kst_cleanupBlock_t)();
+typedef void (^kst_cleanupBlock_t)(void);
 
 static inline void kst_executeCleanupBlock (__strong kst_cleanupBlock_t *block) {
     (*block)();
