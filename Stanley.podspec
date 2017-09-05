@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Stanley'
-  s.version          = '0.12.2'
+  s.version          = '0.12.3'
   s.summary          = 'Stanley is an iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
 # This description is used to generate tags and improve search results.
