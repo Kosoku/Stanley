@@ -44,6 +44,14 @@
     XCTAssertEqualObjects([begin KST_prepend:prepend], end);
 }
 
+- (void)testRemove {
+    NSArray *begin = @[@1,@2,@3,@4,@5,@6];
+    NSArray *remove = @[@1,@3,@5];
+    NSArray *end = @[@2,@4,@6];
+    
+    XCTAssertEqualObjects([begin KST_remove:remove], end);
+}
+
 - (void)testSet {
     NSArray *begin = @[@1,@2,@3];
     NSSet *end = [NSSet setWithArray:begin];

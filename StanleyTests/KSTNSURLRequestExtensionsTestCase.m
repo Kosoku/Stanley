@@ -25,8 +25,8 @@
 
 - (void)testExample {
     NSURL *URL = [NSURL URLWithString:@"https://www.google.com"];
-    NSString *HTTPMethod = KSTHTTPMethod.CONNECT;
-    NSDictionary *HTTPHeaderFields = @{KSTHTTPHeaderField.Accept_Language: @"en"};
+    NSString *HTTPMethod = KSHTTPMethodCONNECT;
+    NSDictionary *HTTPHeaderFields = @{KSTHTTPHeaderFieldAcceptLanguage: @"en"};
     NSURLRequest *request = [NSURLRequest KST_URLRequestWithURL:URL HTTPMethod:HTTPMethod HTTPHeaderFields:HTTPHeaderFields];
     
     XCTAssertEqualObjects(request.URL, URL);
