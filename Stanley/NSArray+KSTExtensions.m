@@ -22,6 +22,9 @@
     return [self reverseObjectEnumerator].allObjects;
 }
 
+- (NSArray *)KST_arrayByAppendingObject:(id)object {
+    return [self arrayByAddingObject:object];
+}
 - (NSArray *)KST_arrayByAppendingArray:(NSArray *)array; {
     return [self arrayByAddingObjectsFromArray:array];
 }

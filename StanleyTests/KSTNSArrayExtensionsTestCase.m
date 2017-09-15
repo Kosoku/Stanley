@@ -29,6 +29,13 @@
     
     XCTAssertEqualObjects([begin KST_reversedArray], end);
 }
+- (void)testKST_arrayByAppendingObject {
+    NSArray *begin = @[@1,@2,@3];
+    NSNumber *object = @4;
+    NSArray *end = @[@1,@2,@3,@4];
+    
+    XCTAssertEqualObjects([begin KST_arrayByAppendingObject:object], end);
+}
 - (void)testArrayByAppendingArray {
     NSArray *begin = @[@1,@2,@3];
     NSArray *append = @[@4,@5,@6];
