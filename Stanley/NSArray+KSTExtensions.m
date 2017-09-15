@@ -25,7 +25,7 @@
 - (NSArray *)KST_arrayByAppendingArray:(NSArray *)array; {
     return [self arrayByAddingObjectsFromArray:array];
 }
-- (NSArray *)KST_prepend:(NSArray *)array {
+- (NSArray *)KST_arrayByPrependingArray:(NSArray *)array {
     NSMutableArray *retval = [self mutableCopy];
     
     [retval insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];

@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The prepended array
  */
-- (NSArray<ObjectType> *)KST_prepend:(NSArray<ObjectType> *)array;
+- (NSArray<ObjectType> *)KST_arrayByPrependingArray:(NSArray<ObjectType> *)array;
 
 /**
  Create and return an array by removing the objects in the provided *array*.

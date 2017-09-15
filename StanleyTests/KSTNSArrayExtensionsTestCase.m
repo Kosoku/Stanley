@@ -29,19 +29,19 @@
     
     XCTAssertEqualObjects([begin KST_reversedArray], end);
 }
-- (void)testAppend {
+- (void)testArrayByAppendingArray {
     NSArray *begin = @[@1,@2,@3];
     NSArray *append = @[@4,@5,@6];
     NSArray *end = @[@1,@2,@3,@4,@5,@6];
     
     XCTAssertEqualObjects([begin KST_arrayByAppendingArray:append], end);
 }
-- (void)testPrepend {
+- (void)testArrayByPrependingArray {
     NSArray *begin = @[@1,@2,@3];
     NSArray *prepend = @[@4,@5,@6];
     NSArray *end = @[@4,@5,@6,@1,@2,@3];
     
-    XCTAssertEqualObjects([begin KST_prepend:prepend], end);
+    XCTAssertEqualObjects([begin KST_arrayByPrependingArray:prepend], end);
 }
 
 - (void)testRemove {
