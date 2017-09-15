@@ -36,6 +36,42 @@
     
     XCTAssertEqualObjects(begin, end);
 }
+- (void)testKST_appendObject {
+    NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1,@2]];
+    NSNumber *object = @3;
+    NSMutableArray *end = [NSMutableArray arrayWithArray:@[@1,@2,@3]];
+    
+    [begin KST_appendObject:object];
+    
+    XCTAssertEqualObjects(begin, end);
+}
+- (void)testKST_appendArray {
+    NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1,@2]];
+    NSArray *append = @[@3,@4];
+    NSMutableArray *end = [NSMutableArray arrayWithArray:@[@1,@2,@3,@4]];
+    
+    [begin KST_appendArray:append];
+    
+    XCTAssertEqualObjects(begin, end);
+}
+- (void)testKST_prependObject {
+    NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1,@2]];
+    NSNumber *object = @3;
+    NSMutableArray *end = [NSMutableArray arrayWithArray:@[@3,@1,@2]];
+    
+    [begin KST_prependObject:object];
+    
+    XCTAssertEqualObjects(begin, end);
+}
+- (void)testKST_prependArray {
+    NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1,@2]];
+    NSArray *append = @[@3,@4];
+    NSMutableArray *end = [NSMutableArray arrayWithArray:@[@3,@4,@1,@2]];
+    
+    [begin KST_prependArray:append];
+    
+    XCTAssertEqualObjects(begin, end);
+}
 - (void)testPush {
     NSMutableArray *begin = [[NSMutableArray alloc] init];
     

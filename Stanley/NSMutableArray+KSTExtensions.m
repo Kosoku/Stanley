@@ -23,6 +23,19 @@
     }
 }
 
+- (void)KST_appendObject:(id)object {
+    [self addObject:object];
+}
+- (void)KST_appendArray:(NSArray *)array {
+    [self addObjectsFromArray:array];
+}
+- (void)KST_prependObject:(id)object {
+    [self insertObject:object atIndex:0];
+}
+- (void)KST_prependArray:(NSArray *)array {
+    [self insertObjects:array atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, array.count)]];
+}
+
 - (void)KST_push:(id)object; {
     [self insertObject:object atIndex:0];
 }

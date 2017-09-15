@@ -25,6 +25,31 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)KST_removeFirstObject;
 
 /**
+ Adds *object* to the end of the receiver. Simply calls addObject:.
+ 
+ @param object The object to add
+ */
+- (void)KST_appendObject:(ObjectType)object;
+/**
+ Adds the objects in *array* to the end of the receiver. Simply calls addObjectsFromArray:.
+ 
+ @param array The objects to add
+ */
+- (void)KST_appendArray:(NSArray<ObjectType> *)array;
+/**
+ Adds the *object* to the beginning of the receiver (i.e. index 0).
+ 
+ @param object The object to add
+ */
+- (void)KST_prependObject:(ObjectType)object;
+/**
+ Adds the objects in *array* to the beginning of the receiver (i.e. starting at index 0).
+ 
+ @param array The objects to add
+ */
+- (void)KST_prependArray:(NSArray<ObjectType> *)array;
+
+/**
  Inserts _object_ at index 0 of the receiver.
  
  @param object The object to insert
