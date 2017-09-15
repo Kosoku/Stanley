@@ -41,6 +41,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSArray<ObjectType> *)KST_arrayByAppendingArray:(NSArray<ObjectType> *)array;
 /**
+ Create and return an array by prepending *object* onto the receiver.
+ 
+ @param object The object to prepend
+ @return The new array
+ */
+- (NSArray<ObjectType> *)KST_arrayByPrependingObject:(ObjectType)object;
+/**
  Creates and returns an array by prepending the objects from array onto the receiver.
  
  @param array The objects to prepend

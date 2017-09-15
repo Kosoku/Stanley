@@ -43,6 +43,13 @@
     
     XCTAssertEqualObjects([begin KST_arrayByAppendingArray:append], end);
 }
+- (void)testKST_arrayByPrependingObject {
+    NSArray *begin = @[@1,@2,@3];
+    NSNumber *object = @4;
+    NSArray *end = @[@4,@1,@2,@3];
+    
+    XCTAssertEqualObjects([begin KST_arrayByPrependingObject:object], end);
+}
 - (void)testArrayByPrependingArray {
     NSArray *begin = @[@1,@2,@3];
     NSArray *prepend = @[@4,@5,@6];

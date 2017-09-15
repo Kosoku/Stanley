@@ -28,6 +28,9 @@
 - (NSArray *)KST_arrayByAppendingArray:(NSArray *)array; {
     return [self arrayByAddingObjectsFromArray:array];
 }
+- (NSArray *)KST_arrayByPrependingObject:(id)object {
+    return [self KST_arrayByPrependingArray:@[object]];
+}
 - (NSArray *)KST_arrayByPrependingArray:(NSArray *)array {
     NSMutableArray *retval = [self mutableCopy];
     
