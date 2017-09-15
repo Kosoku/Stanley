@@ -63,7 +63,7 @@
     NSArray *remove = @[@1,@3,@5];
     NSArray *end = @[@2,@4,@6];
     
-    XCTAssertEqualObjects([begin KST_remove:remove], end);
+    XCTAssertEqualObjects([begin KST_arrayByRemovingArray:remove], end);
 }
 
 - (void)testSet {

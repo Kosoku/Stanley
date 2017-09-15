@@ -39,7 +39,7 @@
     return [retval copy];
 }
 
-- (NSArray *)KST_remove:(NSArray *)array {
+- (NSArray *)KST_arrayByRemovingArray:(NSArray *)array {
     NSMutableArray *retval = [self mutableCopy];
     
     [retval removeObjectsInArray:array];

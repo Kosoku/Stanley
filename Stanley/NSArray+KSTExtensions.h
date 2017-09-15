@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param array The objects to remove
  @return The new array
  */
-- (NSArray<ObjectType> *)KST_remove:(NSArray<ObjectType> *)array;
+- (NSArray<ObjectType> *)KST_arrayByRemovingArray:(NSArray<ObjectType> *)array;
 
 /**
  Creates and returns an NSArray with the receiver's objects.
