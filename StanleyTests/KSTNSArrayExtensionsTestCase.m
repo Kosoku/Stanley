@@ -34,7 +34,7 @@
     NSArray *append = @[@4,@5,@6];
     NSArray *end = @[@1,@2,@3,@4,@5,@6];
     
-    XCTAssertEqualObjects([begin KST_append:append], end);
+    XCTAssertEqualObjects([begin KST_arrayByAppendingArray:append], end);
 }
 - (void)testPrepend {
     NSArray *begin = @[@1,@2,@3];
