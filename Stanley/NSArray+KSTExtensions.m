@@ -33,6 +33,14 @@
     return [retval copy];
 }
 
+- (NSArray *)KST_remove:(NSArray *)array {
+    NSMutableArray *retval = [self mutableCopy];
+    
+    [retval removeObjectsInArray:array];
+    
+    return [retval copy];
+}
+
 - (NSSet *)KST_set; {
     return [NSSet setWithArray:self];
 }

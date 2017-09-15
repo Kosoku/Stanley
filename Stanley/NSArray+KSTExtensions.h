@@ -31,13 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The appended array
  */
-- (NSArray *)KST_append:(NSArray<ObjectType> *)array;
+- (NSArray<ObjectType> *)KST_append:(NSArray<ObjectType> *)array;
 /**
  Creates and returns an array by prepending the objects from array onto the receiver.
  
  @return The prepended array
  */
-- (NSArray *)KST_prepend:(NSArray<ObjectType> *)array;
+- (NSArray<ObjectType> *)KST_prepend:(NSArray<ObjectType> *)array;
+
+/**
+ Create and return an array by removing the objects in the provided *array*.
+ 
+ @return The new array
+ */
+- (NSArray<ObjectType> *)KST_remove:(NSArray<ObjectType> *)array;
 
 /**
  Creates and returns an NSArray with the receiver's objects.
