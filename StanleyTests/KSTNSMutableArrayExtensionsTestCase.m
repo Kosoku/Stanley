@@ -36,6 +36,26 @@
     
     XCTAssertEqualObjects(begin, end);
 }
+- (void)testKST_reverse {
+    NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1]];
+    
+    XCTAssertNoThrow([begin KST_reverse]);
+    
+    NSMutableArray *end = [NSMutableArray arrayWithArray:@[@2,@1]];
+    
+    begin = [NSMutableArray arrayWithArray:@[@1,@2]];
+    
+    [begin KST_reverse];
+    
+    XCTAssertEqualObjects(begin, end);
+    
+    begin = [NSMutableArray arrayWithArray:@[@1,@2,@3]];
+    end = [NSMutableArray arrayWithArray:@[@3,@2,@1]];
+    
+    [begin KST_reverse];
+    
+    XCTAssertEqualObjects(begin, end);
+}
 - (void)testKST_appendObject {
     NSMutableArray *begin = [NSMutableArray arrayWithArray:@[@1,@2]];
     NSNumber *object = @3;

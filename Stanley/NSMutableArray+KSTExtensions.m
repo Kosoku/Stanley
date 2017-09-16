@@ -23,6 +23,16 @@
     }
 }
 
+- (void)KST_reverse {
+    if (self.count <= 1) {
+        return;
+    }
+    
+    for (NSUInteger i=0, j=self.count-1; i<j; i++, j--) {
+        [self exchangeObjectAtIndex:i withObjectAtIndex:j];
+    }
+}
+
 - (void)KST_appendObject:(id)object {
     [self addObject:object];
 }

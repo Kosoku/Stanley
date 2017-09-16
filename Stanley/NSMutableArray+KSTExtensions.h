@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)KST_removeFirstObject;
 
 /**
+ Reverses the objects of the receiver. This is distinct from KST_reversedArray, which returns a new array.
+ */
+- (void)KST_reverse;
+
+/**
  Adds *object* to the end of the receiver. Simply calls addObject:.
  
  @param object The object to add
