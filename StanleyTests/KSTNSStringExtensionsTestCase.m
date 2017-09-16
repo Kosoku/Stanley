@@ -23,6 +23,17 @@
 
 @implementation KSTNSStringExtensionsTestCase
 
+- (void)testKST_stringByRemovingCharactersInSet {
+    NSString *begin = @"abc";
+    NSString *end = @"abc";
+    
+    XCTAssertEqualObjects([begin KST_stringByRemovingCharactersInSet:NSCharacterSet.decimalDigitCharacterSet], end);
+    
+    begin = @"+1 (123) 456-7890";
+    end = @"11234567890";
+    
+    XCTAssertEqualObjects([begin KST_stringByRemovingCharactersInSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet], end);
+}
 - (void)testNilReturnValue {
     XCTAssertNil([@"" KST_MD5String]);
     XCTAssertNil([@"" KST_SHA1String]);

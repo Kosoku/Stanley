@@ -20,6 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (KSTExtensions)
 
 /**
+ Create and return a string by removing all characters in the provided *set* from the receiver. This is distinct from stringByTrimmingCharactersInSet: which only removes characters at the beginning and end of the receiver.
+ 
+ For example, [@"+1 (123) 456-7890" KST_stringByRemovingCharactersInSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet] -> @"11234567890".
+ 
+ @param set The set of characters to remove
+ @return The string with characters removed
+ */
+- (NSString *)KST_stringByRemovingCharactersInSet:(NSCharacterSet *)set;
+
+/**
  Creates and returns an NSString representing the MD5 hash of the receiver.
  
  @return The NSString hash

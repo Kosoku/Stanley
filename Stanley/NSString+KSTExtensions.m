@@ -18,6 +18,21 @@
 
 @implementation NSString (KSTExtensions)
 
+- (NSString *)KST_stringByRemovingCharactersInSet:(NSCharacterSet *)set {
+    set = set.invertedSet;
+    
+    NSMutableString *retval = [[NSMutableString alloc] init];
+    NSRange range = [self rangeOfCharacterFromSet:set options:0 range:NSMakeRange(0, self.length)];
+    
+    while (range.length > 0) {
+        [retval appendString:[self substringWithRange:range]];
+        
+        range = [self rangeOfCharacterFromSet:set options:0 range:NSMakeRange(NSMaxRange(range), self.length - NSMaxRange(range))];
+    }
+    
+    return [retval copy];
+}
+
 - (NSString *)KST_MD5String; {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String];
 }
