@@ -257,6 +257,7 @@
 
 /* Begin PBXFileReference section */
 		072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctionsTestCase.m; sourceTree = "<group>"; };
+		072FDE151F6ED3DA00E73661 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B763B1E6F314E005FC783 /* Stanley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stanley.h; sourceTree = "<group>"; };
 		077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -919,6 +920,7 @@
 				es,
 				ja,
 				Base,
+				ro,
 			);
 			mainGroup = 077B762C1E6F2D73005FC783;
 			productRefGroup = 077B76391E6F314E005FC783 /* Products */;
@@ -1251,6 +1253,7 @@
 				078C70411E6F7D1400F04786 /* en */,
 				078C70461E6F7D3A00F04786 /* es */,
 				078C70471E6F7D4100F04786 /* ja */,
+				072FDE151F6ED3DA00E73661 /* ro */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
