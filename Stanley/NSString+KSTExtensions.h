@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)KST_stringByRemovingCharactersInSet:(NSCharacterSet *)set;
 
+- (NSString *)KST_stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)set;
+- (NSString *)KST_stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)set;
+
 /**
  Creates and returns an NSString representing the MD5 hash of the receiver.
  

@@ -16,6 +16,7 @@
 #import "KSTPhoneNumberFormatter.h"
 #import "NSString+KSTExtensions.h"
 #import "NSBundle+KSTPrivateExtensions.h"
+#import "KSTLoggingMacros.h"
 
 @implementation KSTPhoneNumberFormatter
 
@@ -26,7 +27,70 @@
         return nil;
     }
     
-    return obj;
+    NSURL *fileURL = [[NSBundle KST_frameworkBundle] URLForResource:@"PhoneNumberFormats" withExtension:@"plist"];
+    NSData *data = [NSData dataWithContentsOfURL:fileURL];
+    NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
+    NSString *string = [obj KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
+    
+    KSTLog(@"attempting to format %@",string);
+    
+    for (NSDictionary *dict in plist[KSTPhoneNumberFormatterKeyPlistKeyFormats]) {
+        NSString *pattern = dict[KSTPhoneNumberFormatterKeyPlistKeyPattern];
+        
+        KSTLog(@"check against pattern %@",pattern);
+        
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:NULL];
+        NSTextCheckingResult *match = [regex firstMatchInString:string options:NSMatchingAnchored range:NSMakeRange(0, string.length)];
+        
+        if (match == nil) {
+            continue;
+        }
+        
+        KSTLog(@"match against pattern %@",pattern);
+        
+        NSString *format = dict[KSTPhoneNumberFormatterKeyPlistKeyFormat];
+        NSUInteger formatIndex = 0;
+        NSUInteger stringIndex = 0;
+        NSMutableString *retval = [[NSMutableString alloc] init];
+        
+        while (formatIndex < format.length &&
+               stringIndex < string.length) {
+            
+            unichar fc = [format characterAtIndex:formatIndex++];
+            
+            if (fc == 'x') {
+                unichar sc = [string characterAtIndex:stringIndex++];
+                
+                [retval appendFormat:@"%C",sc];
+            }
+            else {
+                [retval appendFormat:@"%C",fc];
+            }
+        }
+        
+        while (formatIndex < format.length) {
+            unichar fc = [format characterAtIndex:formatIndex++];
+            
+            if (fc == 'x') {
+                break;
+            }
+            else {
+                [retval appendFormat:@"%C",fc];
+            }
+        }
+        
+        if ([retval rangeOfString:@"("].length > 0 &&
+            [retval rangeOfString:@")"].length == 0) {
+            
+            [retval appendString:@" )"];
+        }
+        
+        KSTLog(@"formatted string %@",retval);
+        
+        return [retval copy];
+    }
+    
+    return string;
 }
 - (BOOL)getObjectValue:(out id  _Nullable __autoreleasing *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing  _Nullable *)error {
     *obj = [self phoneNumberFromString:string];
@@ -42,7 +106,7 @@
     return [self stringForObjectValue:phoneNumber];
 }
 - (NSString *)phoneNumberFromString:(NSString *)string {
-    return [string KST_stringByRemovingCharactersInSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet];
+    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
 }
 
 - (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {

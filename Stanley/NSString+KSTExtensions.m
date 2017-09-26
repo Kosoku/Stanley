@@ -33,6 +33,27 @@
     return [retval copy];
 }
 
+- (NSString *)KST_stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)set; {
+    NSRange range = [self rangeOfCharacterFromSet:set];
+    
+    if (range.length > 0) {
+        return [self substringFromIndex:NSMaxRange(range)];
+    }
+    else {
+        return self;
+    }
+}
+- (NSString *)KST_stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)set; {
+    NSRange range = [self rangeOfCharacterFromSet:set options:NSBackwardsSearch];
+    
+    if (range.length > 0) {
+        return [self substringToIndex:range.location];
+    }
+    else {
+        return self;
+    }
+}
+
 - (NSString *)KST_MD5String; {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String];
 }

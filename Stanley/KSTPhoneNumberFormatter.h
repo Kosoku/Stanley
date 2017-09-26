@@ -17,6 +17,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString *const KSTPhoneNumberFormatterKeyPlistKeyFormats = @"formats";
+static NSString *const KSTPhoneNumberFormatterKeyPlistKeyFormat = @"format";
+static NSString *const KSTPhoneNumberFormatterKeyPlistKeyPattern = @"pattern";
+
 @interface KSTPhoneNumberFormatter : NSFormatter
 
 - (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;

@@ -6,6 +6,42 @@
 	<array>
 		<dict>
 			<key>format</key>
+			<string>xx xxx xxx</string>
+			<key>pattern</key>
+			<string>0-9]{0,8}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xxx xxx xxx xxx</string>
+			<key>pattern</key>
+			<string>^\+614[0-9]{0,8}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xxx (x) xxx xxx xxx</string>
+			<key>pattern</key>
+			<string>^\+610[0-9]{0,9}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xxx x xxxx xxxx</string>
+			<key>pattern</key>
+			<string>^\+61[0-9]{0,9}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xxx xx xx xx xx xx</string>
+			<key>pattern</key>
+			<string>^\+44[0-9]{0,10}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xx (xxx) xxx-xxxx</string>
+			<key>pattern</key>
+			<string>^\+[1]{1}[0-9]{0,10}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
 			<string>xx xx xx xx xx</string>
 			<key>pattern</key>
 			<string>^[1-9]{1}[0-9]{0,9}$</string>
