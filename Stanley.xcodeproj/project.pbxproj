@@ -342,6 +342,7 @@
 		07E86B001F7A29D10027E7EC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		07E86B011F7A2A350027E7EC /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fr-CA"; path = "fr-CA.lproj/PhoneNumberFormats.plist"; sourceTree = "<group>"; };
 		07E86B021F7A2A8F0027E7EC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
+		07E86B031F7A2B1E0027E7EC /* de-CH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "de-CH"; path = "de-CH.lproj/PhoneNumberFormats.plist"; sourceTree = "<group>"; };
 		07E991811EA670EE002377E6 /* KSTDirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSTDirectoryWatcher.h; path = macOS/KSTDirectoryWatcher.h; sourceTree = "<group>"; };
 		07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSTDirectoryWatcher.m; path = macOS/KSTDirectoryWatcher.m; sourceTree = "<group>"; };
 		07E9918F1EA6717E002377E6 /* Demo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -952,6 +953,7 @@
 				fr,
 				"fr-CA",
 				de,
+				"de-CH",
 			);
 			mainGroup = 077B762C1E6F2D73005FC783;
 			productRefGroup = 077B76391E6F314E005FC783 /* Products */;
@@ -1295,6 +1297,7 @@
 				07E86B001F7A29D10027E7EC /* fr */,
 				07E86B011F7A2A350027E7EC /* fr-CA */,
 				07E86B021F7A2A8F0027E7EC /* de */,
+				07E86B031F7A2B1E0027E7EC /* de-CH */,
 			);
 			name = PhoneNumberFormats.plist;
 			sourceTree = "<group>";
