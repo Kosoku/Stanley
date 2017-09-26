@@ -23,7 +23,9 @@ static NSString *const KSTPhoneNumberFormatterKeyPlistKeyPattern = @"pattern";
 
 @interface KSTPhoneNumberFormatter : NSFormatter
 
-- (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;
+@property (copy,nonatomic,null_resettable) NSLocale *locale;
+
+- (nullable NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;
 - (nullable NSString *)phoneNumberFromString:(NSString *)string;
 
 - (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;

@@ -18,14 +18,17 @@
 #import "NSBundle+KSTPrivateExtensions.h"
 #import "KSTLoggingMacros.h"
 
-@interface KSTPhoneNumberFormatter ()
-@property (strong,nonatomic) NSNumberFormatter *numberFormatter;
+static NSString *const kPhoneNumberFormatsName = @"PhoneNumberFormats";
+static NSString *const kPhoneNumberFormatsExtension = @"plist";
 
+@interface KSTPhoneNumberFormatter ()
+- (NSString *)_stringFromPhoneNumber:(NSString *)phoneNumber locale:(NSLocale *)locale;
+- (NSURL *)_plistFileURLForLocale:(NSLocale *)locale;
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist;
 @end
 
 @implementation KSTPhoneNumberFormatter
-
+#pragma mark *** Subclass Overrides ***
 - (NSString *)stringForObjectValue:(id)obj {
     if (![obj isKindOfClass:NSString.class]) {
         if ([obj respondsToSelector:@selector(stringValue)]) {
@@ -39,34 +42,17 @@
         }
     }
     
-    NSString *resourceName = @"PhoneNumberFormats";
-    NSString *resourceExtension = @"plist";
-    NSURL *localizedFileURL = [[NSBundle KST_frameworkBundle] URLForResource:resourceName withExtension:resourceExtension];
-    
-    KSTLog(@"phone number formats file URL %@",localizedFileURL);
-    
-    NSData *data = [NSData dataWithContentsOfURL:localizedFileURL];
-    NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
-    NSString *retval = obj;
-    
-    if (![self _formatPhoneNumber:obj outString:&retval plist:plist]) {
-        NSURL *baseFileURL = [[NSBundle KST_frameworkBundle] URLForResource:resourceName withExtension:resourceExtension subdirectory:nil localization:@"Base"];
-        
-        data = [NSData dataWithContentsOfURL:baseFileURL];
-        
-        plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
-        
-        [self _formatPhoneNumber:obj outString:&retval plist:plist];
-    }
-    
-    return retval;
+    return [self _stringFromPhoneNumber:obj locale:self.locale];
 }
 - (BOOL)getObjectValue:(out id  _Nullable __autoreleasing *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing  _Nullable *)error {
     *obj = [self phoneNumberFromString:string];
     return YES;
 }
 - (BOOL)isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error {
-    if ((*partialStringPtr).length < origString.length) {
+    if ((*partialStringPtr).length == 0) {
+        return YES;
+    }
+    else if ((*partialStringPtr).length < origString.length) {
         return YES;
     }
     else {
@@ -75,18 +61,52 @@
         return NO;
     }
 }
-
+#pragma mark *** Public Methods ***
 - (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber {
-    return [self stringForObjectValue:phoneNumber];
+    return [self _stringFromPhoneNumber:phoneNumber locale:self.locale];
 }
 - (NSString *)phoneNumberFromString:(NSString *)string {
     return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
 }
 
 - (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
-    return [self stringFromPhoneNumber:phoneNumber];
+    return [self _stringFromPhoneNumber:phoneNumber locale:NSLocale.currentLocale];
 }
-
+#pragma mark Properties
+- (NSLocale *)locale {
+    return _locale ?: NSLocale.currentLocale;
+}
+#pragma mark *** Private Methods ***
+- (NSString *)_stringFromPhoneNumber:(NSString *)phoneNumber locale:(NSLocale *)locale; {
+    if (phoneNumber.length == 0) {
+        return nil;
+    }
+    
+    NSURL *fileURL = [self _plistFileURLForLocale:locale];
+    NSData *data = [NSData dataWithContentsOfURL:fileURL];
+    NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
+    NSString *retval = phoneNumber;
+    
+    if (![self _formatPhoneNumber:phoneNumber outString:&retval plist:plist]) {
+        fileURL = [[NSBundle KST_frameworkBundle] URLForResource:kPhoneNumberFormatsName withExtension:kPhoneNumberFormatsExtension subdirectory:nil localization:@"Base"];
+        
+        data = [NSData dataWithContentsOfURL:fileURL];
+        plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
+        
+        [self _formatPhoneNumber:phoneNumber outString:&retval plist:plist];
+    }
+    
+    return retval;
+}
+- (NSURL *)_plistFileURLForLocale:(NSLocale *)locale; {
+    NSURL *retval = [[NSBundle KST_frameworkBundle] URLForResource:kPhoneNumberFormatsName withExtension:kPhoneNumberFormatsExtension subdirectory:nil localization:locale.localeIdentifier];
+    
+    if (retval == nil) {
+        retval = [[NSBundle KST_frameworkBundle] URLForResource:kPhoneNumberFormatsName withExtension:kPhoneNumberFormatsExtension subdirectory:nil localization:[locale objectForKey:NSLocaleLanguageCode]];
+    }
+    
+    return retval;
+}
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist; {
     NSString *string = [phoneNumber KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
     
