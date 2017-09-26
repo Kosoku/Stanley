@@ -29,7 +29,19 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)KST_stringByRemovingCharactersInSet:(NSCharacterSet *)set;
 
+/**
+ Create and return a string by removing characters in the provided *set* from the beginning of the receiver. This is similar to stringByTrimmingCharactersInSet:, but only removes characters from the beginning of the receiver.
+ 
+ @param set The set of characters to remove
+ @return The trimmed string
+ */
 - (NSString *)KST_stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)set;
+/**
+ Create and return a string by removing characters in the provided *set* from the end of the receiver. This is similar to stringByTrimmingCharactersInSet:, but only removes characters from the end of the receiver.
+ 
+ @param set The set of characters to remove
+ @return The trimmed string
+ */
 - (NSString *)KST_stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)set;
 
 /**

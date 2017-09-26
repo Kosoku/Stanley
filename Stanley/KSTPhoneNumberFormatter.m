@@ -26,8 +26,6 @@ static NSString *const kPlistKeyFormat = @"format";
 static NSString *const kPlistKeyPattern = @"pattern";
 
 @interface KSTPhoneNumberFormatter ()
-@property (class,readonly,nonatomic) KSTPhoneNumberFormatter *defaultPhoneNumberFormatter;
-
 - (NSString *)_stringFromPhoneNumber:(NSString *)phoneNumber locale:(NSLocale *)locale;
 - (NSURL *)_plistFileURLForLocale:(NSLocale *)locale;
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist;
@@ -71,14 +69,26 @@ static NSString *const kPlistKeyPattern = @"pattern";
 - (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber {
     return [self _stringFromPhoneNumber:phoneNumber locale:self.locale];
 }
-- (NSString *)phoneNumberFromString:(NSString *)string {
-    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
+- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
+    return [self _stringFromPhoneNumber:phoneNumber locale:NSLocale.currentLocale];
 }
-
-+ (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
-    return [[self defaultPhoneNumberFormatter] _stringFromPhoneNumber:phoneNumber locale:NSLocale.currentLocale];
+#pragma mark -
+- (NSString *)phoneNumberFromString:(NSString *)string {
+    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]].uppercaseString;
+}
+- (int64_t)numericPhoneNumberFromString:(NSString *)string; {
+    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberDecimalCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]].longLongValue;
 }
 #pragma mark Properties
++ (KSTPhoneNumberFormatter *)sharedFormatter {
+    static KSTPhoneNumberFormatter *kRetval;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        kRetval = [[KSTPhoneNumberFormatter alloc] init];
+    });
+    return kRetval;
+}
+
 - (NSLocale *)locale {
     return _locale ?: NSLocale.currentLocale;
 }
@@ -173,15 +183,6 @@ static NSString *const kPlistKeyPattern = @"pattern";
         return YES;
     }
     return NO;
-}
-#pragma mark Properties
-+ (KSTPhoneNumberFormatter *)defaultPhoneNumberFormatter {
-    static KSTPhoneNumberFormatter *kRetval;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        kRetval = [[KSTPhoneNumberFormatter alloc] init];
-    });
-    return kRetval;
 }
 
 @end

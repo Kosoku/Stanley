@@ -17,21 +17,72 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ KSTPhoneNumberFormatter is an NSFormatter subclass that can perform locale aware phone number formatting. It also supports formatting as the user types validation by implementing isPartialStringValid:proposedSelectedRange:originalString:originalSelectedRange:errorDescription: though the errorDescription parameter is ignored.
+ */
 @interface KSTPhoneNumberFormatter : NSFormatter
 
+/**
+ Returns the shared formatter object.
+ */
+@property (class,readonly,nonatomic) KSTPhoneNumberFormatter *sharedFormatter;
+
+/**
+ The locale to reference when formatting. If set to a non-nil value, the formatter will attempt to format using the specified locale regardless of the user or system locales.
+ 
+ The default is NSLocale.currentLocale.
+ */
 @property (copy,nonatomic,null_resettable) NSLocale *locale;
 
+/**
+ Returns a formatted string suitable for display from the provided *phoneNumber*. For example @"1234567890" -> @"(123) 456-7890" in the en locale.
+ 
+ This method always respects the receiver's `locale`.
+ 
+ @param phoneNumber The phone number to format
+ @return The formatted string
+ */
 - (nullable NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;
-- (nullable NSString *)phoneNumberFromString:(NSString *)string;
+/**
+ Returns a formatted string suitable for display from the provided *phoneNumber*. For example @"1234567890" -> @"(123) 456-7890" in the en locale.
+ 
+ This method always uses NSLocale.currentLocale when formatting.
+ 
+ @param phoneNumber The phone number to format
+ @return The formatted string
+ */
+- (nullable NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;
 
-+ (nullable NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;
+/**
+ Returns a phone number stripped of all formatting. For example, @"(123) 456-7890" -> @"1234567890".
+ 
+ @param string The formatted string
+ @return The phone number
+ */
+- (nullable NSString *)phoneNumberFromString:(NSString *)string;
+/**
+ Returns the numeric phone number suitable for passing to frameworks like CallKit.
+ 
+ @param string The formatted string
+ @return The numeric phone number
+ */
+- (int64_t)numericPhoneNumberFromString:(NSString *)string;
 
 @end
 
 @interface NSCharacterSet (KSTPhoneNumberFormatterExtensions)
 
+/**
+ The complete set of characters KSTPhoneNumberFormatter allows in formatted string representations of phone numbers.
+ */
 @property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberFormattedCharacterSet;
+/**
+ The complete set of characters that affect the routing of the phone number. This is defined as @"0123456789" + @"abcdABCD+*#".
+ */
 @property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberRoutingCharacterSet;
+/**
+ The decimal digits allowed in phone numbers. This is defined as @"0123456789".
+ */
 @property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberDecimalCharacterSet;
 
 @end
