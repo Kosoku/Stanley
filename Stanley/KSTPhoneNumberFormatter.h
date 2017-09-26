@@ -17,10 +17,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const KSTPhoneNumberFormatterKeyPlistKeyFormats = @"formats";
-static NSString *const KSTPhoneNumberFormatterKeyPlistKeyFormat = @"format";
-static NSString *const KSTPhoneNumberFormatterKeyPlistKeyPattern = @"pattern";
-
 @interface KSTPhoneNumberFormatter : NSFormatter
 
 @property (copy,nonatomic,null_resettable) NSLocale *locale;
@@ -28,7 +24,7 @@ static NSString *const KSTPhoneNumberFormatterKeyPlistKeyPattern = @"pattern";
 - (nullable NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;
 - (nullable NSString *)phoneNumberFromString:(NSString *)string;
 
-- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;
++ (nullable NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;
 
 @end
 

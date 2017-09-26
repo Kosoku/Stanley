@@ -21,7 +21,13 @@
 static NSString *const kPhoneNumberFormatsName = @"PhoneNumberFormats";
 static NSString *const kPhoneNumberFormatsExtension = @"plist";
 
+static NSString *const kPlistKeyFormats = @"formats";
+static NSString *const kPlistKeyFormat = @"format";
+static NSString *const kPlistKeyPattern = @"pattern";
+
 @interface KSTPhoneNumberFormatter ()
+@property (class,readonly,nonatomic) KSTPhoneNumberFormatter *defaultPhoneNumberFormatter;
+
 - (NSString *)_stringFromPhoneNumber:(NSString *)phoneNumber locale:(NSLocale *)locale;
 - (NSURL *)_plistFileURLForLocale:(NSLocale *)locale;
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist;
@@ -69,8 +75,8 @@ static NSString *const kPhoneNumberFormatsExtension = @"plist";
     return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
 }
 
-- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
-    return [self _stringFromPhoneNumber:phoneNumber locale:NSLocale.currentLocale];
++ (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
+    return [[self defaultPhoneNumberFormatter] _stringFromPhoneNumber:phoneNumber locale:NSLocale.currentLocale];
 }
 #pragma mark Properties
 - (NSLocale *)locale {
@@ -112,8 +118,8 @@ static NSString *const kPhoneNumberFormatsExtension = @"plist";
     
     KSTLog(@"attempting to format %@",string);
     
-    for (NSDictionary *dict in plist[KSTPhoneNumberFormatterKeyPlistKeyFormats]) {
-        NSString *pattern = dict[KSTPhoneNumberFormatterKeyPlistKeyPattern];
+    for (NSDictionary *dict in plist[kPlistKeyFormats]) {
+        NSString *pattern = dict[kPlistKeyPattern];
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:NULL];
         NSTextCheckingResult *match = [regex firstMatchInString:string options:NSMatchingAnchored range:NSMakeRange(0, string.length)];
         
@@ -123,7 +129,7 @@ static NSString *const kPhoneNumberFormatsExtension = @"plist";
         
         KSTLog(@"match against pattern %@",pattern);
         
-        NSString *format = dict[KSTPhoneNumberFormatterKeyPlistKeyFormat];
+        NSString *format = dict[kPlistKeyFormat];
         NSUInteger formatIndex = 0;
         NSUInteger stringIndex = 0;
         NSMutableString *retval = [[NSMutableString alloc] init];
@@ -167,6 +173,15 @@ static NSString *const kPhoneNumberFormatsExtension = @"plist";
         return YES;
     }
     return NO;
+}
+#pragma mark Properties
++ (KSTPhoneNumberFormatter *)defaultPhoneNumberFormatter {
+    static KSTPhoneNumberFormatter *kRetval;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        kRetval = [[KSTPhoneNumberFormatter alloc] init];
+    });
+    return kRetval;
 }
 
 @end

@@ -26,10 +26,6 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-}
 - (void)viewDidAppear {
     [super viewDidAppear];
     
