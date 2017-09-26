@@ -15,6 +15,7 @@
 
 #import "KSTPhoneNumberFormatter.h"
 #import "NSString+KSTExtensions.h"
+#import "NSBundle+KSTPrivateExtensions.h"
 
 @implementation KSTPhoneNumberFormatter
 
