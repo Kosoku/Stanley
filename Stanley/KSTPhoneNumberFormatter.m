@@ -50,3 +50,26 @@
 }
 
 @end
+
+@implementation NSCharacterSet (KSTPhoneNumberFormatterExtensions)
+
++ (NSCharacterSet *)KST_phoneNumberFormattedCharacterSet {
+    NSMutableCharacterSet *retval = [[self KST_phoneNumberRoutingCharacterSet] mutableCopy];
+    
+    // \u00A0 is non-breaking space
+    [retval addCharactersInString:@"-.,;()\u00A0"];
+    
+    return [retval copy];
+}
++ (NSCharacterSet *)KST_phoneNumberRoutingCharacterSet {
+    NSMutableCharacterSet *retval = [[self KST_phoneNumberDecimalCharacterSet] mutableCopy];
+    
+    [retval addCharactersInString:@"abcdABCD+*#"];
+    
+    return [retval copy];
+}
++ (NSCharacterSet *)KST_phoneNumberDecimalCharacterSet {
+    return NSCharacterSet.decimalDigitCharacterSet;
+}
+
+@end

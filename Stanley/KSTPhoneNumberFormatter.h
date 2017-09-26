@@ -26,4 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NSCharacterSet (KSTPhoneNumberFormatterExtensions)
+
+@property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberFormattedCharacterSet;
+@property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberRoutingCharacterSet;
+@property (class,readonly,nonatomic) NSCharacterSet *KST_phoneNumberDecimalCharacterSet;
+
+@end
+
 NS_ASSUME_NONNULL_END
