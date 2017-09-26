@@ -13,10 +13,6 @@
 		070CD3A31F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
 		070CD3A41F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
 		070CD3A51F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
-		070CD3A71F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
-		070CD3A81F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
-		070CD3A91F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
-		070CD3AA1F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
 		070CD3AB1F79BB9D00CB7229 /* KSTPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		070CD3AC1F79BBA200CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
 		0726280E1E7096EF00511F80 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078C6FA71E6F63DA00F04786 /* Stanley.framework */; };
@@ -39,6 +35,10 @@
 		077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76711E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m */; };
 		077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B76761E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m */; };
 		077B76811E6F4704005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76551E6F3301005FC783 /* Stanley.framework */; };
+		07836FAC1F7A22CC008F4447 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */; };
+		07836FAD1F7A22CD008F4447 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */; };
+		07836FAE1F7A22CD008F4447 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */; };
+		07836FAF1F7A22CE008F4447 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */; };
 		078C6F691E6F4C2500F04786 /* KSTFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F681E6F4C2500F04786 /* KSTFunctions.m */; };
 		078C6F6A1E6F4C2500F04786 /* KSTFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C6F681E6F4C2500F04786 /* KSTFunctions.m */; };
 		078C6F6C1E6F4C3600F04786 /* KSTFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -270,7 +270,6 @@
 /* Begin PBXFileReference section */
 		070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTPhoneNumberFormatter.h; sourceTree = "<group>"; };
 		070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTPhoneNumberFormatter.m; sourceTree = "<group>"; };
-		070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctionsTestCase.m; sourceTree = "<group>"; };
 		072FDE151F6ED3DA00E73661 /* ro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +288,8 @@
 		077B767C1E6F4704005FC783 /* StanleyTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B76871E6F473B005FC783 /* StanleyTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-iOS-Info.plist"; sourceTree = "<group>"; };
 		077B76881E6F473B005FC783 /* StanleyTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-macOS-Info.plist"; sourceTree = "<group>"; };
+		07836FAA1F7A1412008F4447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
+		07836FAB1F7A1422008F4447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		078C6F671E6F497800F04786 /* Stanley-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stanley-Info.h"; sourceTree = "<group>"; };
 		078C6F681E6F4C2500F04786 /* KSTFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctions.m; sourceTree = "<group>"; };
 		078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTFunctions.h; sourceTree = "<group>"; };
@@ -468,7 +469,7 @@
 				078C6FAF1E6F640600F04786 /* Stanley-tvOS-Info.plist */,
 				078C6F931E6F625D00F04786 /* Stanley-watchOS-Info.plist */,
 				078C6F671E6F497800F04786 /* Stanley-Info.h */,
-				070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */,
+				07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */,
 				078C70401E6F7D1400F04786 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -967,7 +968,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70421E6F7D1400F04786 /* Localizable.strings in Resources */,
-				070CD3A71F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
+				07836FAC1F7A22CC008F4447 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,7 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70431E6F7D1400F04786 /* Localizable.strings in Resources */,
-				070CD3A81F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
+				07836FAD1F7A22CD008F4447 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,7 +1000,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70451E6F7D1400F04786 /* Localizable.strings in Resources */,
-				070CD3AA1F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
+				07836FAF1F7A22CE008F4447 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,7 +1009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70441E6F7D1400F04786 /* Localizable.strings in Resources */,
-				070CD3A91F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
+				07836FAE1F7A22CD008F4447 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,6 +1278,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		07836FA91F7A1412008F4447 /* PhoneNumberFormats.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07836FAA1F7A1412008F4447 /* Base */,
+				07836FAB1F7A1422008F4447 /* en */,
+			);
+			name = PhoneNumberFormats.plist;
+			sourceTree = "<group>";
+		};
 		078C70401E6F7D1400F04786 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

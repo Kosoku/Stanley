@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>formats</key>
+	<array>
+		<dict>
+			<key>format</key>
+			<string>x (xxx) xxx-xxxx</string>
+			<key>pattern</key>
+			<string>^[1]{1}[0-9]{0,10}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>(xxx) xxx-xxxx</string>
+			<key>pattern</key>
+			<string>^[1-9]{1}[0-9]{7,9}$</string>
+		</dict>
+		<dict>
+			<key>format</key>
+			<string>xxx-xxxx</string>
+			<key>pattern</key>
+			<string>^[1-9]{1}[0-9]{0,6}$</string>
+		</dict>
+	</array>
+</dict>
+</plist>

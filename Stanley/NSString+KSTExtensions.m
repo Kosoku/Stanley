@@ -34,7 +34,7 @@
 }
 
 - (NSString *)KST_stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)set; {
-    NSRange range = [self rangeOfCharacterFromSet:set];
+    NSRange range = [self rangeOfCharacterFromSet:set options:NSAnchoredSearch];
     
     if (range.length > 0) {
         return [self substringFromIndex:NSMaxRange(range)];
@@ -44,7 +44,7 @@
     }
 }
 - (NSString *)KST_stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)set; {
-    NSRange range = [self rangeOfCharacterFromSet:set options:NSBackwardsSearch];
+    NSRange range = [self rangeOfCharacterFromSet:set options:NSAnchoredSearch|NSBackwardsSearch];
     
     if (range.length > 0) {
         return [self substringToIndex:range.location];

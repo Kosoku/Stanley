@@ -18,27 +18,82 @@
 #import "NSBundle+KSTPrivateExtensions.h"
 #import "KSTLoggingMacros.h"
 
+@interface KSTPhoneNumberFormatter ()
+@property (strong,nonatomic) NSNumberFormatter *numberFormatter;
+
+- (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist;
+@end
+
 @implementation KSTPhoneNumberFormatter
 
 - (NSString *)stringForObjectValue:(id)obj {
-    if (![obj isKindOfClass:NSString.class] ||
-        [(NSString *)obj length] == 0) {
-        
-        return nil;
+    if (![obj isKindOfClass:NSString.class]) {
+        if ([obj respondsToSelector:@selector(stringValue)]) {
+            obj = [obj stringValue];
+        }
+        else if ([obj respondsToSelector:@selector(description)]) {
+            obj = [obj description];
+        }
+        else {
+            return nil;
+        }
     }
     
-    NSURL *fileURL = [[NSBundle KST_frameworkBundle] URLForResource:@"PhoneNumberFormats" withExtension:@"plist"];
-    NSData *data = [NSData dataWithContentsOfURL:fileURL];
+    NSString *resourceName = @"PhoneNumberFormats";
+    NSString *resourceExtension = @"plist";
+    NSURL *localizedFileURL = [[NSBundle KST_frameworkBundle] URLForResource:resourceName withExtension:resourceExtension];
+    
+    KSTLog(@"phone number formats file URL %@",localizedFileURL);
+    
+    NSData *data = [NSData dataWithContentsOfURL:localizedFileURL];
     NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
-    NSString *string = [obj KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
+    NSString *retval = obj;
+    
+    if (![self _formatPhoneNumber:obj outString:&retval plist:plist]) {
+        NSURL *baseFileURL = [[NSBundle KST_frameworkBundle] URLForResource:resourceName withExtension:resourceExtension subdirectory:nil localization:@"Base"];
+        
+        data = [NSData dataWithContentsOfURL:baseFileURL];
+        
+        plist = [NSPropertyListSerialization propertyListWithData:data options:0 format:NULL error:NULL];
+        
+        [self _formatPhoneNumber:obj outString:&retval plist:plist];
+    }
+    
+    return retval;
+}
+- (BOOL)getObjectValue:(out id  _Nullable __autoreleasing *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing  _Nullable *)error {
+    *obj = [self phoneNumberFromString:string];
+    return YES;
+}
+- (BOOL)isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error {
+    if ((*partialStringPtr).length < origString.length) {
+        return YES;
+    }
+    else {
+        *partialStringPtr = [self stringFromPhoneNumber:*partialStringPtr];
+        *proposedSelRangePtr = NSMakeRange((*partialStringPtr).length, 0);
+        return NO;
+    }
+}
+
+- (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber {
+    return [self stringForObjectValue:phoneNumber];
+}
+- (NSString *)phoneNumberFromString:(NSString *)string {
+    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
+}
+
+- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
+    return [self stringFromPhoneNumber:phoneNumber];
+}
+
+- (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist; {
+    NSString *string = [phoneNumber KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
     
     KSTLog(@"attempting to format %@",string);
     
     for (NSDictionary *dict in plist[KSTPhoneNumberFormatterKeyPlistKeyFormats]) {
         NSString *pattern = dict[KSTPhoneNumberFormatterKeyPlistKeyPattern];
-        
-        KSTLog(@"check against pattern %@",pattern);
-        
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:NULL];
         NSTextCheckingResult *match = [regex firstMatchInString:string options:NSMatchingAnchored range:NSMakeRange(0, string.length)];
         
@@ -87,30 +142,11 @@
         
         KSTLog(@"formatted string %@",retval);
         
-        return [retval copy];
+        *outString = [retval copy];
+        
+        return YES;
     }
-    
-    return string;
-}
-- (BOOL)getObjectValue:(out id  _Nullable __autoreleasing *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing  _Nullable *)error {
-    *obj = [self phoneNumberFromString:string];
-    return YES;
-}
-- (BOOL)isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error {
-    *partialStringPtr = [self phoneNumberFromString:*partialStringPtr];
-    *proposedSelRangePtr = NSMakeRange((*partialStringPtr).length, 0);
     return NO;
-}
-
-- (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber {
-    return [self stringForObjectValue:phoneNumber];
-}
-- (NSString *)phoneNumberFromString:(NSString *)string {
-    return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]];
-}
-
-- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber; {
-    return [self stringFromPhoneNumber:phoneNumber];
 }
 
 @end
