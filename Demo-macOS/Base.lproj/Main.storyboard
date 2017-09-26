@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -669,6 +669,9 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="rRQ-3B-hdo"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -706,16 +709,44 @@
                                     <action selector="_watchFilesAction:" target="XfG-lQ-9wD" id="kV3-gY-kge"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Tz-VQ-DLQ">
+                                <rect key="frame" x="18" y="157" width="95" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Phone Number" id="Akx-u9-AaH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eIr-1v-8ZR">
+                                <rect key="frame" x="119" y="154" width="341" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Enter phone number" drawsBackground="YES" id="5Pv-00-jI7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <outlet property="formatter" destination="QQN-gF-FKW" id="ObM-fX-43A"/>
+                                    </connections>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aM6-2c-yLM" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="APk-Q9-Jc2"/>
+                            <constraint firstItem="0Tz-VQ-DLQ" firstAttribute="centerY" secondItem="eIr-1v-8ZR" secondAttribute="centerY" id="BPc-ZR-Hvv"/>
+                            <constraint firstItem="0Tz-VQ-DLQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CX2-CN-bgd"/>
                             <constraint firstItem="9Y7-HC-NBX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="FKM-E3-5mh"/>
                             <constraint firstItem="9Y7-HC-NBX" firstAttribute="top" secondItem="aM6-2c-yLM" secondAttribute="bottom" constant="12" id="aKB-IT-jzN"/>
+                            <constraint firstItem="eIr-1v-8ZR" firstAttribute="top" secondItem="9Y7-HC-NBX" secondAttribute="bottom" constant="20" id="mQR-l0-sN7"/>
+                            <constraint firstItem="eIr-1v-8ZR" firstAttribute="leading" secondItem="0Tz-VQ-DLQ" secondAttribute="trailing" constant="8" id="nS4-Eo-q4v"/>
                             <constraint firstItem="aM6-2c-yLM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="nna-hp-pt9"/>
+                            <constraint firstAttribute="trailing" secondItem="eIr-1v-8ZR" secondAttribute="trailing" constant="20" id="yXF-me-0dI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="eIr-1v-8ZR" id="vqx-ss-LtG"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customFormatter id="QQN-gF-FKW" customClass="KSTPhoneNumberFormatter"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>

@@ -18,6 +18,8 @@
 #import <Stanley/Stanley.h>
 
 @interface ViewController ()
+@property (weak,nonatomic) IBOutlet NSTextField *phoneNumberTextField;
+
 @property (strong,nonatomic) KSTDirectoryWatcher *directoryWatcher;
 @property (strong,nonatomic) KSTFileWatcher *fileWatcher;
 @end
@@ -27,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+- (void)viewDidAppear {
+    [super viewDidAppear];
     
+    [self.phoneNumberTextField becomeFirstResponder];
 }
 
 - (IBAction)_watchDirectoryAction:(id)sender {

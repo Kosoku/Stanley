@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070CD3A01F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		070CD3A11F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		070CD3A21F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		070CD3A31F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
+		070CD3A41F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
+		070CD3A51F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
+		070CD3A71F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
+		070CD3A81F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
+		070CD3A91F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
+		070CD3AA1F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */; };
+		070CD3AB1F79BB9D00CB7229 /* KSTPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		070CD3AC1F79BBA200CB7229 /* KSTPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */; };
 		0726280E1E7096EF00511F80 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078C6FA71E6F63DA00F04786 /* Stanley.framework */; };
 		072B3B7C1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */; };
 		072B3B7D1EA95FA200EAD6DE /* KSTFunctionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */; };
@@ -256,6 +268,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctionsTestCase.m; sourceTree = "<group>"; };
 		072FDE151F6ED3DA00E73661 /* ro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +468,7 @@
 				078C6FAF1E6F640600F04786 /* Stanley-tvOS-Info.plist */,
 				078C6F931E6F625D00F04786 /* Stanley-watchOS-Info.plist */,
 				078C6F671E6F497800F04786 /* Stanley-Info.h */,
+				070CD3A61F79BB3700CB7229 /* PhoneNumberFormats.plist */,
 				078C70401E6F7D1400F04786 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -501,6 +517,8 @@
 				07E991821EA670EE002377E6 /* KSTDirectoryWatcher.m */,
 				07E991A81EA680A1002377E6 /* KSTFileWatcher.h */,
 				07E991A91EA680A1002377E6 /* KSTFileWatcher.m */,
+				070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */,
+				070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -603,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6F721E6F599400F04786 /* KSTEnvironmentMacros.h in Headers */,
+				070CD3A01F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				077B76721E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C70811E6F93C900F04786 /* KSTValueMacros.h in Headers */,
 				078C6FF01E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
@@ -639,6 +658,7 @@
 				077B76731E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6FE31E6F696500F04786 /* NSString+KSTExtensions.h in Headers */,
 				078C70251E6F77BD00F04786 /* NSError+KSTExtensions.h in Headers */,
+				070CD3A11F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6F6D1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
 				078C70091E6F70BF00F04786 /* NSArray+KSTExtensions.h in Headers */,
 				078C6FFB1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */,
@@ -662,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6F9B1E6F636900F04786 /* KSTEnvironmentMacros.h in Headers */,
+				070CD3AB1F79BB9D00CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6F951E6F636900F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				078C70841E6F93C900F04786 /* KSTValueMacros.h in Headers */,
 				078C6FF31E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
@@ -691,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C6FC41E6F66DD00F04786 /* NSBundle+KSTExtensions.h in Headers */,
+				070CD3A21F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6FCB1E6F66DD00F04786 /* KSTEnvironmentMacros.h in Headers */,
 				078C70831E6F93C900F04786 /* KSTValueMacros.h in Headers */,
 				078C6FF21E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
@@ -945,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70421E6F7D1400F04786 /* Localizable.strings in Resources */,
+				070CD3A71F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,6 +983,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70431E6F7D1400F04786 /* Localizable.strings in Resources */,
+				070CD3A81F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +999,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70451E6F7D1400F04786 /* Localizable.strings in Resources */,
+				070CD3AA1F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1008,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				078C70441E6F7D1400F04786 /* Localizable.strings in Resources */,
+				070CD3A91F79BB3700CB7229 /* PhoneNumberFormats.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,6 +1110,7 @@
 				078C704E1E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6F841E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 				078C70161E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */,
+				070CD3A31F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,6 +1141,7 @@
 				07E991AF1EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C700D1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70291E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
+				070CD3A41F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */,
 				078C6FD91E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
 				07E991881EA670EE002377E6 /* KSTDirectoryWatcher.m in Sources */,
 				078C70331E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m in Sources */,
@@ -1167,6 +1195,7 @@
 				078C70511E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6F9E1E6F637500F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 				078C70191E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */,
+				070CD3AC1F79BBA200CB7229 /* KSTPhoneNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1219,7 @@
 				078C70501E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6FCE1E6F66E800F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 				078C70181E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */,
+				070CD3A51F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

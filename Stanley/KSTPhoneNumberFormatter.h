@@ -1,8 +1,8 @@
 //
-//  Stanley.h
+//  KSTPhoneNumberFormatter.h
 //  Stanley
 //
-//  Created by William Towe on 3/7/17.
+//  Created by William Towe on 9/25/17.
 //  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -15,41 +15,15 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Stanley.
-FOUNDATION_EXPORT double StanleyVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Stanley.
-FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
+@interface KSTPhoneNumberFormatter : NSFormatter
 
-// In this header, you should import all the public headers of your framework using statements like #import <Stanley/PublicHeader.h>
+- (NSString *)stringFromPhoneNumber:(NSString *)phoneNumber;
+- (nullable NSString *)phoneNumberFromString:(NSString *)string;
 
-// macros
-#import <Stanley/KSTScopeMacros.h>
-#import <Stanley/KSTEnvironmentMacros.h>
-#import <Stanley/KSTLoggingMacros.h>
-#import <Stanley/KSTValueMacros.h>
+- (NSString *)localizedStringFromPhoneNumber:(NSString *)phoneNumber;
 
-// functions
-#import <Stanley/KSTFunctions.h>
-#import <Stanley/KSTGeometryFunctions.h>
+@end
 
-// categories
-#import <Stanley/NSBundle+KSTExtensions.h>
-#import <Stanley/NSFileManager+KSTExtensions.h>
-#import <Stanley/NSData+KSTExtensions.h>
-#import <Stanley/NSString+KSTExtensions.h>
-#import <Stanley/NSHTTPURLResponse+KSTExtensions.h>
-#import <Stanley/NSURLRequest+KSTExtensions.h>
-#import <Stanley/NSArray+KSTExtensions.h>
-#import <Stanley/NSMutableArray+KSTExtensions.h>
-#import <Stanley/NSError+KSTExtensions.h>
-#import <Stanley/NSURL+KSTExtensions.h>
-#import <Stanley/NSDate+KSTExtensions.h>
-
-// classes
-#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
-#import <Stanley/KSTFileWatcher.h>
-#import <Stanley/KSTPhoneNumberFormatter.h>
-#if (TARGET_OS_OSX)
-#import <Stanley/KSTDirectoryWatcher.h>
-#endif
+NS_ASSUME_NONNULL_END
