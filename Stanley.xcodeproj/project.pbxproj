@@ -290,6 +290,7 @@
 		077B76881E6F473B005FC783 /* StanleyTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanleyTests-macOS-Info.plist"; sourceTree = "<group>"; };
 		07836FAA1F7A1412008F4447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		07836FAB1F7A1422008F4447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
+		07836FB01F7A28B1008F4447 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "en-AU"; path = "en-AU.lproj/PhoneNumberFormats.plist"; sourceTree = "<group>"; };
 		078C6F671E6F497800F04786 /* Stanley-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stanley-Info.h"; sourceTree = "<group>"; };
 		078C6F681E6F4C2500F04786 /* KSTFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctions.m; sourceTree = "<group>"; };
 		078C6F6B1E6F4C3600F04786 /* KSTFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTFunctions.h; sourceTree = "<group>"; };
@@ -944,6 +945,7 @@
 				ja,
 				Base,
 				ro,
+				"en-AU",
 			);
 			mainGroup = 077B762C1E6F2D73005FC783;
 			productRefGroup = 077B76391E6F314E005FC783 /* Products */;
@@ -1283,6 +1285,7 @@
 			children = (
 				07836FAA1F7A1412008F4447 /* Base */,
 				07836FAB1F7A1422008F4447 /* en */,
+				07836FB01F7A28B1008F4447 /* en-AU */,
 			);
 			name = PhoneNumberFormats.plist;
 			sourceTree = "<group>";
