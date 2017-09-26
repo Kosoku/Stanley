@@ -53,12 +53,15 @@ static NSString *const kPlistKeyPattern = @"pattern";
     return YES;
 }
 - (BOOL)isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error {
+    // ignore the empty string
     if ((*partialStringPtr).length == 0) {
         return YES;
     }
+    // ignore deletions
     else if ((*partialStringPtr).length < origString.length) {
         return YES;
     }
+    // only format when the user enters new text
     else {
         *partialStringPtr = [self stringFromPhoneNumber:*partialStringPtr];
         *proposedSelRangePtr = NSMakeRange((*partialStringPtr).length, 0);
@@ -126,8 +129,6 @@ static NSString *const kPlistKeyPattern = @"pattern";
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist; {
     NSString *string = [phoneNumber KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
     
-    KSTLog(@"attempting to format %@",string);
-    
     for (NSDictionary *dict in plist[kPlistKeyFormats]) {
         NSString *pattern = dict[kPlistKeyPattern];
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:NULL];
@@ -136,8 +137,6 @@ static NSString *const kPlistKeyPattern = @"pattern";
         if (match == nil) {
             continue;
         }
-        
-        KSTLog(@"match against pattern %@",pattern);
         
         NSString *format = dict[kPlistKeyFormat];
         NSUInteger formatIndex = 0;
@@ -175,8 +174,6 @@ static NSString *const kPlistKeyPattern = @"pattern";
             
             [retval appendString:@" )"];
         }
-        
-        KSTLog(@"formatted string %@",retval);
         
         *outString = [retval copy];
         
