@@ -132,11 +132,13 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
             return;
         }
         
-        KSTReachabilityManagerStatus status = KSTReachabilityManagerStatusForNetworkReachabilityFlags(flags);
-        
-        [self setStatus:status];
-        
-        [NSNotificationCenter.defaultCenter postNotificationName:KSTReachabilityManagerNotificationDidChangeStatus object:self userInfo:@{KSTReachabilityManagerUserInfoKeyStatus: @(status)}];
+        KSTDispatchMainAsync(^{
+            KSTReachabilityManagerStatus status = KSTReachabilityManagerStatusForNetworkReachabilityFlags(flags);
+            
+            [self setStatus:status];
+            
+            [NSNotificationCenter.defaultCenter postNotificationName:KSTReachabilityManagerNotificationDidChangeStatus object:self userInfo:@{KSTReachabilityManagerUserInfoKeyStatus: @(status)}];
+        });
     });
 }
 - (void)stopMonitoringReachability; {
@@ -145,6 +147,8 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
     }
     
     SCNetworkReachabilityUnscheduleFromRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
+    
+    [self setStatus:KSTReachabilityManagerStatusUnknown];
 }
 
 + (NSString *)localizedStringForStatus:(KSTReachabilityManagerStatus)status; {
@@ -156,7 +160,7 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
         case KSTReachabilityManagerStatusReachableViaWWAN:
             return NSLocalizedStringWithDefaultValue(@"REACHABILITY_MANAGER_STATUS_REACHABLE_VIA_WWAN", nil, [NSBundle KST_frameworkBundle], @"Reachable via WWAN", @"reachability manager status reachable via wwan");
         case KSTReachabilityManagerStatusNotReachable:
-            return NSLocalizedStringWithDefaultValue(@"REACHABILITY_MANAGER_STATUS_REACHABLE", nil, [NSBundle KST_frameworkBundle], @"Reachable", @"reachability manager status reachable");
+            return NSLocalizedStringWithDefaultValue(@"REACHABILITY_MANAGER_STATUS_REACHABLE", nil, [NSBundle KST_frameworkBundle], @"Not Reachable", @"reachability manager status not reachable");
     }
 }
 
