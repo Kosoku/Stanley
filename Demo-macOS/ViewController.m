@@ -26,6 +26,13 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(_statusDidChange:) name:KSTReachabilityManagerNotificationDidChangeStatus object:nil];
+    
+    [KSTReachabilityManager.sharedManager startMonitoringReachability];
+}
 - (void)viewDidAppear {
     [super viewDidAppear];
     
@@ -58,6 +65,12 @@
             NSLog(@"%@ %@",URL,@(flags));
         }]];
     }];
+}
+
+- (void)_statusDidChange:(NSNotification *)note {
+    KSTReachabilityManagerStatus status = [note.userInfo[KSTReachabilityManagerUserInfoKeyStatus] integerValue];
+    
+    KSTLog(@"status: %@",[KSTReachabilityManager localizedStringForStatus:status]);
 }
 
 @end
