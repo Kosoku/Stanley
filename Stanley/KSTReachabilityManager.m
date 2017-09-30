@@ -25,15 +25,15 @@
 #import <netdb.h>
 
 static KSTReachabilityManagerStatus KSTReachabilityManagerStatusForNetworkReachabilityFlags(SCNetworkReachabilityFlags flags) {
-    BOOL isReachable = ((flags & kSCNetworkReachabilityFlagsReachable) != 0);
+    BOOL reachable = ((flags & kSCNetworkReachabilityFlagsReachable) != 0);
     BOOL needsConnection = ((flags & kSCNetworkReachabilityFlagsConnectionRequired) != 0);
     BOOL canConnectionAutomatically = (((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) || ((flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0));
     BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically && (flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0);
-    BOOL isNetworkReachable = (isReachable && (!needsConnection || canConnectWithoutUserInteraction));
+    BOOL networkReachable = (reachable && (!needsConnection || canConnectWithoutUserInteraction));
     
     KSTReachabilityManagerStatus retval = KSTReachabilityManagerStatusUnknown;
     
-    if (!isNetworkReachable) {
+    if (!networkReachable) {
         retval = KSTReachabilityManagerStatusNotReachable;
     }
 #if (TARGET_OS_IPHONE)
@@ -52,6 +52,7 @@ NSNotificationName const KSTReachabilityManagerNotificationDidChangeStatus = @"K
 NSString *const KSTReachabilityManagerUserInfoKeyStatus = @"KSTReachabilityManagerUserInfoKeyStatus";
 
 @interface KSTReachabilityManager ()
+@property (readwrite,assign,nonatomic) KSTReachabilityManagerFlags flags;
 @property (readwrite,assign,nonatomic) KSTReachabilityManagerStatus status;
 
 @property (assign,nonatomic) SCNetworkReachabilityRef networkReachability;
@@ -64,6 +65,7 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
     kstWeakify(manager);
     KSTDispatchMainAsync(^{
         kstStrongify(manager);
+        [manager setFlags:(KSTReachabilityManagerFlags)flags];
         [manager setStatus:status];
         
         [NSNotificationCenter.defaultCenter postNotificationName:KSTReachabilityManagerNotificationDidChangeStatus object:manager userInfo:@{KSTReachabilityManagerUserInfoKeyStatus: @(status)}];
@@ -135,6 +137,7 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
         KSTDispatchMainAsync(^{
             KSTReachabilityManagerStatus status = KSTReachabilityManagerStatusForNetworkReachabilityFlags(flags);
             
+            [self setFlags:(KSTReachabilityManagerFlags)flags];
             [self setStatus:status];
             
             [NSNotificationCenter.defaultCenter postNotificationName:KSTReachabilityManagerNotificationDidChangeStatus object:self userInfo:@{KSTReachabilityManagerUserInfoKeyStatus: @(status)}];
@@ -148,6 +151,7 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
     
     SCNetworkReachabilityUnscheduleFromRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
     
+    [self setFlags:KSTReachabilityManagerFlagsUnknown];
     [self setStatus:KSTReachabilityManagerStatusUnknown];
 }
 
@@ -178,6 +182,26 @@ static void KSTReachabilityManagerNetworkReachabilityCallback(SCNetworkReachabil
     return kRetval;
 }
 
+- (KSTReachabilityManagerFlags)flags {
+    if (_flags == KSTReachabilityManagerFlagsUnknown) {
+        SCNetworkReachabilityFlags flags;
+        if (SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {
+            _flags = (KSTReachabilityManagerFlags)flags;
+        }
+    }
+    return _flags;
+}
+- (KSTReachabilityManagerStatus)status {
+    if (_status == KSTReachabilityManagerStatusUnknown) {
+        SCNetworkReachabilityFlags flags;
+        if (SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {
+            KSTReachabilityManagerStatus status = KSTReachabilityManagerStatusForNetworkReachabilityFlags(flags);
+            
+            _status = status;
+        }
+    }
+    return _status;
+}
 - (BOOL)isReachable {
     SCNetworkReachabilityFlags flags;
     if (!SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {
