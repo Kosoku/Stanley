@@ -25,11 +25,11 @@ typedef NSString* KSTErrorAlertKey NS_STRING_ENUM;
 /**
  The key used to identify the alert title.
  */
-FOUNDATION_EXPORT KSTErrorAlertKey const KSTErrorAlertKeyTitle;
+FOUNDATION_EXTERN KSTErrorAlertKey const KSTErrorAlertKeyTitle;
 /**
  The key used to identify the alert message.
  */
-FOUNDATION_EXPORT KSTErrorAlertKey const KSTErrorAlertKeyMessage;
+FOUNDATION_EXTERN KSTErrorAlertKey const KSTErrorAlertKeyMessage;
 
 @interface NSError (KSTExtensions)
 

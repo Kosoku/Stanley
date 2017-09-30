@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Named constant used to retrieve shared instance of KSTSnakeCaseToLlamaCaseValueTransformer via `+valueTransformerForName:`.
  */
-FOUNDATION_EXPORT NSString *const KSTSnakeCaseToLlamaCaseValueTransformerName;
+FOUNDATION_EXTERN NSString *const KSTSnakeCaseToLlamaCaseValueTransformerName;
 
 /**
  KSTSnakeCaseToLlamaCaseValueTransformer is a NSValueTransformer subclass whose `-transformedValue:` method converts snake_case strings to camelCase strings.
