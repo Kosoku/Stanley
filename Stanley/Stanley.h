@@ -33,6 +33,10 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/KSTFunctions.h>
 #import <Stanley/KSTGeometryFunctions.h>
 
+// protocols
+#import <Stanley/KSTDeepCopying.h>
+#import <Stanley/KSTDeepMutableCopying.h>
+
 // categories
 #import <Stanley/NSBundle+KSTExtensions.h>
 #import <Stanley/NSFileManager+KSTExtensions.h>

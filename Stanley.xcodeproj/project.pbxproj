@@ -33,6 +33,22 @@
 		07511EDB1F7F0CFD00F9C8E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07511EDA1F7F0CFD00F9C8E5 /* main.m */; };
 		07511EDF1F7F0D2300F9C8E5 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; };
 		07511EE01F7F0D2300F9C8E5 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		077168621F7F5921007252C1 /* KSTDeepCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 077168601F7F5921007252C1 /* KSTDeepCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077168631F7F5921007252C1 /* KSTDeepCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 077168601F7F5921007252C1 /* KSTDeepCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077168641F7F5921007252C1 /* KSTDeepCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 077168601F7F5921007252C1 /* KSTDeepCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077168651F7F5921007252C1 /* KSTDeepCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 077168601F7F5921007252C1 /* KSTDeepCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077168661F7F5921007252C1 /* KSTDeepCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 077168611F7F5921007252C1 /* KSTDeepCopying.m */; };
+		077168671F7F5921007252C1 /* KSTDeepCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 077168611F7F5921007252C1 /* KSTDeepCopying.m */; };
+		077168681F7F5921007252C1 /* KSTDeepCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 077168611F7F5921007252C1 /* KSTDeepCopying.m */; };
+		077168691F7F5921007252C1 /* KSTDeepCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 077168611F7F5921007252C1 /* KSTDeepCopying.m */; };
+		0771686C1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0771686D1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0771686E1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0771686F1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = 0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077168701F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */; };
+		077168711F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */; };
+		077168721F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */; };
+		077168731F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = 0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */; };
 		077B76421E6F314E005FC783 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077B76381E6F314E005FC783 /* Stanley.framework */; };
 		077B76491E6F314E005FC783 /* Stanley.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B763B1E6F314E005FC783 /* Stanley.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		077B76641E6F3FC6005FC783 /* KSTScopeMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 077B76621E6F35CD005FC783 /* KSTScopeMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -316,6 +332,10 @@
 		07511ED71F7F0CFD00F9C8E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07511ED91F7F0CFD00F9C8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07511EDA1F7F0CFD00F9C8E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		077168601F7F5921007252C1 /* KSTDeepCopying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTDeepCopying.h; sourceTree = "<group>"; };
+		077168611F7F5921007252C1 /* KSTDeepCopying.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTDeepCopying.m; sourceTree = "<group>"; };
+		0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTDeepMutableCopying.h; sourceTree = "<group>"; };
+		0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTDeepMutableCopying.m; sourceTree = "<group>"; };
 		077B76381E6F314E005FC783 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B763B1E6F314E005FC783 /* Stanley.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stanley.h; sourceTree = "<group>"; };
 		077B76411E6F314E005FC783 /* StanleyTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StanleyTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -491,6 +511,17 @@
 			path = "Demo-iOS";
 			sourceTree = "<group>";
 		};
+		0771685F1F7F58C7007252C1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				077168601F7F5921007252C1 /* KSTDeepCopying.h */,
+				077168611F7F5921007252C1 /* KSTDeepCopying.m */,
+				0771686A1F7F61BB007252C1 /* KSTDeepMutableCopying.h */,
+				0771686B1F7F61BB007252C1 /* KSTDeepMutableCopying.m */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		077B762C1E6F2D73005FC783 = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +585,7 @@
 		077B76601E6F354A005FC783 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0771685F1F7F58C7007252C1 /* Protocols */,
 				078C6F751E6F5B1E00F04786 /* Categories */,
 				077B766F1E6F44EF005FC783 /* Classes */,
 				077B76681E6F4344005FC783 /* Functions */,
@@ -699,6 +731,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0771686C1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */,
 				078C6F721E6F599400F04786 /* KSTEnvironmentMacros.h in Headers */,
 				070CD3A01F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				077B76721E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
@@ -722,6 +755,7 @@
 				078C70581E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F781E6F5B3800F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				078C704A1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
+				077168621F7F5921007252C1 /* KSTDeepCopying.h in Headers */,
 				078C6F6C1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,6 +777,7 @@
 				078C6F6D1E6F4C3600F04786 /* KSTFunctions.h in Headers */,
 				078C70091E6F70BF00F04786 /* NSArray+KSTExtensions.h in Headers */,
 				078C6FFB1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */,
+				077168631F7F5921007252C1 /* KSTDeepCopying.h in Headers */,
 				078C6F831E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				077B76671E6F3FD3005FC783 /* KSTScopePrivateMacros.h in Headers */,
 				078C6F701E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
@@ -752,6 +787,7 @@
 				077B76651E6F3FCB005FC783 /* KSTScopeMacros.h in Headers */,
 				078C70591E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6F791E6F5B3800F04786 /* NSBundle+KSTExtensions.h in Headers */,
+				0771686D1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */,
 				07E991AB1EA680A1002377E6 /* KSTFileWatcher.h in Headers */,
 				078C704B1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F741E6F5A9E00F04786 /* Stanley.h in Headers */,
@@ -765,6 +801,7 @@
 				078C6F9B1E6F636900F04786 /* KSTEnvironmentMacros.h in Headers */,
 				070CD3AB1F79BB9D00CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6F951E6F636900F04786 /* NSFileManager+KSTExtensions.h in Headers */,
+				0771686F1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */,
 				078C70841E6F93C900F04786 /* KSTValueMacros.h in Headers */,
 				078C6FF31E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				078C6F961E6F636900F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
@@ -785,6 +822,7 @@
 				078C6F9A1E6F636900F04786 /* KSTScopePrivateMacros.h in Headers */,
 				078C704D1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
 				078C6F971E6F636900F04786 /* KSTFunctions.h in Headers */,
+				077168651F7F5921007252C1 /* KSTDeepCopying.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +830,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0771686E1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */,
 				078C6FC41E6F66DD00F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				070CD3A21F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6FCB1E6F66DD00F04786 /* KSTEnvironmentMacros.h in Headers */,
@@ -815,6 +854,7 @@
 				078C705A1E6F886000F04786 /* NSDate+KSTExtensions.h in Headers */,
 				078C6FC51E6F66DD00F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				078C704C1E6F7E2A00F04786 /* NSURL+KSTExtensions.h in Headers */,
+				077168641F7F5921007252C1 /* KSTDeepCopying.h in Headers */,
 				078C6FC21E6F65F500F04786 /* Stanley.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1233,6 +1273,7 @@
 				078C700C1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C70281E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FD81E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
+				077168661F7F5921007252C1 /* KSTDeepCopying.m in Sources */,
 				07511EC11F7EC6EA00F9C8E5 /* KSTReachabilityManager.m in Sources */,
 				078C70321E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m in Sources */,
 				077B76741E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
@@ -1240,6 +1281,7 @@
 				078C6FF41E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				077B766D1E6F4361005FC783 /* KSTGeometryFunctions.m in Sources */,
 				078C6F7A1E6F5B3800F04786 /* NSBundle+KSTExtensions.m in Sources */,
+				077168701F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */,
 				07E991AE1EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C6FFE1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C704E1E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
@@ -1279,6 +1321,7 @@
 				070CD3A41F79ACE100CB7229 /* KSTPhoneNumberFormatter.m in Sources */,
 				078C6FD91E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
 				07E991881EA670EE002377E6 /* KSTDirectoryWatcher.m in Sources */,
+				077168671F7F5921007252C1 /* KSTDeepCopying.m in Sources */,
 				078C70331E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m in Sources */,
 				077B76751E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				07511EC21F7EC6EA00F9C8E5 /* KSTReachabilityManager.m in Sources */,
@@ -1290,6 +1333,7 @@
 				078C704F1E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
 				078C6F851E6F5E1200F04786 /* NSFileManager+KSTExtensions.m in Sources */,
 				078C70171E6F716000F04786 /* NSMutableArray+KSTExtensions.m in Sources */,
+				077168711F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1315,6 +1359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077168691F7F5921007252C1 /* KSTDeepCopying.m in Sources */,
 				078C6FA01E6F637500F04786 /* KSTFunctions.m in Sources */,
 				078C705F1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */,
 				078C700F1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
@@ -1326,6 +1371,7 @@
 				078C6FF71E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				078C6F9F1E6F637500F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				078C6FA11E6F637500F04786 /* KSTGeometryFunctions.m in Sources */,
+				077168731F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */,
 				07E991B11EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C70011E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C70511E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
@@ -1344,6 +1390,7 @@
 				078C700E1E6F70BF00F04786 /* NSArray+KSTExtensions.m in Sources */,
 				078C702A1E6F77BD00F04786 /* NSError+KSTExtensions.m in Sources */,
 				078C6FDA1E6F67BB00F04786 /* NSData+KSTExtensions.m in Sources */,
+				077168681F7F5921007252C1 /* KSTDeepCopying.m in Sources */,
 				07511EC31F7EC6EA00F9C8E5 /* KSTReachabilityManager.m in Sources */,
 				078C70341E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m in Sources */,
 				078C6FCD1E6F66E800F04786 /* NSBundle+KSTExtensions.m in Sources */,
@@ -1351,6 +1398,7 @@
 				078C6FF61E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.m in Sources */,
 				078C6FCF1E6F66E800F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.m in Sources */,
 				078C6FD11E6F66E800F04786 /* KSTGeometryFunctions.m in Sources */,
+				077168721F7F61BB007252C1 /* KSTDeepMutableCopying.m in Sources */,
 				07E991B01EA680A1002377E6 /* KSTFileWatcher.m in Sources */,
 				078C70001E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.m in Sources */,
 				078C70501E6F7E2A00F04786 /* NSURL+KSTExtensions.m in Sources */,
