@@ -100,6 +100,7 @@ typedef NS_ENUM(NSInteger, KSTLogLevel) {
 #define KSTLogCGSize(sizeToLog) KSTLogObject(NSStringFromCGSize(sizeToLog))
 #define KSTLogCGPoint(pointToLog) KSTLogObject(NSStringFromCGPoint(pointToLog))
 #define KSTLogCGFloat(floatToLog) KSTLog(@"%f",floatToLog)
+#define KSTLogBOOL(boolToLog) KSTLog(@"%@",boolToLog ? @"YES" : @"NO")
 
 #if (!TARGET_OS_IPHONE)
 
