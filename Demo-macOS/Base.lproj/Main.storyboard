@@ -728,12 +728,23 @@
                                     </connections>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cyH-UZ-FAf">
+                                <rect key="frame" x="18" y="129" width="444" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reachability" id="RZ0-DT-Hdg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aM6-2c-yLM" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="APk-Q9-Jc2"/>
                             <constraint firstItem="0Tz-VQ-DLQ" firstAttribute="centerY" secondItem="eIr-1v-8ZR" secondAttribute="centerY" id="BPc-ZR-Hvv"/>
                             <constraint firstItem="0Tz-VQ-DLQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CX2-CN-bgd"/>
                             <constraint firstItem="9Y7-HC-NBX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="FKM-E3-5mh"/>
+                            <constraint firstItem="cyH-UZ-FAf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="N6A-fO-Mwi"/>
+                            <constraint firstAttribute="trailing" secondItem="cyH-UZ-FAf" secondAttribute="trailing" constant="20" id="RIh-AK-4QY"/>
+                            <constraint firstItem="cyH-UZ-FAf" firstAttribute="top" secondItem="eIr-1v-8ZR" secondAttribute="bottom" constant="8" id="ZVL-2V-OWV"/>
                             <constraint firstItem="9Y7-HC-NBX" firstAttribute="top" secondItem="aM6-2c-yLM" secondAttribute="bottom" constant="12" id="aKB-IT-jzN"/>
                             <constraint firstItem="eIr-1v-8ZR" firstAttribute="top" secondItem="9Y7-HC-NBX" secondAttribute="bottom" constant="20" id="mQR-l0-sN7"/>
                             <constraint firstItem="eIr-1v-8ZR" firstAttribute="leading" secondItem="0Tz-VQ-DLQ" secondAttribute="trailing" constant="8" id="nS4-Eo-q4v"/>
@@ -743,6 +754,7 @@
                     </view>
                     <connections>
                         <outlet property="phoneNumberTextField" destination="eIr-1v-8ZR" id="vqx-ss-LtG"/>
+                        <outlet property="reachabilityLabel" destination="cyH-UZ-FAf" id="rv2-OX-cN6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

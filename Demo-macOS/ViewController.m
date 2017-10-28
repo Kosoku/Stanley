@@ -19,6 +19,7 @@
 
 @interface ViewController ()
 @property (weak,nonatomic) IBOutlet NSTextField *phoneNumberTextField;
+@property (weak,nonatomic) IBOutlet NSTextField *reachabilityLabel;
 
 @property (strong,nonatomic) KSTDirectoryWatcher *directoryWatcher;
 @property (strong,nonatomic) KSTFileWatcher *fileWatcher;
@@ -69,8 +70,24 @@
 
 - (void)_statusDidChange:(NSNotification *)note {
     KSTReachabilityManagerStatus status = [note.userInfo[KSTReachabilityManagerUserInfoKeyStatus] integerValue];
+    NSColor *textColor = NSColor.textColor;
     
-    KSTLog(@"status: %@",[KSTReachabilityManager localizedStringForStatus:status]);
+    switch (status) {
+        case KSTReachabilityManagerStatusNotReachable:
+            textColor = [NSColor colorWithRed:0.75 green:0 blue:0 alpha:1];
+            break;
+        case KSTReachabilityManagerStatusReachableViaWWAN:
+            textColor = NSColor.orangeColor;
+            break;
+        case KSTReachabilityManagerStatusReachableViaWiFi:
+            textColor = [NSColor colorWithRed:0 green:0.75 blue:0 alpha:1];
+            break;
+        default:
+            break;
+    }
+    
+    [self.reachabilityLabel setTextColor:textColor];
+    [self.reachabilityLabel setStringValue:[KSTReachabilityManager localizedStringForStatus:status]];
 }
 
 @end
