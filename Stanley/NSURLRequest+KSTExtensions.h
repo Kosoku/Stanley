@@ -20,16 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Typedef for string constants for supported HTTP methods. See http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html for more information.
  */
-typedef NSString* KSHTTPMethod NS_EXTENSIBLE_STRING_ENUM;
+typedef NSString* KSTHTTPMethod NS_EXTENSIBLE_STRING_ENUM;
 
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodOPTIONS;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodGET;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodHEAD;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodPOST;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodPUT;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodDELETE;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodTRACE;
-FOUNDATION_EXTERN KSHTTPMethod const KSHTTPMethodCONNECT;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodOPTIONS;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodGET;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodHEAD;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodPOST;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodPUT;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodDELETE;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodTRACE;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodCONNECT;
 
 /**
  Typedef for string constants for supported HTTP header fields. See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more information.
@@ -93,7 +93,7 @@ FOUNDATION_EXTERN KSTHTTPHeaderField const KSTHTTPHeaderFieldWWWAuthenticate;
  @param HTTPMethod The HTTP method for the request
  @return The request
  */
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod;
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSTHTTPMethod)HTTPMethod;
 /**
  Creates and returns an `NSURLRequest` instance with the provided *URL*, *HTTPMethod* and *HTTPHeaderFields*.
  
@@ -102,7 +102,7 @@ FOUNDATION_EXTERN KSTHTTPHeaderField const KSTHTTPHeaderFieldWWWAuthenticate;
  @param HTTPHeaderFields The HTTP header fields for the request
  @return The request
  */
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<KSTHTTPHeaderField, NSString *> *)HTTPHeaderFields;
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSTHTTPMethod)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<KSTHTTPHeaderField, NSString *> *)HTTPHeaderFields;
 
 @end
 

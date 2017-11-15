@@ -15,14 +15,14 @@
 
 #import "NSURLRequest+KSTExtensions.h"
 
-KSHTTPMethod const KSHTTPMethodOPTIONS = @"OPTIONS";
-KSHTTPMethod const KSHTTPMethodGET = @"GET";
-KSHTTPMethod const KSHTTPMethodHEAD = @"HEAD";
-KSHTTPMethod const KSHTTPMethodPOST = @"POST";
-KSHTTPMethod const KSHTTPMethodPUT = @"PUT";
-KSHTTPMethod const KSHTTPMethodDELETE = @"DELETE";
-KSHTTPMethod const KSHTTPMethodTRACE = @"TRACE";
-KSHTTPMethod const KSHTTPMethodCONNECT = @"CONNECT";
+KSTHTTPMethod const KSTHTTPMethodOPTIONS = @"OPTIONS";
+KSTHTTPMethod const KSTHTTPMethodGET = @"GET";
+KSTHTTPMethod const KSTHTTPMethodHEAD = @"HEAD";
+KSTHTTPMethod const KSTHTTPMethodPOST = @"POST";
+KSTHTTPMethod const KSTHTTPMethodPUT = @"PUT";
+KSTHTTPMethod const KSTHTTPMethodDELETE = @"DELETE";
+KSTHTTPMethod const KSTHTTPMethodTRACE = @"TRACE";
+KSTHTTPMethod const KSTHTTPMethodCONNECT = @"CONNECT";
 
 KSTHTTPHeaderField const KSTHTTPHeaderFieldAccept = @"Accept";
 KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptCharset = @"Accept-Charset";
@@ -74,7 +74,7 @@ KSTHTTPHeaderField const KSTHTTPHeaderFieldWWWAuthenticate = @"WWW-Authenticate"
 
 @implementation NSURLRequest (KSTExtensions)
 
-+ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSHTTPMethod)HTTPMethod; {
++ (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(KSTHTTPMethod)HTTPMethod; {
     return [self KST_URLRequestWithURL:URL HTTPMethod:HTTPMethod HTTPHeaderFields:nil];
 }
 + (NSURLRequest *)KST_URLRequestWithURL:(NSURL *)URL HTTPMethod:(NSString *)HTTPMethod HTTPHeaderFields:(nullable NSDictionary<KSTHTTPHeaderField, NSString *> *)HTTPHeaderFields; {
