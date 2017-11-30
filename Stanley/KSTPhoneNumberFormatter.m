@@ -64,11 +64,10 @@ static NSString *const kPlistKeyPattern = @"pattern";
     // only format when the user enters new text
     else {
         NSString *string = [self stringFromPhoneNumber:*partialStringPtr];
-        NSRange range = NSMakeRange(NSMaxRange([string rangeOfCharacterFromSet:NSCharacterSet.KST_phoneNumberDecimalCharacterSet options:0 range:NSMakeRange(origSelRange.location, string.length - origSelRange.location)]), 0);
+        NSRange range = NSMakeRange(NSMaxRange([string rangeOfCharacterFromSet:NSCharacterSet.KST_phoneNumberDecimalCharacterSet options:NSBackwardsSearch range:NSMakeRange(0, string.length)]), 0);
         
-        if ([string rangeOfString:@"-"].length > 0 &&
-            NSMaxRange([string rangeOfString:@"-"]) > NSMaxRange(range)) {
-            range = NSMakeRange(NSMaxRange([string rangeOfString:@"-"]), 0);
+        if (NSMaxRange(range) < string.length) {
+            range = NSMakeRange(string.length, 0);
         }
         
         *partialStringPtr = string;
