@@ -46,6 +46,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/NSURLRequest+KSTExtensions.h>
 #import <Stanley/NSArray+KSTExtensions.h>
 #import <Stanley/NSMutableArray+KSTExtensions.h>
+#import <Stanley/NSObject+KSTExtensions.h>
 #import <Stanley/NSError+KSTExtensions.h>
 #import <Stanley/NSURL+KSTExtensions.h>
 #import <Stanley/NSDate+KSTExtensions.h>
