@@ -69,6 +69,10 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
                                 } if ([propertyType isEqualToString:KSTPropertyTypeFloat]) {
                                     [retval setValue:@([value floatValue]) forKey:kDictionaryKey];
                                 }
+                            } else if ([value conformsToProtocol:@protocol(NSCoding)]) {
+                                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];
+                                NSString *base64String = [data base64EncodedStringWithOptions:0];
+                                [retval setObject:base64String forKey:kDictionaryKey];
                             } else {
                                 NSDictionary *newDict = [value KST_dictionaryWithValueTransformer:transformer excludingProperties:properties];
                                 [retval setObject:newDict forKey:kDictionaryKey];
