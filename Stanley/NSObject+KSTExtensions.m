@@ -51,8 +51,12 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
                             } else if ([value isKindOfClass:[NSArray class]]) {
                                 NSMutableArray *tempArray = [NSMutableArray array];
                                 for (id object in (NSArray *)value) {
-                                    NSDictionary *newDict = [object KST_dictionaryWithValueTransformer:transformer dateFormatter:dateFormatter excludingProperties:properties];
-                                    [tempArray addObject:newDict];
+                                    if ([object isKindOfClass:[NSDictionary class]]) {
+                                        NSDictionary *newDict = [object KST_dictionaryWithValueTransformer:transformer dateFormatter:dateFormatter excludingProperties:properties];
+                                        [tempArray addObject:newDict];
+                                    } else {
+                                        [tempArray addObject:object];
+                                    }
                                 }
                                 [retval setObject:[NSArray arrayWithArray:tempArray] forKey:kDictionaryKey];
                             } else if ([value isKindOfClass:[NSDate class]]) {

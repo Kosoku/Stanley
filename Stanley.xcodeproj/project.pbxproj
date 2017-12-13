@@ -250,6 +250,7 @@
 		07E991AF1EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
 		07E991B01EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
 		07E991B11EA680A1002377E6 /* KSTFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E991A91EA680A1002377E6 /* KSTFileWatcher.m */; };
+		745C58101FE1750600438385 /* KSTNSObjectExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */; };
 		74C485A11FD9AEDF000935B9 /* NSObject+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74C485A21FD9AEDF000935B9 /* NSObject+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74C485A31FD9AEDF000935B9 /* NSObject+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -429,6 +430,7 @@
 		07E9919F1EA6717E002377E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07E991A81EA680A1002377E6 /* KSTFileWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTFileWatcher.h; sourceTree = "<group>"; };
 		07E991A91EA680A1002377E6 /* KSTFileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFileWatcher.m; sourceTree = "<group>"; };
+		745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTNSObjectExtensionsTestCase.m; sourceTree = "<group>"; };
 		74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KSTExtensions.h"; sourceTree = "<group>"; };
 		74C485A01FD9AEDF000935B9 /* NSObject+KSTExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KSTExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -668,6 +670,7 @@
 				07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */,
 				07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */,
 				072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */,
+				745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1376,6 +1379,7 @@
 				078C70031E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70531E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C701F1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
+				745C58101FE1750600438385 /* KSTNSObjectExtensionsTestCase.m in Sources */,
 				078C701B1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEB1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
