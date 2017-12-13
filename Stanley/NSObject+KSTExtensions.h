@@ -23,18 +23,20 @@ NS_ASSUME_NONNULL_BEGIN
  A method for mapping the properties of an NSObject and returning the contents as an NSDictionary
  
  @param transformer An NSValueTransformer instance for converting the property names/dictionary keys
+ @param dateFormatter An NSDateFormatter to format NSDate properties
  @param properties A set of property names to be excluded from the return dictionary
  @return The dictionary representaiton of the object
  */
-- (nullable NSDictionary *)KST_dictionaryWithValueTransformer:(nullable NSValueTransformer *)transformer excludingProperties:(NSSet <NSString *> *)properties;
+- (nullable NSDictionary *)KST_dictionaryWithValueTransformer:(nullable NSValueTransformer *)transformer dateFormatter:(nullable NSDateFormatter *)dateFormatter excludingProperties:(NSSet <NSString *> *)properties;
 
 /**
  A method for populating the properties of an NSObject with a JSON dictionary
  
  @param dictionary The dictionary representation of the object to populate
+ @param dateFormatter An NSDateFormatter to format NSDate properties
  @param transformer An NSValueTrasformer for converting JSON keys to property names
  */
-- (void)KST_setPropertiesWithJSONDictionary:(NSDictionary <NSString *, id> *)dictionary valueTransformer:(nullable NSValueTransformer *)transformer;
+- (void)KST_setPropertiesWithJSONDictionary:(NSDictionary <NSString *, id> *)dictionary dateFormatter:(nullable NSDateFormatter *)dateFormatter valueTransformer:(nullable NSValueTransformer *)transformer;
 
 @end
 

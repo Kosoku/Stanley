@@ -26,7 +26,7 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
 
 @implementation NSObject (KSTExtensions)
 
-- (nullable NSDictionary *)KST_dictionaryWithValueTransformer:(nullable NSValueTransformer *)transformer excludingProperties:(NSSet <NSString *> *)properties; {
+- (nullable NSDictionary *)KST_dictionaryWithValueTransformer:(nullable NSValueTransformer *)transformer dateFormatter:(nullable NSDateFormatter *)dateFormatter excludingProperties:(NSSet <NSString *> *)properties; {
         Class objClass = self.class;
         if (objClass == NULL) {
             return nil;
@@ -51,13 +51,16 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
                             } else if ([value isKindOfClass:[NSArray class]]) {
                                 NSMutableArray *tempArray = [NSMutableArray array];
                                 for (id object in (NSArray *)value) {
-                                    NSDictionary *newDict = [object KST_dictionaryWithValueTransformer:transformer excludingProperties:properties];
+                                    NSDictionary *newDict = [object KST_dictionaryWithValueTransformer:transformer dateFormatter:dateFormatter excludingProperties:properties];
                                     [tempArray addObject:newDict];
                                 }
                                 [retval setObject:[NSArray arrayWithArray:tempArray] forKey:kDictionaryKey];
                             } else if ([value isKindOfClass:[NSDate class]]) {
-                                NSDateFormatter *const dateFormatter = [[NSDateFormatter alloc] init];
-                                [retval setObject:[dateFormatter stringFromDate:(NSDate *)value] forKey:kDictionaryKey];
+                                if (dateFormatter) {
+                                    [retval setObject:[dateFormatter stringFromDate:(NSDate *)value] forKey:kDictionaryKey];
+                                } else {
+                                    [retval setObject:@([(NSDate *)value timeIntervalSince1970]) forKey:kDictionaryKey];
+                                }
                             } else if ([value isKindOfClass:[NSNumber class]]) {
                                 KSTPropertyType propertyType = [self KST_propertyType:property];
                                 if ([propertyType isEqualToString:KSTPropertyTypeBool]) {
@@ -74,7 +77,7 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
                                 NSString *base64String = [data base64EncodedStringWithOptions:0];
                                 [retval setObject:base64String forKey:kDictionaryKey];
                             } else {
-                                NSDictionary *newDict = [value KST_dictionaryWithValueTransformer:transformer excludingProperties:properties];
+                                NSDictionary *newDict = [value KST_dictionaryWithValueTransformer:transformer dateFormatter:dateFormatter excludingProperties:properties];
                                 [retval setObject:newDict forKey:kDictionaryKey];
                             }
                         }
@@ -88,7 +91,7 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
         return retval;
 }
 
-- (void)KST_setPropertiesWithJSONDictionary:(NSDictionary <NSString *, id> *)dictionary valueTransformer:(nullable NSValueTransformer *)transformer; {
+- (void)KST_setPropertiesWithJSONDictionary:(NSDictionary <NSString *, id> *)dictionary dateFormatter:(nullable NSDateFormatter *)dateFormatter valueTransformer:(nullable NSValueTransformer *)transformer; {
     Class objClass = self.class;
     if (objClass == NULL) {
         return;
@@ -103,8 +106,8 @@ KSTPropertyType const KSTPropertyTypeNSDate = @"NSDate";
                 if (property) {
                     KSTPropertyType propertyType = [self KST_propertyType:property];
                     if ([propertyType isEqualToString:KSTPropertyTypeNSDate] && [obj isKindOfClass:[NSString class]]) {
-                        NSDateFormatter *const dateFormatter = [[NSDateFormatter alloc] init];
-                        NSDate *date = [dateFormatter dateFromString:obj];
+                        NSDateFormatter *const formatter = (dateFormatter) ? dateFormatter : [[NSDateFormatter alloc] init];
+                        NSDate *date = [formatter dateFromString:obj];
                         [self setValue:date forKey:kPropertyKey];
                     } else if ([propertyType isEqualToString:KSTPropertyTypeNSDate] && [obj isKindOfClass:[NSNumber class]]) {
                         NSDate *date = [NSDate dateWithTimeIntervalSince1970:[obj longValue]];
