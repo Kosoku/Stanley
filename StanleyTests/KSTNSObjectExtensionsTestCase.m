@@ -11,6 +11,7 @@
 #import <Stanley/NSObject+KSTExtensions.h>
 
 @interface KSTTestObject: NSObject
+@property (nonatomic, copy) NSString *excludedProperty;
 @property (nonatomic, copy) NSString *stringProperty;
 @property (nonatomic, copy) NSDate *dateProperty;
 @property (nonatomic, assign) BOOL boolProperty;
@@ -43,6 +44,7 @@
 
 - (void)testKST_dictionaryFromObject {
     KSTTestObject *testObject = [[KSTTestObject alloc] init];
+    testObject.excludedProperty = @"excludeMe";
     testObject.stringProperty = @"stringValue";
     testObject.dateProperty = [NSDate date];
     testObject.boolProperty = YES;
@@ -50,7 +52,7 @@
     testObject.floatProperty = 1.0;
     testObject.dictionaryProperty = @{@"key":@"value"};
     testObject.arrayProperty = @[@"first",@"second"];
-    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:nil dateFormatter:nil excludingProperties:[NSSet setWithArray:@[]]];
+    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:nil dateFormatter:nil excludingProperties:[NSSet setWithArray:@[@"excludedProperty"]]];
     
     XCTAssertEqualObjects(jsonDict[@"stringProperty"],@"stringValue");
     XCTAssertTrue([jsonDict[@"boolProperty"] boolValue]);
@@ -58,6 +60,7 @@
     XCTAssertEqual([jsonDict[@"floatProperty"] floatValue],1.0);
     XCTAssertEqualObjects(jsonDict[@"dictionaryProperty"][@"key"], @"value");
     XCTAssertEqualObjects(((NSArray *)jsonDict[@"arrayProperty"]).firstObject, @"first");
+    XCTAssertNil(jsonDict[@"excludedProperty"]);
 }
 
 @end
