@@ -32,8 +32,10 @@
 
 - (void)testKST_setPropertiesWithJSONDictionary {
     KSTTestObject *testObject = [[KSTTestObject alloc] init];
-    NSDictionary *jsonDict = @{@"string_property":@"stringValue",@"date_property":@"2017-12-14",@"bool_property":@YES,@"integer_property":@1,@"float_property":@1.0,@"dictionary_property":@{@"key":@"value"},@"array_property":@[@"first",@"second"]};
-    [testObject KST_setPropertiesWithJSONDictionary:jsonDict dateFormatter:nil valueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName]];
+    NSDictionary *jsonDict = @{@"string_property":@"stringValue",@"date_property":@"11/23/17",@"bool_property":@YES,@"integer_property":@1,@"float_property":@1.0,@"dictionary_property":@{@"key":@"value"},@"array_property":@[@"first",@"second"]};
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [testObject KST_setPropertiesWithJSONDictionary:jsonDict dateFormatter:dateFormatter valueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName]];
     
     XCTAssertEqualObjects(testObject.stringProperty,@"stringValue");
     XCTAssertTrue(testObject.boolProperty);
@@ -41,19 +43,27 @@
     XCTAssertEqual(testObject.floatProperty,1.0);
     XCTAssertEqualObjects(testObject.dictionaryProperty[@"key"], @"value");
     XCTAssertEqualObjects(testObject.arrayProperty.firstObject, @"first");
+    XCTAssertEqualObjects([dateFormatter stringFromDate:testObject.dateProperty], @"11/23/17");
 }
 
 - (void)testKST_dictionaryFromObject {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setYear:2017];
+    [dateComponents setMonth:11];
+    [dateComponents setDay:23];
     KSTTestObject *testObject = [[KSTTestObject alloc] init];
     testObject.excludedProperty = @"excludeMe";
     testObject.stringProperty = @"stringValue";
-    testObject.dateProperty = [NSDate date];
+    testObject.dateProperty = [calendar dateFromComponents:dateComponents];
     testObject.boolProperty = YES;
     testObject.integerProperty = 1;
     testObject.floatProperty = 1.0;
     testObject.dictionaryProperty = @{@"key":@"value"};
     testObject.arrayProperty = @[@"first",@"second"];
-    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] dateFormatter:nil excludingProperties:[NSSet setWithArray:@[@"excludedProperty"]]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] dateFormatter:dateFormatter excludingProperties:[NSSet setWithArray:@[@"excludedProperty"]]];
     
     XCTAssertEqualObjects(jsonDict[@"string_property"],@"stringValue");
     XCTAssertTrue([jsonDict[@"bool_property"] boolValue]);
@@ -62,6 +72,7 @@
     XCTAssertEqualObjects(jsonDict[@"dictionary_property"][@"key"], @"value");
     XCTAssertEqualObjects(((NSArray *)jsonDict[@"array_property"]).firstObject, @"first");
     XCTAssertNil(jsonDict[@"excluded_property"]);
+    XCTAssertEqualObjects(jsonDict[@"date_property"], @"11/23/17");
 }
 
 @end
