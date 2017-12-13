@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 
 #import <Stanley/NSObject+KSTExtensions.h>
+#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
 
 @interface KSTTestObject: NSObject
 @property (nonatomic, copy) NSString *excludedProperty;
@@ -31,8 +32,8 @@
 
 - (void)testKST_setPropertiesWithJSONDictionary {
     KSTTestObject *testObject = [[KSTTestObject alloc] init];
-    NSDictionary *jsonDict = @{@"stringProperty":@"stringValue",@"dateProperty":@"2017-12-14",@"boolProperty":@YES,@"integerProperty":@1,@"floatProperty":@1.0,@"dictionaryProperty":@{@"key":@"value"},@"arrayProperty":@[@"first",@"second"]};
-    [testObject KST_setPropertiesWithJSONDictionary:jsonDict dateFormatter:nil valueTransformer:nil];
+    NSDictionary *jsonDict = @{@"string_property":@"stringValue",@"date_property":@"2017-12-14",@"bool_property":@YES,@"integer_property":@1,@"float_property":@1.0,@"dictionary_property":@{@"key":@"value"},@"array_property":@[@"first",@"second"]};
+    [testObject KST_setPropertiesWithJSONDictionary:jsonDict dateFormatter:nil valueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName]];
     
     XCTAssertEqualObjects(testObject.stringProperty,@"stringValue");
     XCTAssertTrue(testObject.boolProperty);
@@ -52,15 +53,15 @@
     testObject.floatProperty = 1.0;
     testObject.dictionaryProperty = @{@"key":@"value"};
     testObject.arrayProperty = @[@"first",@"second"];
-    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:nil dateFormatter:nil excludingProperties:[NSSet setWithArray:@[@"excludedProperty"]]];
+    NSDictionary *jsonDict = [testObject KST_dictionaryWithValueTransformer:[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] dateFormatter:nil excludingProperties:[NSSet setWithArray:@[@"excludedProperty"]]];
     
-    XCTAssertEqualObjects(jsonDict[@"stringProperty"],@"stringValue");
-    XCTAssertTrue([jsonDict[@"boolProperty"] boolValue]);
-    XCTAssertEqual([jsonDict[@"integerProperty"] integerValue],1);
-    XCTAssertEqual([jsonDict[@"floatProperty"] floatValue],1.0);
-    XCTAssertEqualObjects(jsonDict[@"dictionaryProperty"][@"key"], @"value");
-    XCTAssertEqualObjects(((NSArray *)jsonDict[@"arrayProperty"]).firstObject, @"first");
-    XCTAssertNil(jsonDict[@"excludedProperty"]);
+    XCTAssertEqualObjects(jsonDict[@"string_property"],@"stringValue");
+    XCTAssertTrue([jsonDict[@"bool_property"] boolValue]);
+    XCTAssertEqual([jsonDict[@"integer_property"] integerValue],1);
+    XCTAssertEqual([jsonDict[@"float_property"] floatValue],1.0);
+    XCTAssertEqualObjects(jsonDict[@"dictionary_property"][@"key"], @"value");
+    XCTAssertEqualObjects(((NSArray *)jsonDict[@"array_property"]).firstObject, @"first");
+    XCTAssertNil(jsonDict[@"excluded_property"]);
 }
 
 @end
