@@ -410,6 +410,7 @@
 		078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70801E6F93C900F04786 /* KSTValueMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTValueMacros.h; sourceTree = "<group>"; };
+		07CE61F91FE5D5D200393202 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
 		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
 		07E86B001F7A29D10027E7EC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
@@ -1578,6 +1579,7 @@
 				07E86B021F7A2A8F0027E7EC /* de */,
 				07E86B031F7A2B1E0027E7EC /* de-CH */,
 				07E86B041F7A2BC30027E7EC /* gsw-CH */,
+				07CE61F91FE5D5D200393202 /* ja */,
 			);
 			name = PhoneNumberFormats.plist;
 			sourceTree = "<group>";
