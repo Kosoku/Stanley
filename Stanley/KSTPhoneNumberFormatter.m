@@ -136,6 +136,11 @@ static NSString *const kPlistKeyPattern = @"pattern";
 - (BOOL)_formatPhoneNumber:(NSString *)phoneNumber outString:(NSString **)outString plist:(NSDictionary *)plist; {
     NSString *string = [phoneNumber KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberRoutingCharacterSet.invertedSet];
     
+    if (string.length <= 4) {
+        *outString = string;
+        return NO;
+    }
+    
     for (NSDictionary *dict in plist[kPlistKeyFormats]) {
         NSString *pattern = dict[kPlistKeyPattern];
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:NULL];
