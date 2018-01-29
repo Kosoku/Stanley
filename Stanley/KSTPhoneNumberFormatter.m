@@ -191,6 +191,9 @@ static NSString *const kPlistKeyPattern = @"pattern";
         
         return YES;
     }
+    
+    *outString = string;
+    
     return NO;
 }
 
