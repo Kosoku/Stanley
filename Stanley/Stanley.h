@@ -55,6 +55,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
 #import <Stanley/KSTFileWatcher.h>
 #import <Stanley/KSTPhoneNumberFormatter.h>
+#import <Stanley/KSTTimer.h>
 #if (TARGET_OS_OSX || TARGET_OS_IOS || TARGET_OS_TV)
 #import <Stanley/KSTReachabilityManager.h>
 #endif
