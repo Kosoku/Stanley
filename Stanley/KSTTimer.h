@@ -45,6 +45,10 @@ typedef void(^KSTTimerBlock)(KSTTimer *timer);
 @property (assign) NSTimeInterval tolerance;
 
 /**
+ Creates and returns a timer using initWithTimeInterval:target:selector:userInfo:repeats:queue:, passing nil for queue, and calls schedule on it.
+ */
++ (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(nullable id)userInfo repeats:(BOOL)repeats;
+/**
  Creates and returns a timer using initWithTimeInterval:target:selector:userInfo:repeats:queue: and calls schedule on it.
  */
 + (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(nullable id)userInfo repeats:(BOOL)repeats queue:(nullable dispatch_queue_t)queue;
@@ -53,6 +57,17 @@ typedef void(^KSTTimerBlock)(KSTTimer *timer);
  */
 + (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval block:(KSTTimerBlock)block userInfo:(nullable id)userInfo repeats:(BOOL)repeats queue:(nullable dispatch_queue_t)queue;
 
+/**
+ Creates and returns a timer that will invoke the provided selector on target when it fires.
+ 
+ @param timeInterval The interval at which the timer should fire
+ @param target The target on which to invoke selector
+ @param selector The selector to invoke on target
+ @param userInfo The user info to associate with the timer
+ @param repeats Whether the timer should repeat
+ @return The initialized timer
+ */
+- (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(nullable id)userInfo repeats:(BOOL)repeats;
 /**
  Creates and returns a timer that will invoke the provided selector on target when it fires.
  

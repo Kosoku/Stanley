@@ -49,6 +49,9 @@ static NSMutableSet<KSTTimer *> *kNonRepeatingTimers;
     [self invalidate];
 }
 #pragma mark *** Public Methods ***
++ (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(id)userInfo repeats:(BOOL)repeats {
+    return [self scheduledTimerWithTimeInterval:timeInterval target:target selector:selector userInfo:userInfo repeats:repeats queue:nil];
+}
 + (instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(id)userInfo repeats:(BOOL)repeats queue:(dispatch_queue_t)queue {
     KSTTimer *retval = [[KSTTimer alloc] initWithTimeInterval:timeInterval target:target selector:selector userInfo:userInfo repeats:repeats queue:queue];
     
@@ -63,7 +66,10 @@ static NSMutableSet<KSTTimer *> *kNonRepeatingTimers;
     
     return retval;
 }
-
+#pragma mark -
+- (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(id)userInfo repeats:(BOOL)repeats {
+    return [self initWithTimeInterval:timeInterval target:target selector:selector userInfo:userInfo repeats:repeats queue:nil];
+}
 - (instancetype)initWithTimeInterval:(NSTimeInterval)timeInterval target:(id)target selector:(SEL)selector userInfo:(id)userInfo repeats:(BOOL)repeats queue:(dispatch_queue_t)queue {
     if (!(self = [super init]))
         return nil;
