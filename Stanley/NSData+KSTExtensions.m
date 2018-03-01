@@ -43,7 +43,7 @@
     
     unsigned char buffer[CC_SHA1_DIGEST_LENGTH];
     
-    CC_MD5(self.bytes, (CC_LONG)self.length, buffer);
+    CC_SHA1(self.bytes, (CC_LONG)self.length, buffer);
     
     NSMutableString *retval = [[NSMutableString alloc] initWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
     
@@ -60,7 +60,7 @@
     
     unsigned char buffer[CC_SHA256_DIGEST_LENGTH];
     
-    CC_MD5(self.bytes, (CC_LONG)self.length, buffer);
+    CC_SHA256(self.bytes, (CC_LONG)self.length, buffer);
     
     NSMutableString *retval = [[NSMutableString alloc] initWithCapacity:CC_SHA256_DIGEST_LENGTH * 2];
     
@@ -77,7 +77,7 @@
     
     unsigned char buffer[CC_SHA512_DIGEST_LENGTH];
     
-    CC_MD5(self.bytes, (CC_LONG)self.length, buffer);
+    CC_SHA512(self.bytes, (CC_LONG)self.length, buffer);
     
     NSMutableString *retval = [[NSMutableString alloc] initWithCapacity:CC_SHA512_DIGEST_LENGTH * 2];
     
