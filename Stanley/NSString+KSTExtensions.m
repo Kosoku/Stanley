@@ -54,6 +54,45 @@
     }
 }
 
+- (NSString *)KST_wordAtRange:(NSRange)range {
+    NSInteger location = range.location;
+    
+    if (location == NSNotFound) {
+        return nil;
+    }
+    
+    if (self.length == 0 || location < 0 || (range.location+range.length) > self.length) {
+        return nil;
+    }
+    
+    NSString *leftPortion = [self substringToIndex:location];
+    NSArray *leftComponents = [leftPortion componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *leftWordPart = [leftComponents lastObject];
+    
+    NSString *rightPortion = [self substringFromIndex:location];
+    NSArray *rightComponents = [rightPortion componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *rightPart = [rightComponents firstObject];
+    
+    if (location > 0) {
+        NSString *characterBeforeCursor = [self substringWithRange:NSMakeRange(location-1, 1)];
+        NSRange whitespaceRange = [characterBeforeCursor rangeOfCharacterFromSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        if (whitespaceRange.length == 1) {
+            return rightPart;
+        }
+    }
+    
+    NSString *word = [leftWordPart stringByAppendingString:rightPart];
+    NSString *linebreak = @"\n";
+    
+    // If a break is detected, return the last component of the string
+    if ([word rangeOfString:linebreak].location != NSNotFound) {
+        word = [[word componentsSeparatedByString:linebreak] lastObject];
+    }
+    
+    return word;
+}
+
 - (NSString *)KST_MD5String; {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String];
 }
