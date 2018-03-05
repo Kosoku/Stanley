@@ -51,6 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return The word or nil
  */
 - (nullable NSString *)KST_wordAtRange:(NSRange)range;
+/**
+ Returns the word within the receiver at the provided *range* or nil. Words are delimited by NSCharacterSet.whitespaceAndNewlineCharacterSet. The range of the word within the receiver is returned by reference if *outRange* is non-Null.
+ 
+ @param range The range at which to search for a word
+ @param outRange The range of the word within the receiver
+ @return The word or nil
+ */
+- (nullable NSString *)KST_wordAtRange:(NSRange)range outRange:(nullable NSRangePointer)outRange;
 
 /**
  Creates and returns an NSString representing the MD5 hash of the receiver.

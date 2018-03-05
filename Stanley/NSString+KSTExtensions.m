@@ -55,13 +55,20 @@
 }
 
 - (NSString *)KST_wordAtRange:(NSRange)range {
+    return [self KST_wordAtRange:range outRange:NULL];
+}
+- (NSString *)KST_wordAtRange:(NSRange)range outRange:(NSRangePointer)outRange; {
     NSInteger location = range.location;
     
     if (location == NSNotFound) {
         return nil;
     }
     
+    // Aborts in case minimum requieres are not fufilled
     if (self.length == 0 || location < 0 || (range.location+range.length) > self.length) {
+        if (outRange != NULL) {
+            *outRange = NSMakeRange(0, 0);
+        }
         return nil;
     }
     
@@ -78,8 +85,18 @@
         NSRange whitespaceRange = [characterBeforeCursor rangeOfCharacterFromSet:[NSCharacterSet whitespaceCharacterSet]];
         
         if (whitespaceRange.length == 1) {
+            // At the start of a word, just use the word behind the cursor for the current word
+            if (outRange != NULL) {
+                *outRange = NSMakeRange(location, rightPart.length);
+            }
+            
             return rightPart;
         }
+    }
+    
+    // In the middle of a word, so combine the part of the word before the cursor, and after the cursor to get the current word
+    if (outRange != NULL) {
+        *outRange = NSMakeRange(location-leftWordPart.length, leftWordPart.length+rightPart.length);
     }
     
     NSString *word = [leftWordPart stringByAppendingString:rightPart];
@@ -87,6 +104,9 @@
     
     // If a break is detected, return the last component of the string
     if ([word rangeOfString:linebreak].location != NSNotFound) {
+        if (outRange != NULL) {
+            *outRange = [self rangeOfString:word];
+        }
         word = [[word componentsSeparatedByString:linebreak] lastObject];
     }
     
