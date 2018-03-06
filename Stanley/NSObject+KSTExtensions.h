@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (KSTExtensions)
 
 /**
+ Set and get an arbitrary object associated with the receiver. Convenience property to associate additional objects with the receiver.
+ */
+@property (strong,nonatomic,nullable) id KST_representedObject;
+
+/**
  A method for mapping the properties of an NSObject and returning the contents as an NSDictionary
  
  @param transformer An NSValueTransformer instance for converting the property names/dictionary keys
