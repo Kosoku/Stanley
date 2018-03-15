@@ -16,6 +16,6 @@
 #ifndef __STANLEY_INFO__
 #define __STANLEY_INFO__
 
-#define KST_BUNDLE_SHORT_VERSION_STRING 2.2.1
+#define KST_BUNDLE_SHORT_VERSION_STRING 2.3.0
 
 #endif
