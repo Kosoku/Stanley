@@ -23,6 +23,15 @@
 
 @implementation KSTFunctionsTestCase
 
+- (void)testIsEmptyObject {
+    XCTAssertEqual(KSTIsEmptyObject(nil), YES);
+    XCTAssertEqual(KSTIsEmptyObject(NSNull.null), YES);
+    XCTAssertEqual(KSTIsEmptyObject(@""), YES);
+    XCTAssertEqual(KSTIsEmptyObject(@[]), YES);
+    XCTAssertEqual(KSTIsEmptyObject(@{}), YES);
+    XCTAssertEqual(KSTIsEmptyObject([NSData data]), YES);
+}
+
 - (void)testDispatchMain {
     XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchMain1"];
     XCTestExpectation *expect2 = [self expectationWithDescription:@"testDispatchMain2"];

@@ -1,9 +1,9 @@
 //
-//  KSTMacros.h
+//  KSTMacrosTestCase.m
 //  Stanley
 //
-//  Created by William Towe on 3/7/17.
-//  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
+//  Created by William Towe on 5/24/18.
+//  Copyright © 2018 Kosoku Interactive, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 //
@@ -13,27 +13,27 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef __KST_MACROS__
-#define __KST_MACROS__
+#import <XCTest/XCTest.h>
 
-#import <Foundation/Foundation.h>
-#import <Stanley/KSTFunctions.h>
+#import <Stanley/KSTMacros.h>
 
-/**
- Returns the value bounded by *min* and *max*.
- 
- @param min The minimum value
- @param max The maximum value
- @return The bounded value
- */
-#define KSTBoundedValue(value, min, max) MAX(MIN((value), (max)), (min))
+@interface KSTMacrosTestCase : XCTestCase
 
-/**
- Returns nil if the object is empty as defined by KSTIsEmptyObject(), otherwise returns the object.
- 
- @param object The object to test for emptiness
- @return The object or nil
- */
-#define KSTObjectIfNotEmptyOrNil(object) (KSTIsEmptyObject(object) ? nil : (object))
+@end
 
-#endif
+@implementation KSTMacrosTestCase
+
+- (void)testBoundedValue {
+    XCTAssertEqual(KSTBoundedValue(NSIntegerMax, NSIntegerMin, 0), 0);
+    XCTAssertEqual(KSTBoundedValue(NSIntegerMin, 0, NSIntegerMax), 0);
+}
+- (void)testObjectIfNotEmptyOrNil {
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil(nil));
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil(NSNull.null));
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@""));
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@[]));
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@{}));
+    XCTAssertNil(KSTObjectIfNotEmptyOrNil([NSData data]));
+}
+
+@end

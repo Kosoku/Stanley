@@ -15,6 +15,13 @@
 
 #import "KSTFunctions.h"
 
+BOOL KSTIsEmptyObject(id object) {
+    return (object == nil ||
+            [object isEqual:NSNull.null] ||
+            ([object respondsToSelector:@selector(count)] && [(NSArray *)object count] == 0) ||
+            ([object respondsToSelector:@selector(length)] && [(NSString *)object length] == 0));
+}
+
 void KSTDispatchMainAsync(dispatch_block_t block) {
     NSCParameterAssert(block);
     

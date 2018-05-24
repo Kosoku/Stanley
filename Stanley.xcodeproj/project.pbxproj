@@ -235,6 +235,9 @@
 		078C70821E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C70831E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078C70841E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07AA43AB20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AA43AA20B77C0B006C19C0 /* KSTMacrosTestCase.m */; };
+		07AA43AC20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AA43AA20B77C0B006C19C0 /* KSTMacrosTestCase.m */; };
+		07AA43AD20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AA43AA20B77C0B006C19C0 /* KSTMacrosTestCase.m */; };
 		07D166D31E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
 		07D166D41E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
 		07D166D51E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
@@ -428,6 +431,7 @@
 		078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70801E6F93C900F04786 /* KSTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTMacros.h; sourceTree = "<group>"; };
+		07AA43AA20B77C0B006C19C0 /* KSTMacrosTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTMacrosTestCase.m; sourceTree = "<group>"; };
 		07CE61F91FE5D5D200393202 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
 		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
@@ -694,6 +698,7 @@
 				07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */,
 				072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */,
 				745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */,
+				07AA43AA20B77C0B006C19C0 /* KSTMacrosTestCase.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -1415,6 +1420,7 @@
 				078C70531E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C701F1E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
 				745C58101FE1750600438385 /* KSTNSObjectExtensionsTestCase.m in Sources */,
+				07AA43AB20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */,
 				078C701B1E6F73CF00F04786 /* KSTNSArrayExtensionsTestCase.m in Sources */,
 				078C6FEB1E6F6A3300F04786 /* KSTNSStringExtensionsTestCase.m in Sources */,
 				077B76771E6F46A5005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformerTestCase.m in Sources */,
@@ -1461,6 +1467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D166D41E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */,
+				07AA43AC20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */,
 				078C70041E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70541E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C70201E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,
@@ -1538,6 +1545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D166D51E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */,
+				07AA43AD20B77C0B006C19C0 /* KSTMacrosTestCase.m in Sources */,
 				078C70051E6F6EDE00F04786 /* KSTNSURLRequestExtensionsTestCase.m in Sources */,
 				078C70551E6F860200F04786 /* KSTNSURLExtensionsTestCase.m in Sources */,
 				078C70211E6F756A00F04786 /* KSTNSMutableArrayExtensionsTestCase.m in Sources */,

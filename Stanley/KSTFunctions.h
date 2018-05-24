@@ -18,6 +18,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ Returns YES if the object is empty, otherwise NO.
+ 
+ This first tests the object against nil, then against NSNull.null, then checks if the object responds to count or length invokes the method and checks its return value.
+ 
+ @param object The object to test for emptiness
+ @return YES if the object is empty, otherwise NO
+ */
+FOUNDATION_EXTERN BOOL KSTIsEmptyObject(id _Nullable object);
+
+/**
  Executes *block* on the main thread asynchronously, using dispatch_async, passing dispatch_get_main_queue() and *block* respectively.
  
  @param block The block to execute on the main thread
