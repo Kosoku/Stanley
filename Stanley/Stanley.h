@@ -27,7 +27,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/KSTScopeMacros.h>
 #import <Stanley/KSTEnvironmentMacros.h>
 #import <Stanley/KSTLoggingMacros.h>
-#import <Stanley/KSTValueMacros.h>
+#import <Stanley/KSTMacros.h>
 
 // functions
 #import <Stanley/KSTFunctions.h>

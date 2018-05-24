@@ -231,10 +231,10 @@
 		078C705D1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
 		078C705E1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
 		078C705F1E6F886000F04786 /* NSDate+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */; };
-		078C70811E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		078C70821E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		078C70831E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		078C70841E6F93C900F04786 /* KSTValueMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTValueMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C70811E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C70821E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C70831E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		078C70841E6F93C900F04786 /* KSTMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 078C70801E6F93C900F04786 /* KSTMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07D166D31E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
 		07D166D41E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
 		07D166D51E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */; };
@@ -427,7 +427,7 @@
 		078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSURLExtensionsTestCase.m; sourceTree = "<group>"; };
 		078C70561E6F886000F04786 /* NSDate+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70571E6F886000F04786 /* NSDate+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+KSTExtensions.m"; sourceTree = "<group>"; };
-		078C70801E6F93C900F04786 /* KSTValueMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTValueMacros.h; sourceTree = "<group>"; };
+		078C70801E6F93C900F04786 /* KSTMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTMacros.h; sourceTree = "<group>"; };
 		07CE61F91FE5D5D200393202 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/PhoneNumberFormats.plist; sourceTree = "<group>"; };
 		07D166D21E973F4B0073F69A /* KSTNSErrorExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSErrorExtensionsTestCase.m; sourceTree = "<group>"; };
 		07D166D61E9741830073F69A /* KSTNSDateExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSDateExtensionsTestCase.m; sourceTree = "<group>"; };
@@ -634,7 +634,7 @@
 				077B76631E6F35CD005FC783 /* KSTScopePrivateMacros.h */,
 				078C6F711E6F599400F04786 /* KSTEnvironmentMacros.h */,
 				078C6F6E1E6F56B400F04786 /* KSTLoggingMacros.h */,
-				078C70801E6F93C900F04786 /* KSTValueMacros.h */,
+				078C70801E6F93C900F04786 /* KSTMacros.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -775,7 +775,7 @@
 				078C6F721E6F599400F04786 /* KSTEnvironmentMacros.h in Headers */,
 				070CD3A01F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				077B76721E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
-				078C70811E6F93C900F04786 /* KSTValueMacros.h in Headers */,
+				078C70811E6F93C900F04786 /* KSTMacros.h in Headers */,
 				07511EBD1F7EC6EA00F9C8E5 /* KSTReachabilityManager.h in Headers */,
 				078C6FF01E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				078C6F6F1E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
@@ -810,7 +810,7 @@
 				07E991841EA670EE002377E6 /* KSTDirectoryWatcher.h in Headers */,
 				078C6F731E6F599400F04786 /* KSTEnvironmentMacros.h in Headers */,
 				077B766C1E6F4361005FC783 /* KSTGeometryFunctions.h in Headers */,
-				078C70821E6F93C900F04786 /* KSTValueMacros.h in Headers */,
+				078C70821E6F93C900F04786 /* KSTMacros.h in Headers */,
 				078C6FF11E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				077B76731E6F44FA005FC783 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				07511EBE1F7EC6EA00F9C8E5 /* KSTReachabilityManager.h in Headers */,
@@ -848,7 +848,7 @@
 				070CD3AB1F79BB9D00CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6F951E6F636900F04786 /* NSFileManager+KSTExtensions.h in Headers */,
 				0771686F1F7F61BB007252C1 /* KSTDeepMutableCopying.h in Headers */,
-				078C70841E6F93C900F04786 /* KSTValueMacros.h in Headers */,
+				078C70841E6F93C900F04786 /* KSTMacros.h in Headers */,
 				078C6FF31E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				078C6F961E6F636900F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6FE51E6F696500F04786 /* NSString+KSTExtensions.h in Headers */,
@@ -883,7 +883,7 @@
 				078C6FC41E6F66DD00F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				070CD3A21F79ACE100CB7229 /* KSTPhoneNumberFormatter.h in Headers */,
 				078C6FCB1E6F66DD00F04786 /* KSTEnvironmentMacros.h in Headers */,
-				078C70831E6F93C900F04786 /* KSTValueMacros.h in Headers */,
+				078C70831E6F93C900F04786 /* KSTMacros.h in Headers */,
 				07511EBF1F7EC6EA00F9C8E5 /* KSTReachabilityManager.h in Headers */,
 				078C6FF21E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				078C6FC61E6F66DD00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
