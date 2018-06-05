@@ -18,6 +18,16 @@
 
 @implementation NSString (KSTExtensions)
 
+- (NSString *)KST_reversedString {
+    NSMutableString *retval = [NSMutableString stringWithCapacity:self.length];
+    
+    [self enumerateSubstringsInRange:NSMakeRange(0, self.length) options:NSStringEnumerationReverse|NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+        [retval appendString:substring];
+    }];
+    
+    return [retval copy];
+}
+
 - (NSString *)KST_stringByRemovingCharactersInSet:(NSCharacterSet *)set {
     set = set.invertedSet;
     

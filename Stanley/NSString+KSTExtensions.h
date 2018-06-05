@@ -20,6 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (KSTExtensions)
 
 /**
+ Creates and returns a reversed string from the receiver.
+ 
+ @return The reversed string
+ */
+- (NSString *)KST_reversedString;
+
+/**
  Create and return a string by removing all characters in the provided *set* from the receiver. This is distinct from stringByTrimmingCharactersInSet: which only removes characters at the beginning and end of the receiver.
  
  For example, [@"+1 (123) 456-7890" KST_stringByRemovingCharactersInSet:NSCharacterSet.decimalDigitCharacterSet.invertedSet] -> @"11234567890".
