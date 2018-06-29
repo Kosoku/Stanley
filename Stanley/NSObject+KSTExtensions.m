@@ -46,6 +46,7 @@ static void const *kKST_representedObjectKey = &kKST_representedObjectKey;
     objc_setAssociatedObject(self, kKST_representedObjectKey, KST_representedObject, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+// implementation for perform methods taken from https://bou.io/PerformIfResponds.html and https://github.com/n-b/PerformIfResponds
 - (instancetype)KST_performIfResponds {
     return (id)[[KSTPerformProxy alloc] initWithTarget:self returnType:@encode(void) returnValueHandler:^(NSInvocation *invocation){}];
 }
