@@ -30,6 +30,26 @@
 
 @implementation KSTNSObjectExtensionsTestCase
 
+- (void)testPerformIfResponds {
+    KSTTestObject *object = [[KSTTestObject alloc] init];
+    
+    XCTAssertThrows([(id)object formUnionWithCharacterSet:NSCharacterSet.whitespaceCharacterSet]);
+    XCTAssertNoThrow([(id)[object KST_performIfResponds] formUnionWithCharacterSet:NSCharacterSet.whitespaceCharacterSet]);
+}
+- (void)testPerformOrReturn {
+    KSTTestObject *object = [[KSTTestObject alloc] init];
+    
+    XCTAssertThrows([(id)object countryCode]);
+    XCTAssertNil([[(id)object KST_performOrReturn:nil] countryCode]);
+    XCTAssertEqualObjects([[(id)object KST_performOrReturn:@"en"] countryCode], @"en");
+}
+- (void)testPerformOrReturnValue {
+    KSTTestObject *object = [[KSTTestObject alloc] init];
+    
+    XCTAssertThrows([(id)object count]);
+    XCTAssertEqual([[(id)object KST_performOrReturnValue:@0] count], 0);
+}
+
 - (void)testKST_setPropertiesWithJSONDictionary {
     KSTTestObject *testObject = [[KSTTestObject alloc] init];
     NSDictionary *jsonDict = @{@"string_property":@"stringValue",@"date_property":@"11/23/17",@"bool_property":@YES,@"integer_property":@1,@"float_property":@1.0,@"dictionary_property":@{@"key":@"value"},@"array_property":@[@"first",@"second"]};

@@ -25,6 +25,59 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic,nullable) id KST_representedObject;
 
 /**
+ Used in place of a respondsToSelector: check before calling a method that returns void. For example:
+ 
+ MyClass foo = ...;
+ 
+ if ([foo respondsToSelector:@selector(bar)]) {
+    [foo bar];
+ }
+ 
+ would become:
+ 
+ MyClass foo = ...;
+ 
+ [[foo KST_performIfResponds] bar];
+ */
+- (instancetype)KST_performIfResponds;
+/**
+ Used in place of a respondsToSelector: check before calling a method that returns an id value. For example:
+ 
+ MyClass foo = ...;
+ 
+ if ([foo respondsToSelector:@selector(baz)]) {
+    id retval = [foo baz];
+ }
+ 
+ would become:
+ 
+ MyClass foo = ...;
+ id retval = [[foo KST_performOrReturn:nil] baz];
+ 
+ @param value The default return value that should be used if the receiver does not respond to the method
+ @return Either the return value from the receiver or the default return value
+ */
+- (instancetype)KST_performOrReturn:(nullable id)value;
+/**
+ Used in place of a respondsToSelector: check before calling a method that returns a non-object value (struct, primitive, etc). For example:
+ 
+ MyClass foo = ...;
+ 
+ if ([foo respondsToSelector:@selector(boop)]) {
+    NSUInteger retval = [foo boop];
+ }
+ 
+ would become:
+ 
+ MyClass foo = ...;
+ NSUInteger retval = [[foo KST_performOrReturnValue:@0] boop];
+ 
+ @param value The default value that should be used if the receiver does not respond to the method
+ @return Either the return value from the receiver or the default return value
+ */
+- (instancetype)KST_performOrReturnValue:(nullable NSValue *)value;
+
+/**
  A method for mapping the properties of an NSObject and returning the contents as an NSDictionary
  
  @param transformer An NSValueTransformer instance for converting the property names/dictionary keys
