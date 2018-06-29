@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSBundle (KSTExtensions)
 
 /**
+ Returns the current bundle based on the calling context. For example, if you call this property within a framework, it will return the framework bundle. If you call this property in the main app, it will return the main bundle.
+ */
+@property (class,readonly,nonatomic) NSBundle *KST_currentBundle;
+
+/**
  Returns the bundle identifier. For example, "com.mycompany.app".
  
  @return The bundle identifier

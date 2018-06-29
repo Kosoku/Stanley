@@ -15,6 +15,8 @@
 
 #import "NSBundle+KSTExtensions.h"
 
+#import <dlfcn.h>
+
 static NSString *const kKSTBundleIdentifierKey = @"CFBundleIdentifier";
 static NSString *const kKSTBundleDisplayNameKey = @"CFBundleDisplayName";
 static NSString *const kKSTBundleExecutableKey = @"CFBundleExecutable";
@@ -22,6 +24,53 @@ static NSString *const kKSTBundleShortVersionStringKey = @"CFBundleShortVersionS
 static NSString *const kKSTBundleVersionKey = @"CFBundleVersion";
 
 @implementation NSBundle (KSTExtensions)
+
+// implementation translated from Swift from https://bou.io/NSBundle.current.html
++ (NSBundle *)KST_currentBundle {
+    static NSCache *kCache;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        kCache = [[NSCache alloc] init];
+        
+        kCache.name = @"com.kosoku.stanley.current-bundle.cache";
+    });
+    
+    NSNumber *caller = NSThread.callStackReturnAddresses[1];
+    NSBundle *retval = [kCache objectForKey:caller];
+    
+    if (retval == nil) {
+        Dl_info info = {
+            .dli_fname = "",
+            .dli_fbase = NULL,
+            .dli_sname = "",
+            .dli_saddr = NULL
+        };
+        
+        if (dladdr(caller.pointerValue, &info) == 0) {
+            return nil;
+        }
+        
+        NSString *bundlePath = [NSString stringWithCString:info.dli_fname encoding:NSUTF8StringEncoding];
+        
+        if (bundlePath == nil) {
+            return nil;
+        }
+        
+        for (NSBundle *bundle in [NSBundle.allBundles arrayByAddingObjectsFromArray:NSBundle.allFrameworks]) {
+            NSString *path = bundle.executablePath.stringByResolvingSymlinksInPath;
+            
+            if ([path isEqualToString:bundlePath]) {
+                retval = bundle;
+                
+                [kCache setObject:retval forKey:caller];
+                
+                break;
+            }
+        }
+    }
+    
+    return retval;
+}
 
 - (NSString *)KST_bundleIdentifier; {
     return self.infoDictionary[kKSTBundleIdentifierKey];

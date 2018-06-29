@@ -23,6 +23,10 @@
 
 @implementation KSTNSBundleExtensionsTestCase
 
+- (void)testCurrentBundle {
+    XCTAssertEqualObjects(NSBundle.KST_currentBundle.KST_bundleIdentifier, [NSBundle bundleForClass:self.class].KST_bundleIdentifier);
+}
+
 - (void)testBundleIdentifier {
     XCTAssertNotNil([[NSBundle bundleForClass:[self class]] KST_bundleIdentifier]);
 }

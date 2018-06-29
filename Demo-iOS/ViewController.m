@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    (void)NSBundle.KST_currentBundle;
+    
     [self.label setText:[KSTReachabilityManager localizedStringForStatus:KSTReachabilityManagerStatusUnknown]];
     
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(_statusDidChange:) name:KSTReachabilityManagerNotificationDidChangeStatus object:nil];
