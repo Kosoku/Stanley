@@ -31,6 +31,17 @@
     XCTAssertEqual(KSTIsEmptyObject(@{}), YES);
     XCTAssertEqual(KSTIsEmptyObject([NSData data]), YES);
 }
+- (void)testNullIfEmptyOrObject {
+    XCTAssertEqualObjects(KSTNullIfEmptyOrObject(nil), NSNull.null);
+    XCTAssertEqualObjects(KSTNullIfEmptyOrObject(@""), NSNull.null);
+    XCTAssertEqualObjects(KSTNullIfEmptyOrObject(@[]), NSNull.null);
+    XCTAssertEqualObjects(KSTNullIfEmptyOrObject(@{}), NSNull.null);
+    XCTAssertEqualObjects(KSTNullIfEmptyOrObject([NSData data]), NSNull.null);
+    
+    XCTAssertNotEqualObjects(KSTNullIfEmptyOrObject(@"a"), NSNull.null);
+    XCTAssertNotEqualObjects(KSTNullIfEmptyOrObject(@[@1]), NSNull.null);
+    XCTAssertNotEqualObjects(KSTNullIfEmptyOrObject(@{@1: @"a"}), NSNull.null);
+}
 
 - (void)testDispatchMain {
     XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchMain1"];

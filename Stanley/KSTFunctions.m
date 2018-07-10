@@ -22,6 +22,10 @@ BOOL KSTIsEmptyObject(id object) {
             ([object respondsToSelector:@selector(length)] && [(NSString *)object length] == 0));
 }
 
+id KSTNullIfEmptyOrObject(id _Nullable object) {
+    return KSTIsEmptyObject(object) ? NSNull.null : object;
+}
+
 void KSTDispatchMainAsync(dispatch_block_t block) {
     NSCParameterAssert(block);
     

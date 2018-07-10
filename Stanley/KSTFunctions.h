@@ -28,6 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXTERN BOOL KSTIsEmptyObject(id _Nullable object);
 
 /**
+ Returns NSNull.null if the object is empty, using KSTIsEmptyObject to test, otherwise returns object.
+ 
+ @param object The object to test
+ @return NSNull.null or the object
+ */
+FOUNDATION_EXTERN id KSTNullIfEmptyOrObject(id _Nullable object);
+
+/**
  Executes *block* on the main thread asynchronously, using dispatch_async, passing dispatch_get_main_queue() and *block* respectively.
  
  @param block The block to execute on the main thread
