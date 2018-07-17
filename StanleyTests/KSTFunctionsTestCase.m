@@ -42,6 +42,17 @@
     XCTAssertNotEqualObjects(KSTNullIfEmptyOrObject(@[@1]), NSNull.null);
     XCTAssertNotEqualObjects(KSTNullIfEmptyOrObject(@{@1: @"a"}), NSNull.null);
 }
+- (void)testNilIfEmptyOrObject {
+    XCTAssertNil(KSTNilIfEmptyOrObject(nil));
+    XCTAssertNil(KSTNilIfEmptyOrObject(@""));
+    XCTAssertNil(KSTNilIfEmptyOrObject(@[]));
+    XCTAssertNil(KSTNilIfEmptyOrObject(@{}));
+    XCTAssertNil(KSTNilIfEmptyOrObject([NSData data]));
+    
+    XCTAssertNotNil(KSTNilIfEmptyOrObject(@"a"));
+    XCTAssertNotNil(KSTNilIfEmptyOrObject(@[@1]));
+    XCTAssertNotNil(KSTNilIfEmptyOrObject(@{@1: @"a"}));
+}
 
 - (void)testDispatchMain {
     XCTestExpectation *expect1 = [self expectationWithDescription:@"testDispatchMain1"];
