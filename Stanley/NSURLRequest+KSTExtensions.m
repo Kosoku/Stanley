@@ -23,6 +23,7 @@ KSTHTTPMethod const KSTHTTPMethodPUT = @"PUT";
 KSTHTTPMethod const KSTHTTPMethodDELETE = @"DELETE";
 KSTHTTPMethod const KSTHTTPMethodTRACE = @"TRACE";
 KSTHTTPMethod const KSTHTTPMethodCONNECT = @"CONNECT";
+KSTHTTPMethod const KSTHTTPMethodPATCH = @"PATCH";
 
 KSTHTTPHeaderField const KSTHTTPHeaderFieldAccept = @"Accept";
 KSTHTTPHeaderField const KSTHTTPHeaderFieldAcceptCharset = @"Accept-Charset";

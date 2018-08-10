@@ -30,6 +30,7 @@ FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodPUT;
 FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodDELETE;
 FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodTRACE;
 FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodCONNECT;
+FOUNDATION_EXTERN KSTHTTPMethod const KSTHTTPMethodPATCH;
 
 /**
  Typedef for string constants for supported HTTP header fields. See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html for more information.
