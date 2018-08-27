@@ -3,7 +3,7 @@
 //  StanleyTests-iOS
 //
 //  Created by Jason Anderson on 12/13/17.
-//  Copyright © 2017 Kosoku Interactive, LLC. All rights reserved.
+//  Copyright © 2018 Kosoku Interactive, LLC. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
