@@ -28,12 +28,4 @@
  */
 #define KSTBoundedValue(value, min, max) MAX(MIN((value), (max)), (min))
 
-/**
- Returns nil if the object is empty as defined by KSTIsEmptyObject(), otherwise returns the object.
- 
- @param object The object to test for emptiness
- @return The object or nil
- */
-#define KSTObjectIfNotEmptyOrNil(object) (KSTIsEmptyObject(object) ? nil : (object))
-
 #endif
