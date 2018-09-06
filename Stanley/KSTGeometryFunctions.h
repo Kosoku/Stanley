@@ -21,6 +21,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ Returns a new CGSize by rounding both the width and height of the original using the ceil function.
+ 
+ For example, KSTCGSizeIntegral(CGSizeMake(1.5, 2.1)) would return CGSizeMake(2, 3).
+ 
+ @param size The size to round using ceil
+ @return The new size
+ */
+FOUNDATION_EXTERN CGSize KSTCGSizeIntegral(CGSize size);
+
+/**
  Creates and returns a `CGRect` by centering *rect_to_center* within *in_rect*.
  
  @param rect_to_center The rectangle to center
@@ -46,6 +56,16 @@ FOUNDATION_EXTERN CGRect KSTCGRectCenterInRectHorizontally(CGRect rect_to_center
 FOUNDATION_EXTERN CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect);
 
 #if (TARGET_OS_OSX)
+/**
+ Returns a new NSSize by rounding both the width and height of the original using the ceil function.
+ 
+ For example, KSTNSSizeIntegral(NSMakeSize(1.5, 2.1)) would return NSMakeSize(2, 3).
+ 
+ @param size The size to round using ceil
+ @return The new size
+ */
+FOUNDATION_EXTERN NSSize KSTNSSizeIntegral(NSSize size);
+
 /**
  Creates and returns a `NSRect` by centering *rect_to_center* within *in_rect*.
  

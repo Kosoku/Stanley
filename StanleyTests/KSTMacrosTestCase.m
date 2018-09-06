@@ -27,13 +27,5 @@
     XCTAssertEqual(KSTBoundedValue(NSIntegerMax, NSIntegerMin, 0), 0);
     XCTAssertEqual(KSTBoundedValue(NSIntegerMin, 0, NSIntegerMax), 0);
 }
-- (void)testObjectIfNotEmptyOrNil {
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil(nil));
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil(NSNull.null));
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@""));
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@[]));
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil(@{}));
-    XCTAssertNil(KSTObjectIfNotEmptyOrNil([NSData data]));
-}
 
 @end

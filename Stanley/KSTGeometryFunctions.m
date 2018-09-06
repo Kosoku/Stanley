@@ -15,7 +15,9 @@
 
 #import "KSTGeometryFunctions.h"
 
-#import <math.h>
+CGSize KSTCGSizeIntegral(CGSize size) {
+    return CGSizeMake(ceil(size.width), ceil(size.height));
+}
 
 CGRect KSTCGRectCenterInRect(CGRect rect_to_center, CGRect in_rect) {
     return CGRectMake(floor(CGRectGetMinX(in_rect) + (CGRectGetWidth(in_rect) * 0.5) - (CGRectGetWidth(rect_to_center) * 0.5)),
@@ -39,6 +41,10 @@ CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect) {
 }
 
 #if (TARGET_OS_OSX)
+NSSize KSTNSSizeIntegral(NSSize size) {
+    return NSMakeSize(ceil(size.width), ceil(size.height));
+}
+
 NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_rect) {
     return NSMakeRect(floor(NSMinX(in_rect) + (NSWidth(in_rect) * 0.5) - (NSWidth(rect_to_center) * 0.5)),
                       floor(NSMinY(in_rect) + (NSHeight(in_rect) * 0.5) - (NSHeight(rect_to_center) * 0.5)),
