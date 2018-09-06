@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param in_rect The bounding rectangle
  @return The centered rect
  */
-FOUNDATION_EXPORT CGRect KSTCGRectCenterInRect(CGRect rect_to_center, CGRect in_rect);
+FOUNDATION_EXTERN CGRect KSTCGRectCenterInRect(CGRect rect_to_center, CGRect in_rect);
 /**
  Calls KSTCGRectCenterInRect() and restores the resulting rectangle origin.y to its original value. This centers the rectangle horizontally.
  
@@ -35,7 +35,7 @@ FOUNDATION_EXPORT CGRect KSTCGRectCenterInRect(CGRect rect_to_center, CGRect in_
  @param in_rect The bounding rectangle
  @return The centered rectangle
  */
-FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectHorizontally(CGRect rect_to_center, CGRect in_rect);
+FOUNDATION_EXTERN CGRect KSTCGRectCenterInRectHorizontally(CGRect rect_to_center, CGRect in_rect);
 /**
  Calls KSTCGRectCenterInRect() and restores the resulting rectangle origin.x to its original value. This centers the rectangle vertically.
  
@@ -43,7 +43,7 @@ FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectHorizontally(CGRect rect_to_center
  @param in_rect The bounding rectangle
  @return The centered rectangle
  */
-FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect);
+FOUNDATION_EXTERN CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, CGRect in_rect);
 
 #if (TARGET_OS_OSX)
 /**
@@ -53,7 +53,7 @@ FOUNDATION_EXPORT CGRect KSTCGRectCenterInRectVertically(CGRect rect_to_center, 
  @param in_rect The bounding rectangle
  @return The centered rect
  */
-FOUNDATION_EXPORT NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_rect);
+FOUNDATION_EXTERN NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_rect);
 /**
  Calls KSTNSRectCenterInRect() and restores the resulting rectangle origin.y to its original value. This centers the rectangle horizontally.
  
@@ -61,7 +61,7 @@ FOUNDATION_EXPORT NSRect KSTNSRectCenterInRect(NSRect rect_to_center, NSRect in_
  @param in_rect The bounding rectangle
  @return The centered rectangle
  */
-FOUNDATION_EXPORT NSRect KSTNSRectCenterInRectHorizontally(NSRect rect_to_center, NSRect in_rect);
+FOUNDATION_EXTERN NSRect KSTNSRectCenterInRectHorizontally(NSRect rect_to_center, NSRect in_rect);
 /**
  Calls KSTNSRectCenterInRect() and restores the resulting rectangle origin.x to its original value. This centers the rectangle vertically.
  
@@ -69,7 +69,7 @@ FOUNDATION_EXPORT NSRect KSTNSRectCenterInRectHorizontally(NSRect rect_to_center
  @param in_rect The bounding rectangle
  @return The centered rectangle
  */
-FOUNDATION_EXPORT NSRect KSTNSRectCenterInRectVertically(NSRect rect_to_center, NSRect in_rect);
+FOUNDATION_EXTERN NSRect KSTNSRectCenterInRectVertically(NSRect rect_to_center, NSRect in_rect);
 #endif
 
 NS_ASSUME_NONNULL_END
