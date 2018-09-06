@@ -17,7 +17,6 @@
 #define __KST_MACROS__
 
 #import <Foundation/Foundation.h>
-#import <Stanley/KSTFunctions.h>
 
 /**
  Returns the value bounded by *min* and *max*.
