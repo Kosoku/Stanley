@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Typedef for a block that takes zero parameters and returns void.
@@ -38,6 +38,6 @@ typedef void(^KSTValueBlock)(id _Nullable value);
  */
 typedef void(^KSTValueErrorBlock)(id _Nullable value, NSError * _Nullable error);
 
-NS_ASSUME_NONULL_END
+NS_ASSUME_NONNULL_END
 
 #endif
