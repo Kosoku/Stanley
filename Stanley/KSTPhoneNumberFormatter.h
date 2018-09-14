@@ -67,6 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return The numeric phone number
  */
 - (int64_t)numericPhoneNumberFromString:(NSString *)string;
+/**
+ Strips all formatting from the *string* except for digit characters and returns @"+" prepended to the resulting string.
+ 
+ @param string The string to format
+ @return The E.164 formatted phone number or nil
+ */
+- (nullable NSString *)E164PhoneNumberFromString:(NSString *)string;
 
 @end
 

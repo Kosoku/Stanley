@@ -89,6 +89,10 @@ static NSString *const kPlistKeyPattern = @"pattern";
 - (int64_t)numericPhoneNumberFromString:(NSString *)string; {
     return [[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberDecimalCharacterSet.invertedSet] KST_stringByTrimmingLeadingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0"]].longLongValue;
 }
+#pragma mark -
+- (NSString *)e164PhoneNumberFromString:(NSString *)string {
+    return [NSString stringWithFormat:@"+%@",[string KST_stringByRemovingCharactersInSet:NSCharacterSet.KST_phoneNumberDecimalCharacterSet.invertedSet]];
+}
 #pragma mark Properties
 + (KSTPhoneNumberFormatter *)sharedFormatter {
     static KSTPhoneNumberFormatter *kRetval;
