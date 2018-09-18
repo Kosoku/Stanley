@@ -351,7 +351,7 @@
 		070CD39E1F79ACE100CB7229 /* KSTPhoneNumberFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTPhoneNumberFormatter.h; sourceTree = "<group>"; };
 		070CD39F1F79ACE100CB7229 /* KSTPhoneNumberFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTPhoneNumberFormatter.m; sourceTree = "<group>"; };
 		072B3B7B1EA95FA200EAD6DE /* KSTFunctionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFunctionsTestCase.m; sourceTree = "<group>"; };
-		072FDE151F6ED3DA00E73661 /* ro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		072FDE151F6ED3DA00E73661 /* ro */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07511EBB1F7EC6EA00F9C8E5 /* KSTReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTReachabilityManager.h; sourceTree = "<group>"; };
 		07511EBC1F7EC6EA00F9C8E5 /* KSTReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTReachabilityManager.m; sourceTree = "<group>"; };
 		07511EC91F7F0CFD00F9C8E5 /* Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -426,9 +426,9 @@
 		078C70231E6F77BD00F04786 /* NSError+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C702C1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+KSTPrivateExtensions.h"; sourceTree = "<group>"; };
 		078C702D1E6F7A1000F04786 /* NSBundle+KSTPrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+KSTPrivateExtensions.m"; sourceTree = "<group>"; };
-		078C70411E6F7D1400F04786 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		078C70461E6F7D3A00F04786 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		078C70471E6F7D4100F04786 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		078C70411E6F7D1400F04786 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		078C70461E6F7D3A00F04786 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		078C70471E6F7D4100F04786 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		078C70481E6F7E2A00F04786 /* NSURL+KSTExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KSTExtensions.h"; sourceTree = "<group>"; };
 		078C70491E6F7E2A00F04786 /* NSURL+KSTExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KSTExtensions.m"; sourceTree = "<group>"; };
 		078C70521E6F860200F04786 /* KSTNSURLExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTNSURLExtensionsTestCase.m; sourceTree = "<group>"; };
