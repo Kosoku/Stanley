@@ -54,6 +54,7 @@ FOUNDATION_EXPORT const unsigned char StanleyVersionString[];
 #import <Stanley/NSURL+KSTExtensions.h>
 #import <Stanley/NSDate+KSTExtensions.h>
 #import <Stanley/NSCharacterSet+KSTExtensions.h>
+#import <Stanley/NSDictionary+KSTExtensions.h>
 
 // classes
 #import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
