@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Stanley'
-  s.version          = '2.16.0'
+  s.version          = '2.16.1'
   s.summary          = 'Stanley is an iOS/macOS/tvOS/watchOS framework that extends the Foundation framework.'
 
   s.description      = <<-DESC
@@ -8,7 +8,7 @@ Stanley is an iOS/macOS/tvOS/watchOS framework that extends the `Foundation` fra
                        DESC
 
   s.homepage         = 'https://github.com/Kosoku/Stanley'
-  s.license          = { :type => 'BSD', :file => 'license.txt' }
+  s.license          = { :type => 'Apache 2.0', :file => 'LICENSE.txt' }
   s.author           = { 'William Towe' => 'willbur1984@gmail.com' }
   s.source           = { :git => 'https://github.com/Kosoku/Stanley.git', :tag => s.version.to_s }
 
