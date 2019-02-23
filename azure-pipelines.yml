@@ -18,7 +18,7 @@ pool:
 steps:
 - task: Xcode@5
   inputs:
-    actions: 'clean test'
+    actions: 'test'
     scheme: 'StanleyTests-iOS'
     sdk: 'iphonesimulator'
     destinationPlatformOption: "iOS"
@@ -29,7 +29,7 @@ steps:
     publishJUnitResults: true
 - task: Xcode@5
   inputs:
-    actions: 'clean test'
+    actions: 'test'
     scheme: 'StanleyTests-tvOS'
     sdk: 'appletvsimulator'
     destinationPlatformOption: "tvOS"
@@ -40,7 +40,7 @@ steps:
     publishJUnitResults: true
 - task: Xcode@5
   inputs:
-    actions: 'clean test'
+    actions: 'test'
     scheme: 'StanleyTests-macOS'
     sdk: 'macosx'
     xcodeVersion: '10'
