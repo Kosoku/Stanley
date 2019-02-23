@@ -4,7 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 
 trigger:
-- master
+    batch: true
+    branches:
+        include: ["master"]
+pr:
+    autoCancel: true
+    branches:
+        include: ["master"]
 
 pool:
   vmImage: 'macOS-10.13'
@@ -16,7 +22,7 @@ steps:
     scheme: 'StanleyTests-iOS'
     sdk: 'iphonesimulator'
     configuration: 'Debug'
-    destinationPlatform: 'iOS Simulator'
-    destinationSimulators: 'iPhone 8'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    destinationPlatformOption: "iOS"
+    destinationTypeOption: "simulators"
+    destinationSimulators: 'iPhone X'
     xcodeVersion: '10'
