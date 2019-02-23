@@ -18,13 +18,31 @@ pool:
 steps:
 - task: Xcode@5
   inputs:
-    actions: 'test'
+    actions: 'clean test'
     scheme: 'StanleyTests-iOS'
     sdk: 'iphonesimulator'
-    configuration: 'Debug'
     destinationPlatformOption: "iOS"
     destinationTypeOption: "simulators"
     destinationSimulators: 'iPhone X'
+    xcodeVersion: '10'
+    useXcpretty: true
+    publishJUnitResults: true
+- task: Xcode@5
+  inputs:
+    actions: 'clean test'
+    scheme: 'StanleyTests-tvOS'
+    sdk: 'appletvsimulator'
+    destinationPlatformOption: "tvOS"
+    destinationTypeOption: "simulators"
+    destinationSimulators: 'Apple TV'
+    xcodeVersion: '10'
+    useXcpretty: true
+    publishJUnitResults: true
+- task: Xcode@5
+  inputs:
+    actions: 'clean test'
+    scheme: 'StanleyTests-macOS'
+    sdk: 'macosx'
     xcodeVersion: '10'
     useXcpretty: true
     publishJUnitResults: true
