@@ -16,15 +16,23 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
-- task: Xcode@5
-  inputs:
-    actions: 'test'
-    scheme: 'StanleyTests-iOS'
-    sdk: 'iphonesimulator'
-    configuration: 'Debug'
-    destinationPlatformOption: "iOS"
-    destinationTypeOption: "simulators"
-    destinationSimulators: 'iPhone X'
-    xcodeVersion: '10'
-    useXcpretty: true
-    publishJUnitResults: true
+    - task: Bash@3
+    inputs:
+        targetType: "filePath"
+        filePath: ./scripts/travis-ci.sh
+    - task: Bash@3
+    inputs:
+        targetType: "filePath"
+        filePath: ./scripts/travis-ci-after-success.sh
+# - task: Xcode@5
+#   inputs:
+#     actions: 'test'
+#     scheme: 'StanleyTests-iOS'
+#     sdk: 'iphonesimulator'
+#     configuration: 'Debug'
+#     destinationPlatformOption: "iOS"
+#     destinationTypeOption: "simulators"
+#     destinationSimulators: 'iPhone X'
+#     xcodeVersion: '10'
+#     useXcpretty: true
+#     publishJUnitResults: true
