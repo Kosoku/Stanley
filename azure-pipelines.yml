@@ -26,3 +26,5 @@ steps:
     destinationTypeOption: "simulators"
     destinationSimulators: 'iPhone X'
     xcodeVersion: '10'
+    useXcpretty: true
+    publishJUnitResults: true
