@@ -47,5 +47,5 @@ steps:
     useXcpretty: true
     publishJUnitResults: true
 - task: ShellScript@2
-    inputs:
-        scriptPath: "scripts/upload_code_coverage.sh"
+  inputs:
+    scriptPath: "scripts/upload_code_coverage.sh"
