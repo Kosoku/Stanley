@@ -34,12 +34,12 @@
     XCTAssertNotNil(NSError.KST_defaultAlertMessage);
 }
 - (void)testAlertTitle {
-    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{NSLocalizedDescriptionKey: @"message"}];
+    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{KSTErrorAlertKeyTitle: @"message"}];
     
     XCTAssertEqualObjects(error.KST_alertTitle, @"message");
 }
 - (void)testAlertMessage {
-    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{NSLocalizedRecoverySuggestionErrorKey: @"message"}];
+    NSError *error = [NSError errorWithDomain:@"domain" code:1 userInfo:@{KSTErrorAlertKeyMessage: @"message"}];
     
     XCTAssertEqualObjects(error.KST_alertMessage, @"message");
 }
