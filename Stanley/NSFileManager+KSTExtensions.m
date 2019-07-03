@@ -19,16 +19,14 @@
 
 #import "NSFileManager+KSTExtensions.h"
 #import "NSBundle+KSTExtensions.h"
-#import "KSTLoggingMacros.h"
+#import "KSTOSLoggingMacros.h"
 
-#import <os/log.h>
-
-static os_log_t kLog;
+static os_log_t kKSTOSLogTarget;
 
 @implementation NSFileManager (KSTExtensions)
 
 + (void)load {
-    kLog = os_log_create(NSBundle.KST_currentBundle.bundleIdentifier.UTF8String, "NSFileManager-KSTExtensions");
+    kKSTOSLogTarget = KSTOSLogCreate(@"NSFileManager-KSTExtensions");
 }
 
 - (NSURL *)KST_applicationSupportDirectoryURL; {
@@ -41,7 +39,7 @@ static os_log_t kLog;
     if (![retval checkResourceIsReachableAndReturnError:NULL]) {
         NSError *outError;
         if (![self createDirectoryAtURL:retval withIntermediateDirectories:NO attributes:nil error:&outError]) {
-            os_log_error(kLog, "%@", outError);
+            KSTOSLogError("%@", outError);
         }
     }
     
@@ -57,7 +55,7 @@ static os_log_t kLog;
     if (![retval checkResourceIsReachableAndReturnError:NULL]) {
         NSError *outError;
         if (![self createDirectoryAtURL:retval withIntermediateDirectories:NO attributes:nil error:&outError]) {
-            os_log_error(kLog, "%@", outError);
+            KSTOSLogError("%@", outError);
         }
     }
 #endif
