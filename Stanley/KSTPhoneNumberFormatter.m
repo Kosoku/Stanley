@@ -20,7 +20,6 @@
 #import "KSTPhoneNumberFormatter.h"
 #import "NSString+KSTExtensions.h"
 #import "NSBundle+KSTPrivateExtensions.h"
-#import "KSTLoggingMacros.h"
 
 static NSString *const kPhoneNumberFormatsName = @"PhoneNumberFormats";
 static NSString *const kPhoneNumberFormatsExtension = @"plist";
@@ -76,6 +75,7 @@ static NSString *const kPlistKeyPattern = @"pattern";
         
         *partialStringPtr = string;
         *proposedSelRangePtr = range;
+        
         return NO;
     }
 }

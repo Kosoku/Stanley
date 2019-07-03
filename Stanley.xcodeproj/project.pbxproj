@@ -281,6 +281,10 @@
 		07FEADA3205A81F6005743FF /* NSCharacterSet+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD9D205A81F6005743FF /* NSCharacterSet+KSTExtensions.m */; };
 		07FEADA4205A81F6005743FF /* NSCharacterSet+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD9D205A81F6005743FF /* NSCharacterSet+KSTExtensions.m */; };
 		07FEADA5205A81F6005743FF /* NSCharacterSet+KSTExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD9D205A81F6005743FF /* NSCharacterSet+KSTExtensions.m */; };
+		4D915C4922CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D915C4A22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D915C4B22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D915C4C22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		745C58101FE1750600438385 /* KSTNSObjectExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */; };
 		74C485A11FD9AEDF000935B9 /* NSObject+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74C485A21FD9AEDF000935B9 /* NSObject+KSTExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -470,6 +474,7 @@
 		07E991A91EA680A1002377E6 /* KSTFileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTFileWatcher.m; sourceTree = "<group>"; };
 		07FEAD9C205A81F6005743FF /* NSCharacterSet+KSTExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+KSTExtensions.h"; sourceTree = "<group>"; };
 		07FEAD9D205A81F6005743FF /* NSCharacterSet+KSTExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+KSTExtensions.m"; sourceTree = "<group>"; };
+		4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSTOSLoggingMacros.h; sourceTree = "<group>"; };
 		745C580F1FE1750600438385 /* KSTNSObjectExtensionsTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSTNSObjectExtensionsTestCase.m; sourceTree = "<group>"; };
 		74C4859F1FD9AEDF000935B9 /* NSObject+KSTExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KSTExtensions.h"; sourceTree = "<group>"; };
 		74C485A01FD9AEDF000935B9 /* NSObject+KSTExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KSTExtensions.m"; sourceTree = "<group>"; };
@@ -653,6 +658,7 @@
 				077B76631E6F35CD005FC783 /* KSTScopePrivateMacros.h */,
 				078C6F711E6F599400F04786 /* KSTEnvironmentMacros.h */,
 				078C6F6E1E6F56B400F04786 /* KSTLoggingMacros.h */,
+				4D915C4822CCFD59005592AD /* KSTOSLoggingMacros.h */,
 				078C70801E6F93C900F04786 /* KSTMacros.h */,
 				07A43D82214342ED0015F9ED /* KSTDefines.h */,
 			);
@@ -804,6 +810,7 @@
 				078C6F6F1E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
 				078C6FE21E6F696500F04786 /* NSString+KSTExtensions.h in Headers */,
 				078C70241E6F77BD00F04786 /* NSError+KSTExtensions.h in Headers */,
+				4D915C4922CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */,
 				077B76641E6F3FC6005FC783 /* KSTScopeMacros.h in Headers */,
 				077DC284202356CE00CE5C87 /* KSTTimer.h in Headers */,
 				07FEAD9E205A81F6005743FF /* NSCharacterSet+KSTExtensions.h in Headers */,
@@ -850,6 +857,7 @@
 				078C6FFB1E6F6BDD00F04786 /* NSURLRequest+KSTExtensions.h in Headers */,
 				077168631F7F5921007252C1 /* KSTDeepCopying.h in Headers */,
 				078C6F831E6F5E1200F04786 /* NSFileManager+KSTExtensions.h in Headers */,
+				4D915C4A22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */,
 				07FEAD9F205A81F6005743FF /* NSCharacterSet+KSTExtensions.h in Headers */,
 				077B76671E6F3FD3005FC783 /* KSTScopePrivateMacros.h in Headers */,
 				078C6F701E6F56B400F04786 /* KSTLoggingMacros.h in Headers */,
@@ -880,6 +888,7 @@
 				078C6FF31E6F6AF600F04786 /* NSHTTPURLResponse+KSTExtensions.h in Headers */,
 				078C6F961E6F636900F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6FE51E6F696500F04786 /* NSString+KSTExtensions.h in Headers */,
+				4D915C4C22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */,
 				078C70271E6F77BD00F04786 /* NSError+KSTExtensions.h in Headers */,
 				078C6F941E6F636900F04786 /* NSBundle+KSTExtensions.h in Headers */,
 				078C700B1E6F70BF00F04786 /* NSArray+KSTExtensions.h in Headers */,
@@ -918,6 +927,7 @@
 				078C6FC61E6F66DD00F04786 /* KSTSnakeCaseToLlamaCaseValueTransformer.h in Headers */,
 				078C6FE41E6F696500F04786 /* NSString+KSTExtensions.h in Headers */,
 				078C70261E6F77BD00F04786 /* NSError+KSTExtensions.h in Headers */,
+				4D915C4B22CCFD59005592AD /* KSTOSLoggingMacros.h in Headers */,
 				078C6FCA1E6F66DD00F04786 /* KSTScopePrivateMacros.h in Headers */,
 				077DC286202356CE00CE5C87 /* KSTTimer.h in Headers */,
 				07FEADA0205A81F6005743FF /* NSCharacterSet+KSTExtensions.h in Headers */,
@@ -1172,6 +1182,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				es,
 				ja,
