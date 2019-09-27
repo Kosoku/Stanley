@@ -26,7 +26,7 @@ static os_log_t kKSTOSLogTarget;
 @implementation NSFileManager (KSTExtensions)
 
 + (void)load {
-    kKSTOSLogTarget = KSTOSLogCreate(@"NSFileManager-KSTExtensions");
+    kKSTOSLogTarget = KSTOSLogCreateWithSubsystem(@"com.kosoku.stanley", @"NSFileManager-KSTExtensions");
 }
 
 - (NSURL *)KST_applicationSupportDirectoryURL; {
