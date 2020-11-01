@@ -127,9 +127,6 @@
     return word;
 }
 
-- (NSString *)KST_MD5String; {
-    return [[self dataUsingEncoding:NSUTF8StringEncoding] KST_MD5String];
-}
 - (NSString *)KST_SHA1String; {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] KST_SHA1String];
 }

@@ -20,7 +20,7 @@
 #ifndef __KST_SCOPE_MACROS__
 #define __KST_SCOPE_MACROS__
 
-#import "KSTScopePrivateMacros.h"
+#import <Stanley/KSTScopePrivateMacros.h>
 
 /**
  Given a real object receiver and key path, returns the string concatentation of all arguments except the first. If the keypath is invalid, it will be flagged at compile time.

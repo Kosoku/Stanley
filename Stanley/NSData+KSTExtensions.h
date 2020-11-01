@@ -24,12 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSData (KSTExtensions)
 
 /**
- Creates and returns an NSString representing the MD5 hash of the receiver's bytes.
- 
- @return The NSString hash
- */
-- (nullable NSString *)KST_MD5String;
-/**
  Creates and returns an NSString representing the SHA1 hash of the receiver's bytes.
  
  @return The NSString hash

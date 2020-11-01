@@ -23,23 +23,6 @@
 
 @implementation NSData (KSTExtensions)
 
-- (NSString *)KST_MD5String; {
-    if (self.length == 0) {
-        return nil;
-    }
-    
-    unsigned char buffer[CC_MD5_DIGEST_LENGTH];
-    
-    CC_MD5(self.bytes, (CC_LONG)self.length, buffer);
-    
-    NSMutableString *retval = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    
-    for (NSUInteger i=0; i<CC_MD5_DIGEST_LENGTH; i++) {
-        [retval appendFormat:@"%02x",buffer[i]];
-    }
-    
-    return retval;
-}
 - (NSString *)KST_SHA1String; {
     if (self.length == 0) {
         return nil;

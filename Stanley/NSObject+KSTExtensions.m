@@ -122,7 +122,7 @@ static void const *kKST_representedObjectKey = &kKST_representedObjectKey;
                                 [retval setValue:@([value floatValue]) forKey:kDictionaryKey];
                             }
                         } else if ([value conformsToProtocol:@protocol(NSCoding)]) {
-                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];
+                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value requiringSecureCoding:false error:NULL];
                             NSString *base64String = [data base64EncodedStringWithOptions:0];
                             [retval setObject:base64String forKey:kDictionaryKey];
                         } else {
