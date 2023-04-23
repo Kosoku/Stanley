@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KSTReachabilityManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/KSTReachabilityManager" class="dashAnchor"></a>
+
+    <a title="KSTReachabilityManager Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Stanley 3.0.1 Docs
+        </a>
+         (60% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Stanley Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      KSTReachabilityManager Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepCopyingExtensions%29.html">NSArray(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepMutableCopyingExtensions%29.html">NSArray(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTExtensions%29.html">NSArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSBundle%28KSTExtensions%29.html">NSBundle(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTExtensions%29.html">NSCharacterSet(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTPhoneNumberFormatterExtensions%29.html">NSCharacterSet(KSTPhoneNumberFormatterExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSData%28KSTExtensions%29.html">NSData(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDate%28KSTExtensions%29.html">NSDate(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepCopyingExtensions%29.html">NSDictionary(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepMutableCopyingExtensions%29.html">NSDictionary(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTExtensions%29.html">NSDictionary(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSError%28KSTExtensions%29.html">NSError(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSFileManager%28KSTExtensions%29.html">NSFileManager(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSHTTPURLResponse%28KSTExtensions%29.html">NSHTTPURLResponse(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSMutableArray%28KSTExtensions%29.html">NSMutableArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSObject%28KSTExtensions%29.html">NSObject(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepCopyingExtensions%29.html">NSSet(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepMutableCopyingExtensions%29.html">NSSet(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSString%28KSTExtensions%29.html">NSString(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURL%28KSTExtensions%29.html">NSURL(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURLRequest%28KSTExtensions%29.html">NSURLRequest(KSTExtensions)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTFileWatcher.html">KSTFileWatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTPhoneNumberFormatter.html">KSTPhoneNumberFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTReachabilityManager.html">KSTReachabilityManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)KSTSnakeCaseToLlamaCaseValueTransformer">KSTSnakeCaseToLlamaCaseValueTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTTimer.html">KSTTimer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyMessage">KSTErrorAlertKeyMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyTitle">KSTErrorAlertKeyTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAccept">KSTHTTPHeaderFieldAccept</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptCharset">KSTHTTPHeaderFieldAcceptCharset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptEncoding">KSTHTTPHeaderFieldAcceptEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptLanguage">KSTHTTPHeaderFieldAcceptLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptRanges">KSTHTTPHeaderFieldAcceptRanges</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAge">KSTHTTPHeaderFieldAge</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAllow">KSTHTTPHeaderFieldAllow</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAuthorization">KSTHTTPHeaderFieldAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldCacheControl">KSTHTTPHeaderFieldCacheControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldConnection">KSTHTTPHeaderFieldConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentEncoding">KSTHTTPHeaderFieldContentEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLanguage">KSTHTTPHeaderFieldContentLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLength">KSTHTTPHeaderFieldContentLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLocation">KSTHTTPHeaderFieldContentLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentMD5">KSTHTTPHeaderFieldContentMD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentRange">KSTHTTPHeaderFieldContentRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentType">KSTHTTPHeaderFieldContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldDate">KSTHTTPHeaderFieldDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldETag">KSTHTTPHeaderFieldETag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpect">KSTHTTPHeaderFieldExpect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpires">KSTHTTPHeaderFieldExpires</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldFrom">KSTHTTPHeaderFieldFrom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldHost">KSTHTTPHeaderFieldHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfMatch">KSTHTTPHeaderFieldIfMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfModifiedSince">KSTHTTPHeaderFieldIfModifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfNoneMatch">KSTHTTPHeaderFieldIfNoneMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfRange">KSTHTTPHeaderFieldIfRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfUnmodifiedSince">KSTHTTPHeaderFieldIfUnmodifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLastModified">KSTHTTPHeaderFieldLastModified</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLocation">KSTHTTPHeaderFieldLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldMaxForwards">KSTHTTPHeaderFieldMaxForwards</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldPragma">KSTHTTPHeaderFieldPragma</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthenticate">KSTHTTPHeaderFieldProxyAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthorization">KSTHTTPHeaderFieldProxyAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRange">KSTHTTPHeaderFieldRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldReferer">KSTHTTPHeaderFieldReferer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRetryAfter">KSTHTTPHeaderFieldRetryAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldServer">KSTHTTPHeaderFieldServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTE">KSTHTTPHeaderFieldTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTrailer">KSTHTTPHeaderFieldTrailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTransferEncoding">KSTHTTPHeaderFieldTransferEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUpgrade">KSTHTTPHeaderFieldUpgrade</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUserAgent">KSTHTTPHeaderFieldUserAgent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVary">KSTHTTPHeaderFieldVary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVia">KSTHTTPHeaderFieldVia</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWWWAuthenticate">KSTHTTPHeaderFieldWWWAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWarning">KSTHTTPHeaderFieldWarning</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodCONNECT">KSTHTTPMethodCONNECT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodDELETE">KSTHTTPMethodDELETE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodGET">KSTHTTPMethodGET</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodHEAD">KSTHTTPMethodHEAD</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodOPTIONS">KSTHTTPMethodOPTIONS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPATCH">KSTHTTPMethodPATCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPOST">KSTHTTPMethodPOST</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPUT">KSTHTTPMethodPUT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodTRACE">KSTHTTPMethodTRACE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerNotificationDidChangeStatus">KSTReachabilityManagerNotificationDidChangeStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerUserInfoKeyStatus">KSTReachabilityManagerUserInfoKeyStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTSnakeCaseToLlamaCaseValueTransformerName">KSTSnakeCaseToLlamaCaseValueTransformerName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionNumber">StanleyVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionString">StanleyVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTFileWatcherFlags.html">KSTFileWatcherFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTHTTPStatusCode.html">KSTHTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogFlags.html">KSTLogFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogLevel.html">KSTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerFlags.html">KSTReachabilityManagerFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerStatus.html">KSTReachabilityManagerStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepCopying.html">KSTDeepCopying</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepMutableCopying.html">KSTDeepMutableCopying</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSError+KSTExtensions.h@T@KSTErrorAlertKey">KSTErrorAlertKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTFileWatcher.h@T@KSTFileWatcherBlock">KSTFileWatcherBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPHeaderField">KSTHTTPHeaderField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPMethod">KSTHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTTimer.h@T@KSTTimerBlock">KSTTimerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueBlock">KSTValueBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueErrorBlock">KSTValueErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTVoidBlock">KSTVoidBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTScopePrivateMacros.h@T@kst_cleanupBlock_t">kst_cleanupBlock_t</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRect">KSTCGRectCenterInRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectHorizontally">KSTCGRectCenterInRectHorizontally</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectVertically">KSTCGRectCenterInRectVertically</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGSizeIntegral">KSTCGSizeIntegral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchAfter">KSTDispatchAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAfter">KSTDispatchMainAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAsync">KSTDispatchMainAsync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainSync">KSTDispatchMainSync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTIsEmptyObject">KSTIsEmptyObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNilIfEmptyOrObject">KSTNilIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNullIfEmptyOrObject">KSTNullIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:KSTScopePrivateMacros.h@F@kst_executeCleanupBlock">kst_executeCleanupBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/c:@S@sockaddr_in6">sockaddr_in6</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>KSTReachabilityManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">KSTReachabilityManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>KSTReachabilityManager wraps the SCNetworkReachability APIs.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(cpy)sharedManager"></a>
+                    <a name="//apple_ref/objc/Property/sharedManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(cpy)sharedManager">sharedManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared manager, unless you need to check a specific host name, this should suffice.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">KSTReachabilityManager</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">sharedManager</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(py)flags"></a>
+                    <a name="//apple_ref/objc/Property/flags" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(py)flags">flags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current flags of the receiver. Calling this method will block until flags can be determined if they are unknown when the method is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    KSTReachabilityManagerFlags
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/KSTReachabilityManagerFlags.html">KSTReachabilityManagerFlags</a></span> <span class="n">flags</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(py)status"></a>
+                    <a name="//apple_ref/objc/Property/status" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(py)status">status</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current status of the receiver. Calling this method will block until status can be determined if they are unknown when the method is called.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    KSTReachabilityManagerStatus
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/KSTReachabilityManagerStatus.html">KSTReachabilityManagerStatus</a></span> <span class="n">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(py)reachable"></a>
+                    <a name="//apple_ref/objc/Property/reachable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(py)reachable">reachable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return YES if the host is reachable by WiFi or WWAN, otherwise NO. This method will block to determine if the host is reachable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isReachable</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">reachable</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(py)reachableViaWWAN"></a>
+                    <a name="//apple_ref/objc/Property/reachableViaWWAN" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(py)reachableViaWWAN">reachableViaWWAN</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return YES if the host is reachable by WWAN, otherwise NO. This method will block to determine if the host is reachable by WWAN.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isReachableViaWWAN</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">reachableViaWWAN</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(py)reachableViaWiFi"></a>
+                    <a name="//apple_ref/objc/Property/reachableViaWiFi" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(py)reachableViaWiFi">reachableViaWiFi</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return YES if the host is reachable by WiFi, otherwise NO. This method will block to determine if the host is reachable by WiFi.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isReachableViaWiFi</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">reachableViaWiFi</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)initWithNetworkReachability:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithNetworkReachability:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(im)initWithNetworkReachability:">-initWithNetworkReachability:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The designated initializer.</p>
+
+<p>Monitors the provided <em>networkReachability</em> object for changes, updates its properties and posts the appropriate notification when changes occur.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNetworkReachability</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">SCNetworkReachabilityRef</span><span class="p">)</span><span class="nv">networkReachability</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>networkReachability</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The network reachability object to monitor</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The initialized instance</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)initWithAddress:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithAddress:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(im)initWithAddress:">-initWithAddress:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls <code>initWithNetworkReachability:</code> passing a network reachability object created by calling <code>SCNetworkReachabilityCreateWithAddress()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithAddress</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="k">const</span> <span class="k">struct</span> <span class="n"><a href="../Structs.html#/c:@S@sockaddr_in6">sockaddr_in6</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">address</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer to the sockaddr_in6 to monitor</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The initialized instance</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)initWithDomain:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithDomain:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(im)initWithDomain:">-initWithDomain:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls <code>initWithNetworkReachability:</code> passing a network reachability object created by calling <code>SCNetworkReachabilityCreateWithName()</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDomain</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">domain</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>domain</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The domain to monitor (e.g. @&ldquo;<a href="http://www.google.com%22">www.google.com&rdquo;</a>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The initialized instance</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)KSTReachabilityManager(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(cm)new"></a>
+                    <a name="//apple_ref/objc/Method/+new" class="dashAnchor"></a>
+                    <a class="token discouraged" href="#/c:objc(cs)KSTReachabilityManager(cm)new">+new</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        
+                      </div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">new</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)startMonitoringReachability"></a>
+                    <a name="//apple_ref/objc/Method/-startMonitoringReachability" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(im)startMonitoringReachability">-startMonitoringReachability</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start monitoring the networkk reachability object for changes and post a notification when changes occur.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startMonitoringReachability</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(im)stopMonitoringReachability"></a>
+                    <a name="//apple_ref/objc/Method/-stopMonitoringReachability" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(im)stopMonitoringReachability">-stopMonitoringReachability</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop monitoring the network reachability object for changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopMonitoringReachability</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)KSTReachabilityManager(cm)localizedStringForStatus:"></a>
+                    <a name="//apple_ref/objc/Method/+localizedStringForStatus:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)KSTReachabilityManager(cm)localizedStringForStatus:">+localizedStringForStatus:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return a localized string representing the <em>status</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">localizedStringForStatus</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Enums/KSTReachabilityManagerStatus.html">KSTReachabilityManagerStatus</a></span><span class="p">)</span><span class="nv">status</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>status</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reachability manager status</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The localized string</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://github.com/Kosoku" target="_blank" rel="external noopener">Kosoku</a>. All rights reserved. (Last updated: 2023-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

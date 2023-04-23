@@ -1,0 +1,901 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepCopying.h",
+      "line": 43,
+      "symbol": "NSArray(KSTDeepCopyingExtensions).-deepCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepCopying.h",
+      "line": 50,
+      "symbol": "NSSet(KSTDeepCopyingExtensions).-deepCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepCopying.h",
+      "line": 57,
+      "symbol": "NSDictionary(KSTDeepCopyingExtensions).-deepCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepMutableCopying.h",
+      "line": 43,
+      "symbol": "NSArray(KSTDeepMutableCopyingExtensions).-deepMutableCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepMutableCopying.h",
+      "line": 50,
+      "symbol": "NSSet(KSTDeepMutableCopyingExtensions).-deepMutableCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTDeepMutableCopying.h",
+      "line": 57,
+      "symbol": "NSDictionary(KSTDeepMutableCopyingExtensions).-deepMutableCopy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTFileWatcher.h",
+      "line": 109,
+      "symbol": "KSTFileWatcher.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTFileWatcher.h",
+      "line": 110,
+      "symbol": "KSTFileWatcher.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTPhoneNumberFormatter.h",
+      "line": 84,
+      "symbol": "NSCharacterSet(KSTPhoneNumberFormatterExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTReachabilityManager.h",
+      "line": 69,
+      "symbol": "KSTReachabilityManagerFlags.KSTReachabilityManagerFlagsIsWWAN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTReachabilityManager.h",
+      "line": 155,
+      "symbol": "sockaddr_in6",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTReachabilityManager.h",
+      "line": 164,
+      "symbol": "KSTReachabilityManager.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTReachabilityManager.h",
+      "line": 165,
+      "symbol": "KSTReachabilityManager.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTScopePrivateMacros.h",
+      "line": 32,
+      "symbol": "kst_executeCleanupBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTTimer.h",
+      "line": 99,
+      "symbol": "KSTTimer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/KSTTimer.h",
+      "line": 100,
+      "symbol": "KSTTimer.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSArray+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSArray(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSBundle+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSBundle(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSCharacterSet+KSTExtensions.h",
+      "line": 22,
+      "symbol": "NSCharacterSet(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSData+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSData(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSDate+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSDate(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSDictionary+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSDictionary(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSError+KSTExtensions.h",
+      "line": 38,
+      "symbol": "NSError(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSFileManager+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSFileManager(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 28,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeContinue",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 29,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeSwitchingProtocols",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 31,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeOK",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 32,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeCreated",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 33,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeAccepted",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 34,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNonAuthoritativeInformation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 35,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNoContent",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 36,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeResetContent",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 37,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodePartialContent",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 39,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeMultipleChoices",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 40,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeMovedPermanently",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 41,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeFound",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 42,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeSeeOther",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 43,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNotModified",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 44,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeUseProxy",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 45,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeTemporaryRedirect",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 47,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeBadRequest",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 48,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeUnauthorized",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 49,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodePaymentRequired",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 50,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeForbidden",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 51,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNotFound",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 52,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeMethoNotAllowed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 53,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNotAcceptable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 54,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeProxyAuthenticationRequired",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 55,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeRequestTimeout",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 56,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeConflict",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 57,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeGone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 58,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeLengthRequired",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 59,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodePreconditionFailed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 60,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeRequestEntityTooLarge",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 61,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeRequestURITooLarge",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 62,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeUnsupportedMediaType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 63,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeRequestedRangeNotSatisfiable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 64,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeExpectationFailed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 66,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeInternalServerError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 67,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeNotImplemented",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 68,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeBadGateway",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 69,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeServiceUnavailable",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 70,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeGatewayTimeout",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 71,
+      "symbol": "KSTHTTPStatusCode.KSTHTTPStatusCodeHTTPVersionNotSupported",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSHTTPURLResponse+KSTExtensions.h",
+      "line": 74,
+      "symbol": "NSHTTPURLResponse(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSMutableArray+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSMutableArray(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSObject+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSObject(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSString+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSString(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURL+KSTExtensions.h",
+      "line": 24,
+      "symbol": "NSURL(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 29,
+      "symbol": "KSTHTTPMethodOPTIONS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 30,
+      "symbol": "KSTHTTPMethodGET",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 31,
+      "symbol": "KSTHTTPMethodHEAD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 32,
+      "symbol": "KSTHTTPMethodPOST",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 33,
+      "symbol": "KSTHTTPMethodPUT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 34,
+      "symbol": "KSTHTTPMethodDELETE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 35,
+      "symbol": "KSTHTTPMethodTRACE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 36,
+      "symbol": "KSTHTTPMethodCONNECT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 37,
+      "symbol": "KSTHTTPMethodPATCH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 44,
+      "symbol": "KSTHTTPHeaderFieldAccept",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 45,
+      "symbol": "KSTHTTPHeaderFieldAcceptCharset",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 46,
+      "symbol": "KSTHTTPHeaderFieldAcceptEncoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 47,
+      "symbol": "KSTHTTPHeaderFieldAcceptLanguage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 48,
+      "symbol": "KSTHTTPHeaderFieldAcceptRanges",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 49,
+      "symbol": "KSTHTTPHeaderFieldAge",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 50,
+      "symbol": "KSTHTTPHeaderFieldAllow",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 51,
+      "symbol": "KSTHTTPHeaderFieldAuthorization",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 52,
+      "symbol": "KSTHTTPHeaderFieldCacheControl",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 53,
+      "symbol": "KSTHTTPHeaderFieldConnection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 54,
+      "symbol": "KSTHTTPHeaderFieldContentEncoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 55,
+      "symbol": "KSTHTTPHeaderFieldContentLanguage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 56,
+      "symbol": "KSTHTTPHeaderFieldContentLength",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 57,
+      "symbol": "KSTHTTPHeaderFieldContentLocation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 58,
+      "symbol": "KSTHTTPHeaderFieldContentMD5",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 59,
+      "symbol": "KSTHTTPHeaderFieldContentRange",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 60,
+      "symbol": "KSTHTTPHeaderFieldContentType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 61,
+      "symbol": "KSTHTTPHeaderFieldDate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 62,
+      "symbol": "KSTHTTPHeaderFieldETag",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 63,
+      "symbol": "KSTHTTPHeaderFieldExpect",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 64,
+      "symbol": "KSTHTTPHeaderFieldExpires",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 65,
+      "symbol": "KSTHTTPHeaderFieldFrom",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 66,
+      "symbol": "KSTHTTPHeaderFieldHost",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 67,
+      "symbol": "KSTHTTPHeaderFieldIfMatch",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 68,
+      "symbol": "KSTHTTPHeaderFieldIfModifiedSince",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 69,
+      "symbol": "KSTHTTPHeaderFieldIfNoneMatch",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 70,
+      "symbol": "KSTHTTPHeaderFieldIfRange",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 71,
+      "symbol": "KSTHTTPHeaderFieldIfUnmodifiedSince",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 72,
+      "symbol": "KSTHTTPHeaderFieldLastModified",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 73,
+      "symbol": "KSTHTTPHeaderFieldLocation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 74,
+      "symbol": "KSTHTTPHeaderFieldMaxForwards",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 75,
+      "symbol": "KSTHTTPHeaderFieldPragma",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 76,
+      "symbol": "KSTHTTPHeaderFieldProxyAuthenticate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 77,
+      "symbol": "KSTHTTPHeaderFieldProxyAuthorization",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 78,
+      "symbol": "KSTHTTPHeaderFieldRange",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 79,
+      "symbol": "KSTHTTPHeaderFieldReferer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 80,
+      "symbol": "KSTHTTPHeaderFieldRetryAfter",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 81,
+      "symbol": "KSTHTTPHeaderFieldServer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 82,
+      "symbol": "KSTHTTPHeaderFieldTE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 83,
+      "symbol": "KSTHTTPHeaderFieldTrailer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 84,
+      "symbol": "KSTHTTPHeaderFieldTransferEncoding",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 85,
+      "symbol": "KSTHTTPHeaderFieldUpgrade",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 86,
+      "symbol": "KSTHTTPHeaderFieldUserAgent",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 87,
+      "symbol": "KSTHTTPHeaderFieldVary",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 88,
+      "symbol": "KSTHTTPHeaderFieldVia",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 89,
+      "symbol": "KSTHTTPHeaderFieldWarning",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 90,
+      "symbol": "KSTHTTPHeaderFieldWWWAuthenticate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/NSURLRequest+KSTExtensions.h",
+      "line": 92,
+      "symbol": "NSURLRequest(KSTExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/Stanley.h",
+      "line": 23,
+      "symbol": "StanleyVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Stanley/Stanley/Stanley.h",
+      "line": 26,
+      "symbol": "StanleyVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/williamtowe/Projects/Stanley/Stanley"
+}

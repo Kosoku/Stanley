@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KSTHTTPStatusCode Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Enum/KSTHTTPStatusCode" class="dashAnchor"></a>
+
+    <a title="KSTHTTPStatusCode Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Stanley 3.0.1 Docs
+        </a>
+         (60% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Stanley Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      KSTHTTPStatusCode Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepCopyingExtensions%29.html">NSArray(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepMutableCopyingExtensions%29.html">NSArray(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTExtensions%29.html">NSArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSBundle%28KSTExtensions%29.html">NSBundle(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTExtensions%29.html">NSCharacterSet(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTPhoneNumberFormatterExtensions%29.html">NSCharacterSet(KSTPhoneNumberFormatterExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSData%28KSTExtensions%29.html">NSData(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDate%28KSTExtensions%29.html">NSDate(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepCopyingExtensions%29.html">NSDictionary(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepMutableCopyingExtensions%29.html">NSDictionary(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTExtensions%29.html">NSDictionary(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSError%28KSTExtensions%29.html">NSError(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSFileManager%28KSTExtensions%29.html">NSFileManager(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSHTTPURLResponse%28KSTExtensions%29.html">NSHTTPURLResponse(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSMutableArray%28KSTExtensions%29.html">NSMutableArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSObject%28KSTExtensions%29.html">NSObject(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepCopyingExtensions%29.html">NSSet(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepMutableCopyingExtensions%29.html">NSSet(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSString%28KSTExtensions%29.html">NSString(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURL%28KSTExtensions%29.html">NSURL(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURLRequest%28KSTExtensions%29.html">NSURLRequest(KSTExtensions)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTFileWatcher.html">KSTFileWatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTPhoneNumberFormatter.html">KSTPhoneNumberFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTReachabilityManager.html">KSTReachabilityManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)KSTSnakeCaseToLlamaCaseValueTransformer">KSTSnakeCaseToLlamaCaseValueTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTTimer.html">KSTTimer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyMessage">KSTErrorAlertKeyMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyTitle">KSTErrorAlertKeyTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAccept">KSTHTTPHeaderFieldAccept</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptCharset">KSTHTTPHeaderFieldAcceptCharset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptEncoding">KSTHTTPHeaderFieldAcceptEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptLanguage">KSTHTTPHeaderFieldAcceptLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptRanges">KSTHTTPHeaderFieldAcceptRanges</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAge">KSTHTTPHeaderFieldAge</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAllow">KSTHTTPHeaderFieldAllow</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAuthorization">KSTHTTPHeaderFieldAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldCacheControl">KSTHTTPHeaderFieldCacheControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldConnection">KSTHTTPHeaderFieldConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentEncoding">KSTHTTPHeaderFieldContentEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLanguage">KSTHTTPHeaderFieldContentLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLength">KSTHTTPHeaderFieldContentLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLocation">KSTHTTPHeaderFieldContentLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentMD5">KSTHTTPHeaderFieldContentMD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentRange">KSTHTTPHeaderFieldContentRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentType">KSTHTTPHeaderFieldContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldDate">KSTHTTPHeaderFieldDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldETag">KSTHTTPHeaderFieldETag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpect">KSTHTTPHeaderFieldExpect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpires">KSTHTTPHeaderFieldExpires</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldFrom">KSTHTTPHeaderFieldFrom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldHost">KSTHTTPHeaderFieldHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfMatch">KSTHTTPHeaderFieldIfMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfModifiedSince">KSTHTTPHeaderFieldIfModifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfNoneMatch">KSTHTTPHeaderFieldIfNoneMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfRange">KSTHTTPHeaderFieldIfRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfUnmodifiedSince">KSTHTTPHeaderFieldIfUnmodifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLastModified">KSTHTTPHeaderFieldLastModified</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLocation">KSTHTTPHeaderFieldLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldMaxForwards">KSTHTTPHeaderFieldMaxForwards</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldPragma">KSTHTTPHeaderFieldPragma</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthenticate">KSTHTTPHeaderFieldProxyAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthorization">KSTHTTPHeaderFieldProxyAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRange">KSTHTTPHeaderFieldRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldReferer">KSTHTTPHeaderFieldReferer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRetryAfter">KSTHTTPHeaderFieldRetryAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldServer">KSTHTTPHeaderFieldServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTE">KSTHTTPHeaderFieldTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTrailer">KSTHTTPHeaderFieldTrailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTransferEncoding">KSTHTTPHeaderFieldTransferEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUpgrade">KSTHTTPHeaderFieldUpgrade</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUserAgent">KSTHTTPHeaderFieldUserAgent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVary">KSTHTTPHeaderFieldVary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVia">KSTHTTPHeaderFieldVia</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWWWAuthenticate">KSTHTTPHeaderFieldWWWAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWarning">KSTHTTPHeaderFieldWarning</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodCONNECT">KSTHTTPMethodCONNECT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodDELETE">KSTHTTPMethodDELETE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodGET">KSTHTTPMethodGET</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodHEAD">KSTHTTPMethodHEAD</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodOPTIONS">KSTHTTPMethodOPTIONS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPATCH">KSTHTTPMethodPATCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPOST">KSTHTTPMethodPOST</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPUT">KSTHTTPMethodPUT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodTRACE">KSTHTTPMethodTRACE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerNotificationDidChangeStatus">KSTReachabilityManagerNotificationDidChangeStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerUserInfoKeyStatus">KSTReachabilityManagerUserInfoKeyStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTSnakeCaseToLlamaCaseValueTransformerName">KSTSnakeCaseToLlamaCaseValueTransformerName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionNumber">StanleyVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionString">StanleyVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTFileWatcherFlags.html">KSTFileWatcherFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTHTTPStatusCode.html">KSTHTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogFlags.html">KSTLogFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogLevel.html">KSTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerFlags.html">KSTReachabilityManagerFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerStatus.html">KSTReachabilityManagerStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepCopying.html">KSTDeepCopying</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepMutableCopying.html">KSTDeepMutableCopying</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSError+KSTExtensions.h@T@KSTErrorAlertKey">KSTErrorAlertKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTFileWatcher.h@T@KSTFileWatcherBlock">KSTFileWatcherBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPHeaderField">KSTHTTPHeaderField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPMethod">KSTHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTTimer.h@T@KSTTimerBlock">KSTTimerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueBlock">KSTValueBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueErrorBlock">KSTValueErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTVoidBlock">KSTVoidBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTScopePrivateMacros.h@T@kst_cleanupBlock_t">kst_cleanupBlock_t</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRect">KSTCGRectCenterInRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectHorizontally">KSTCGRectCenterInRectHorizontally</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectVertically">KSTCGRectCenterInRectVertically</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGSizeIntegral">KSTCGSizeIntegral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchAfter">KSTDispatchAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAfter">KSTDispatchMainAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAsync">KSTDispatchMainAsync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainSync">KSTDispatchMainSync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTIsEmptyObject">KSTIsEmptyObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNilIfEmptyOrObject">KSTNilIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNullIfEmptyOrObject">KSTNullIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:KSTScopePrivateMacros.h@F@kst_executeCleanupBlock">kst_executeCleanupBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/c:@S@sockaddr_in6">sockaddr_in6</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>KSTHTTPStatusCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">KSTHTTPStatusCode</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+
+                </div>
+              </div>
+            <p>Enum representing the currently defined HTTP status codes. See <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</a> for more information.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeContinue"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeContinue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeContinue">KSTHTTPStatusCodeContinue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeContinue</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeSwitchingProtocols"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeSwitchingProtocols" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeSwitchingProtocols">KSTHTTPStatusCodeSwitchingProtocols</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeSwitchingProtocols</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeOK"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeOK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeOK">KSTHTTPStatusCodeOK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeOK</span> <span class="o">=</span> <span class="mi">200</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeCreated"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeCreated" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeCreated">KSTHTTPStatusCodeCreated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeCreated</span> <span class="o">=</span> <span class="mi">201</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeAccepted"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeAccepted" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeAccepted">KSTHTTPStatusCodeAccepted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeAccepted</span> <span class="o">=</span> <span class="mi">202</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNonAuthoritativeInformation"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNonAuthoritativeInformation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNonAuthoritativeInformation">KSTHTTPStatusCodeNonAuthoritativeInformation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNonAuthoritativeInformation</span> <span class="o">=</span> <span class="mi">203</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNoContent"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNoContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNoContent">KSTHTTPStatusCodeNoContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNoContent</span> <span class="o">=</span> <span class="mi">204</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeResetContent"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeResetContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeResetContent">KSTHTTPStatusCodeResetContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeResetContent</span> <span class="o">=</span> <span class="mi">205</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePartialContent"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodePartialContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePartialContent">KSTHTTPStatusCodePartialContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodePartialContent</span> <span class="o">=</span> <span class="mi">206</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMultipleChoices"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeMultipleChoices" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMultipleChoices">KSTHTTPStatusCodeMultipleChoices</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeMultipleChoices</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMovedPermanently"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeMovedPermanently" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMovedPermanently">KSTHTTPStatusCodeMovedPermanently</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeMovedPermanently</span> <span class="o">=</span> <span class="mi">301</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeFound"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeFound" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeFound">KSTHTTPStatusCodeFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeFound</span> <span class="o">=</span> <span class="mi">302</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeSeeOther"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeSeeOther" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeSeeOther">KSTHTTPStatusCodeSeeOther</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeSeeOther</span> <span class="o">=</span> <span class="mi">303</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotModified"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNotModified" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotModified">KSTHTTPStatusCodeNotModified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNotModified</span> <span class="o">=</span> <span class="mi">304</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUseProxy"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeUseProxy" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUseProxy">KSTHTTPStatusCodeUseProxy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeUseProxy</span> <span class="o">=</span> <span class="mi">305</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeTemporaryRedirect"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeTemporaryRedirect" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeTemporaryRedirect">KSTHTTPStatusCodeTemporaryRedirect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeTemporaryRedirect</span> <span class="o">=</span> <span class="mi">307</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeBadRequest"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeBadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeBadRequest">KSTHTTPStatusCodeBadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeBadRequest</span> <span class="o">=</span> <span class="mi">400</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUnauthorized"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeUnauthorized" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUnauthorized">KSTHTTPStatusCodeUnauthorized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeUnauthorized</span> <span class="o">=</span> <span class="mi">401</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePaymentRequired"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodePaymentRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePaymentRequired">KSTHTTPStatusCodePaymentRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodePaymentRequired</span> <span class="o">=</span> <span class="mi">402</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeForbidden"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeForbidden" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeForbidden">KSTHTTPStatusCodeForbidden</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeForbidden</span> <span class="o">=</span> <span class="mi">403</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotFound"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotFound">KSTHTTPStatusCodeNotFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNotFound</span> <span class="o">=</span> <span class="mi">404</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMethoNotAllowed"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeMethoNotAllowed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeMethoNotAllowed">KSTHTTPStatusCodeMethoNotAllowed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeMethoNotAllowed</span> <span class="o">=</span> <span class="mi">405</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotAcceptable"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNotAcceptable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotAcceptable">KSTHTTPStatusCodeNotAcceptable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNotAcceptable</span> <span class="o">=</span> <span class="mi">406</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeProxyAuthenticationRequired"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeProxyAuthenticationRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeProxyAuthenticationRequired">KSTHTTPStatusCodeProxyAuthenticationRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeProxyAuthenticationRequired</span> <span class="o">=</span> <span class="mi">407</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestTimeout"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeRequestTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestTimeout">KSTHTTPStatusCodeRequestTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeRequestTimeout</span> <span class="o">=</span> <span class="mi">408</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeConflict"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeConflict" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeConflict">KSTHTTPStatusCodeConflict</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeConflict</span> <span class="o">=</span> <span class="mi">409</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeGone"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeGone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeGone">KSTHTTPStatusCodeGone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeGone</span> <span class="o">=</span> <span class="mi">410</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeLengthRequired"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeLengthRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeLengthRequired">KSTHTTPStatusCodeLengthRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeLengthRequired</span> <span class="o">=</span> <span class="mi">411</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePreconditionFailed"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodePreconditionFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodePreconditionFailed">KSTHTTPStatusCodePreconditionFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodePreconditionFailed</span> <span class="o">=</span> <span class="mi">412</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestEntityTooLarge"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeRequestEntityTooLarge" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestEntityTooLarge">KSTHTTPStatusCodeRequestEntityTooLarge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeRequestEntityTooLarge</span> <span class="o">=</span> <span class="mi">413</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestURITooLarge"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeRequestURITooLarge" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestURITooLarge">KSTHTTPStatusCodeRequestURITooLarge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeRequestURITooLarge</span> <span class="o">=</span> <span class="mi">414</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUnsupportedMediaType"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeUnsupportedMediaType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeUnsupportedMediaType">KSTHTTPStatusCodeUnsupportedMediaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeUnsupportedMediaType</span> <span class="o">=</span> <span class="mi">415</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestedRangeNotSatisfiable"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeRequestedRangeNotSatisfiable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeRequestedRangeNotSatisfiable">KSTHTTPStatusCodeRequestedRangeNotSatisfiable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeRequestedRangeNotSatisfiable</span> <span class="o">=</span> <span class="mi">416</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeExpectationFailed"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeExpectationFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeExpectationFailed">KSTHTTPStatusCodeExpectationFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeExpectationFailed</span> <span class="o">=</span> <span class="mi">417</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeInternalServerError"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeInternalServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeInternalServerError">KSTHTTPStatusCodeInternalServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeInternalServerError</span> <span class="o">=</span> <span class="mi">500</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotImplemented"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeNotImplemented" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeNotImplemented">KSTHTTPStatusCodeNotImplemented</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeNotImplemented</span> <span class="o">=</span> <span class="mi">501</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeBadGateway"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeBadGateway" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeBadGateway">KSTHTTPStatusCodeBadGateway</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeBadGateway</span> <span class="o">=</span> <span class="mi">502</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeServiceUnavailable"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeServiceUnavailable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeServiceUnavailable">KSTHTTPStatusCodeServiceUnavailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeServiceUnavailable</span> <span class="o">=</span> <span class="mi">503</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeGatewayTimeout"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeGatewayTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeGatewayTimeout">KSTHTTPStatusCodeGatewayTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeGatewayTimeout</span> <span class="o">=</span> <span class="mi">504</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeHTTPVersionNotSupported"></a>
+                    <a name="//apple_ref/objc/Case/KSTHTTPStatusCodeHTTPVersionNotSupported" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTHTTPStatusCode@KSTHTTPStatusCodeHTTPVersionNotSupported">KSTHTTPStatusCodeHTTPVersionNotSupported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTHTTPStatusCodeHTTPVersionNotSupported</span> <span class="o">=</span> <span class="mi">505</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://github.com/Kosoku" target="_blank" rel="external noopener">Kosoku</a>. All rights reserved. (Last updated: 2023-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

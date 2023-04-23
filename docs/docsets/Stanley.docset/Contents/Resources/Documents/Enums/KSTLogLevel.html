@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KSTLogLevel Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Enum/KSTLogLevel" class="dashAnchor"></a>
+
+    <a title="KSTLogLevel Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Stanley 3.0.1 Docs
+        </a>
+         (60% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Stanley Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      KSTLogLevel Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepCopyingExtensions%29.html">NSArray(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTDeepMutableCopyingExtensions%29.html">NSArray(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSArray%28KSTExtensions%29.html">NSArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSBundle%28KSTExtensions%29.html">NSBundle(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTExtensions%29.html">NSCharacterSet(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSCharacterSet%28KSTPhoneNumberFormatterExtensions%29.html">NSCharacterSet(KSTPhoneNumberFormatterExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSData%28KSTExtensions%29.html">NSData(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDate%28KSTExtensions%29.html">NSDate(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepCopyingExtensions%29.html">NSDictionary(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTDeepMutableCopyingExtensions%29.html">NSDictionary(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSDictionary%28KSTExtensions%29.html">NSDictionary(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSError%28KSTExtensions%29.html">NSError(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSFileManager%28KSTExtensions%29.html">NSFileManager(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSHTTPURLResponse%28KSTExtensions%29.html">NSHTTPURLResponse(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSMutableArray%28KSTExtensions%29.html">NSMutableArray(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSObject%28KSTExtensions%29.html">NSObject(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepCopyingExtensions%29.html">NSSet(KSTDeepCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSSet%28KSTDeepMutableCopyingExtensions%29.html">NSSet(KSTDeepMutableCopyingExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSString%28KSTExtensions%29.html">NSString(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURL%28KSTExtensions%29.html">NSURL(KSTExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSURLRequest%28KSTExtensions%29.html">NSURLRequest(KSTExtensions)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTFileWatcher.html">KSTFileWatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTPhoneNumberFormatter.html">KSTPhoneNumberFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTReachabilityManager.html">KSTReachabilityManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)KSTSnakeCaseToLlamaCaseValueTransformer">KSTSnakeCaseToLlamaCaseValueTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KSTTimer.html">KSTTimer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyMessage">KSTErrorAlertKeyMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTErrorAlertKeyTitle">KSTErrorAlertKeyTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAccept">KSTHTTPHeaderFieldAccept</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptCharset">KSTHTTPHeaderFieldAcceptCharset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptEncoding">KSTHTTPHeaderFieldAcceptEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptLanguage">KSTHTTPHeaderFieldAcceptLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAcceptRanges">KSTHTTPHeaderFieldAcceptRanges</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAge">KSTHTTPHeaderFieldAge</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAllow">KSTHTTPHeaderFieldAllow</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldAuthorization">KSTHTTPHeaderFieldAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldCacheControl">KSTHTTPHeaderFieldCacheControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldConnection">KSTHTTPHeaderFieldConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentEncoding">KSTHTTPHeaderFieldContentEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLanguage">KSTHTTPHeaderFieldContentLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLength">KSTHTTPHeaderFieldContentLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentLocation">KSTHTTPHeaderFieldContentLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentMD5">KSTHTTPHeaderFieldContentMD5</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentRange">KSTHTTPHeaderFieldContentRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldContentType">KSTHTTPHeaderFieldContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldDate">KSTHTTPHeaderFieldDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldETag">KSTHTTPHeaderFieldETag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpect">KSTHTTPHeaderFieldExpect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldExpires">KSTHTTPHeaderFieldExpires</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldFrom">KSTHTTPHeaderFieldFrom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldHost">KSTHTTPHeaderFieldHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfMatch">KSTHTTPHeaderFieldIfMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfModifiedSince">KSTHTTPHeaderFieldIfModifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfNoneMatch">KSTHTTPHeaderFieldIfNoneMatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfRange">KSTHTTPHeaderFieldIfRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldIfUnmodifiedSince">KSTHTTPHeaderFieldIfUnmodifiedSince</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLastModified">KSTHTTPHeaderFieldLastModified</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldLocation">KSTHTTPHeaderFieldLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldMaxForwards">KSTHTTPHeaderFieldMaxForwards</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldPragma">KSTHTTPHeaderFieldPragma</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthenticate">KSTHTTPHeaderFieldProxyAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldProxyAuthorization">KSTHTTPHeaderFieldProxyAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRange">KSTHTTPHeaderFieldRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldReferer">KSTHTTPHeaderFieldReferer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldRetryAfter">KSTHTTPHeaderFieldRetryAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldServer">KSTHTTPHeaderFieldServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTE">KSTHTTPHeaderFieldTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTrailer">KSTHTTPHeaderFieldTrailer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldTransferEncoding">KSTHTTPHeaderFieldTransferEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUpgrade">KSTHTTPHeaderFieldUpgrade</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldUserAgent">KSTHTTPHeaderFieldUserAgent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVary">KSTHTTPHeaderFieldVary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldVia">KSTHTTPHeaderFieldVia</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWWWAuthenticate">KSTHTTPHeaderFieldWWWAuthenticate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPHeaderFieldWarning">KSTHTTPHeaderFieldWarning</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodCONNECT">KSTHTTPMethodCONNECT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodDELETE">KSTHTTPMethodDELETE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodGET">KSTHTTPMethodGET</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodHEAD">KSTHTTPMethodHEAD</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodOPTIONS">KSTHTTPMethodOPTIONS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPATCH">KSTHTTPMethodPATCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPOST">KSTHTTPMethodPOST</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodPUT">KSTHTTPMethodPUT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTHTTPMethodTRACE">KSTHTTPMethodTRACE</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerNotificationDidChangeStatus">KSTReachabilityManagerNotificationDidChangeStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTReachabilityManagerUserInfoKeyStatus">KSTReachabilityManagerUserInfoKeyStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KSTSnakeCaseToLlamaCaseValueTransformerName">KSTSnakeCaseToLlamaCaseValueTransformerName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionNumber">StanleyVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@StanleyVersionString">StanleyVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTFileWatcherFlags.html">KSTFileWatcherFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTHTTPStatusCode.html">KSTHTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogFlags.html">KSTLogFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTLogLevel.html">KSTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerFlags.html">KSTReachabilityManagerFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KSTReachabilityManagerStatus.html">KSTReachabilityManagerStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepCopying.html">KSTDeepCopying</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KSTDeepMutableCopying.html">KSTDeepMutableCopying</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSError+KSTExtensions.h@T@KSTErrorAlertKey">KSTErrorAlertKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTFileWatcher.h@T@KSTFileWatcherBlock">KSTFileWatcherBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPHeaderField">KSTHTTPHeaderField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSURLRequest+KSTExtensions.h@T@KSTHTTPMethod">KSTHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTTimer.h@T@KSTTimerBlock">KSTTimerBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueBlock">KSTValueBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTValueErrorBlock">KSTValueErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTDefines.h@T@KSTVoidBlock">KSTVoidBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:KSTScopePrivateMacros.h@T@kst_cleanupBlock_t">kst_cleanupBlock_t</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRect">KSTCGRectCenterInRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectHorizontally">KSTCGRectCenterInRectHorizontally</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGRectCenterInRectVertically">KSTCGRectCenterInRectVertically</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTCGSizeIntegral">KSTCGSizeIntegral</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchAfter">KSTDispatchAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAfter">KSTDispatchMainAfter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainAsync">KSTDispatchMainAsync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTDispatchMainSync">KSTDispatchMainSync</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTIsEmptyObject">KSTIsEmptyObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNilIfEmptyOrObject">KSTNilIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@KSTNullIfEmptyOrObject">KSTNullIfEmptyOrObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:KSTScopePrivateMacros.h@F@kst_executeCleanupBlock">kst_executeCleanupBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs.html#/c:@S@sockaddr_in6">sockaddr_in6</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>KSTLogLevel</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">KSTLogLevel</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+
+                </div>
+              </div>
+            <p>Enum describing the current log level. This should be defined somewhere in your project as a static const variable named kKSTLogLevel with the value equal to one of the below values.</p>
+
+<p>static NSInteger const kKSTLogLevel = &hellip;;</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelNone"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelNone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelNone">KSTLogLevelNone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Nothing is logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelNone</span> <span class="o">=</span> <span class="n">KSTLogFlagsNone</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelError"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelError">KSTLogLevelError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Only error statements are logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelError</span> <span class="o">=</span> <span class="n">KSTLogFlagsError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelWarning"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelWarning" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelWarning">KSTLogLevelWarning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Only warning and below statements are logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelWarning</span> <span class="o">=</span> <span class="n"><a href="../Enums/KSTLogLevel.html#/c:@E@KSTLogLevel@KSTLogLevelError">KSTLogLevelError</a></span> <span class="o">|</span> <span class="n">KSTLogFlagsWarning</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelInfo"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelInfo">KSTLogLevelInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Only info and below statements are logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelInfo</span> <span class="o">=</span> <span class="n"><a href="../Enums/KSTLogLevel.html#/c:@E@KSTLogLevel@KSTLogLevelWarning">KSTLogLevelWarning</a></span> <span class="o">|</span> <span class="n">KSTLogFlagsInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelDebug"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelDebug" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelDebug">KSTLogLevelDebug</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Only debug and below statements are logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelDebug</span> <span class="o">=</span> <span class="n"><a href="../Enums/KSTLogLevel.html#/c:@E@KSTLogLevel@KSTLogLevelInfo">KSTLogLevelInfo</a></span> <span class="o">|</span> <span class="n">KSTLogFlagsDebug</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@KSTLogLevel@KSTLogLevelVerbose"></a>
+                    <a name="//apple_ref/objc/Case/KSTLogLevelVerbose" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@KSTLogLevel@KSTLogLevelVerbose">KSTLogLevelVerbose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Only verbose and below statements are logged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">KSTLogLevelVerbose</span> <span class="o">=</span> <span class="n"><a href="../Enums/KSTLogLevel.html#/c:@E@KSTLogLevel@KSTLogLevelDebug">KSTLogLevelDebug</a></span> <span class="o">|</span> <span class="n">KSTLogFlagsVerbose</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://github.com/Kosoku" target="_blank" rel="external noopener">Kosoku</a>. All rights reserved. (Last updated: 2023-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
